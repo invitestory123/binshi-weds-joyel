@@ -633,6 +633,19 @@
           fetchpriority="high"
           class="absolute inset-0 h-full w-full object-cover object-bottom"
         />
+        <!-- Animated Bride, Groom & Floral Stage Video (Exact Gilded Hall OG Template Animation) -->
+        <video
+          id="weddingHeroVideo"
+          src="gilded-hall/editable/assets/couple.mp4"
+          poster="gilded-hall/editable/assets/hall.png"
+          autoplay
+          loop
+          muted
+          playsinline
+          webkit-playsinline
+          preload="auto"
+          class="absolute inset-0 h-full w-full object-cover object-bottom z-10 transition-opacity duration-700"
+        ></video>
 
         <!-- Gilded Hall Petal Veil (drifting sheet overlay from OG template) -->
         <div class="petal-veil" aria-hidden="true">
@@ -1514,5 +1527,42 @@
       })();
     </script>
 
+  
+    <!-- Video Autoplay & Playback Assurance -->
+    <script>
+      (function() {
+        var vid = document.getElementById('weddingHeroVideo');
+        if (!vid) return;
+
+        function playVid() {
+          if (vid.paused) {
+            vid.muted = true;
+            var p = vid.play();
+            if (p !== undefined) {
+              p.catch(function() {});
+            }
+          }
+        }
+
+        playVid();
+
+        var events = ['pointerdown', 'touchstart', 'scroll'];
+        function onInteract() {
+          playVid();
+          events.forEach(function(e) {
+            window.removeEventListener(e, onInteract);
+          });
+        }
+        events.forEach(function(e) {
+          window.addEventListener(e, onInteract, { once: true, passive: true });
+        });
+
+        document.addEventListener('visibilitychange', function() {
+          if (!document.hidden) {
+            playVid();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
