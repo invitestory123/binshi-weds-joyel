@@ -231,6 +231,75 @@
         to { transform: rotate(360deg); }
       }
 
+      
+      /* --- Falling Petal Rain (Authentic Invitestory Template Animation) --- */
+      @keyframes petal-rain-fall {
+        0% {
+          transform: translate3d(0, -8vh, 0) rotate(0deg);
+          opacity: 0;
+        }
+        8% {
+          opacity: var(--petal-opacity, 0.85);
+        }
+        92% {
+          opacity: var(--petal-opacity, 0.85);
+        }
+        100% {
+          transform: translate3d(var(--petal-drift, 40px), 108vh, 0) rotate(var(--petal-spin, 320deg));
+          opacity: 0;
+        }
+      }
+
+      .petal {
+        position: absolute;
+        top: 0;
+        border-radius: 60% 4% 60% 60%;
+        background: radial-gradient(circle at 30% 30%, #ffc24d, #f58a1f 55%, #d96a08);
+        box-shadow: 0 1px 3px rgba(150, 70, 0, 0.25);
+        animation: petal-rain-fall linear infinite;
+        will-change: transform;
+        pointer-events: none;
+      }
+      .petal.petal-rose {
+        background: radial-gradient(circle at 30% 30%, #ff9db1, #e0476a 60%, #b92c50);
+        box-shadow: 0 1px 3px rgba(185, 44, 80, 0.25);
+      }
+      .petal.petal-gold {
+        background: radial-gradient(circle at 35% 35%, #fff2b8, #e9c879 50%, #c9973e 90%);
+        box-shadow: 0 1px 3px rgba(169, 124, 42, 0.35);
+      }
+      .petal.petal-ivory {
+        background: radial-gradient(circle at 35% 35%, #ffffff, #fdf6e7 65%, #edd9b5);
+        box-shadow: 0 1px 3px rgba(120, 95, 60, 0.15);
+      }
+      .petal.petal-sage {
+        background: radial-gradient(circle at 35% 35%, #e2ecd9, #b8cca6 60%, #889e72);
+        box-shadow: 0 1px 3px rgba(100, 120, 80, 0.2);
+      }
+
+      /* Interactive Tap/Click Petal Scatter (Seashell Vows OG Effect) */
+      @keyframes petal-fall {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px) rotate(0deg) scale(0.7);
+        }
+        15% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(var(--drift, 30px), 240px, 0) rotate(320deg) scale(1);
+        }
+      }
+
+      .interactive-petal-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9998;
+        overflow: hidden;
+      }
+
       /* Ensure reveal elements start visibly activated or animate cleanly */
       .reveal {
         opacity: 1 !important;
@@ -288,6 +357,27 @@
               height="1536"
               class="h-full w-full object-cover object-top animate-bloom"
             />
+          <!-- Seashell Vows Falling Petal Rain Animation -->
+          <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden z-20">
+          <span class="petal petal-ivory" style="left:13%;width:11px;height:14px;animation-delay:0s;animation-duration:9.00s;--petal-drift:35px;--petal-spin:240deg;--petal-opacity:0.65"></span>
+          <span class="petal petal-rose" style="left:10%;width:18px;height:23px;animation-delay:-1.45s;animation-duration:11.10s;--petal-drift:-46px;--petal-spin:293deg;--petal-opacity:0.78"></span>
+          <span class="petal petal-sage" style="left:7%;width:12px;height:15px;animation-delay:-2.9s;animation-duration:13.20s;--petal-drift:57px;--petal-spin:346deg;--petal-opacity:0.91"></span>
+          <span class="petal petal-ivory" style="left:4%;width:19px;height:24px;animation-delay:-4.35s;animation-duration:15.30s;--petal-drift:-68px;--petal-spin:399deg;--petal-opacity:0.69"></span>
+          <span class="petal petal-ivory" style="left:1%;width:13px;height:16px;animation-delay:-5.8s;animation-duration:9.40s;--petal-drift:79px;--petal-spin:452deg;--petal-opacity:0.82"></span>
+          <span class="petal petal-rose" style="left:98%;width:20px;height:25px;animation-delay:-7.25s;animation-duration:11.50s;--petal-drift:-35px;--petal-spin:265deg;--petal-opacity:0.95"></span>
+          <span class="petal petal-sage" style="left:95%;width:14px;height:18px;animation-delay:-8.7s;animation-duration:13.60s;--petal-drift:46px;--petal-spin:318deg;--petal-opacity:0.73"></span>
+          <span class="petal petal-ivory" style="left:92%;width:21px;height:26px;animation-delay:-10.15s;animation-duration:15.70s;--petal-drift:-57px;--petal-spin:371deg;--petal-opacity:0.86"></span>
+          <span class="petal petal-ivory" style="left:89%;width:15px;height:19px;animation-delay:-11.6s;animation-duration:9.80s;--petal-drift:68px;--petal-spin:424deg;--petal-opacity:0.99"></span>
+          <span class="petal petal-rose" style="left:86%;width:22px;height:28px;animation-delay:-13.05s;animation-duration:11.90s;--petal-drift:-79px;--petal-spin:477deg;--petal-opacity:0.77"></span>
+          <span class="petal petal-sage" style="left:83%;width:16px;height:20px;animation-delay:-0.5s;animation-duration:14.00s;--petal-drift:35px;--petal-spin:290deg;--petal-opacity:0.90"></span>
+          <span class="petal petal-ivory" style="left:80%;width:23px;height:29px;animation-delay:-1.95s;animation-duration:16.10s;--petal-drift:-46px;--petal-spin:343deg;--petal-opacity:0.68"></span>
+          <span class="petal petal-ivory" style="left:77%;width:17px;height:21px;animation-delay:-3.4s;animation-duration:10.20s;--petal-drift:57px;--petal-spin:396deg;--petal-opacity:0.81"></span>
+          <span class="petal petal-rose" style="left:74%;width:11px;height:14px;animation-delay:-4.85s;animation-duration:12.30s;--petal-drift:-68px;--petal-spin:449deg;--petal-opacity:0.94"></span>
+          <span class="petal petal-sage" style="left:71%;width:18px;height:23px;animation-delay:-6.3s;animation-duration:14.40s;--petal-drift:79px;--petal-spin:262deg;--petal-opacity:0.72"></span>
+          <span class="petal petal-ivory" style="left:68%;width:12px;height:15px;animation-delay:-7.75s;animation-duration:16.50s;--petal-drift:-35px;--petal-spin:315deg;--petal-opacity:0.85"></span>
+          <span class="petal petal-ivory" style="left:65%;width:19px;height:24px;animation-delay:-9.2s;animation-duration:10.60s;--petal-drift:46px;--petal-spin:368deg;--petal-opacity:0.98"></span>
+          <span class="petal petal-rose" style="left:62%;width:13px;height:16px;animation-delay:-10.65s;animation-duration:12.70s;--petal-drift:-57px;--petal-spin:421deg;--petal-opacity:0.76"></span>
+          </div>
             <div class="absolute inset-0" style="background:var(--gradient-veil)"></div>
           </div>
           <img
@@ -543,6 +633,39 @@
           fetchpriority="high"
           class="absolute inset-0 h-full w-full object-cover object-bottom"
         />
+
+        <!-- Gilded Hall Petal Veil (drifting sheet overlay from OG template) -->
+        <div class="petal-veil" aria-hidden="true">
+          <img src="gilded-hall/editable/assets/petals.png" alt="" />
+        </div>
+
+        <!-- Falling Golden & Rose Petal Rain Animation -->
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden z-20">
+          <span class="petal petal-gold" style="left:13%;width:11px;height:14px;animation-delay:0s;animation-duration:9.00s;--petal-drift:35px;--petal-spin:240deg;--petal-opacity:0.65"></span>
+          <span class="petal petal-rose" style="left:10%;width:18px;height:23px;animation-delay:-1.45s;animation-duration:11.10s;--petal-drift:-46px;--petal-spin:293deg;--petal-opacity:0.78"></span>
+          <span class="petal petal-gold" style="left:7%;width:12px;height:15px;animation-delay:-2.9s;animation-duration:13.20s;--petal-drift:57px;--petal-spin:346deg;--petal-opacity:0.91"></span>
+          <span class="petal petal-ivory" style="left:4%;width:19px;height:24px;animation-delay:-4.35s;animation-duration:15.30s;--petal-drift:-68px;--petal-spin:399deg;--petal-opacity:0.69"></span>
+          <span class="petal petal-rose" style="left:1%;width:13px;height:16px;animation-delay:-5.8s;animation-duration:9.40s;--petal-drift:79px;--petal-spin:452deg;--petal-opacity:0.82"></span>
+          <span class="petal petal-gold" style="left:98%;width:20px;height:25px;animation-delay:-7.25s;animation-duration:11.50s;--petal-drift:-35px;--petal-spin:265deg;--petal-opacity:0.95"></span>
+          <span class="petal petal-rose" style="left:95%;width:14px;height:18px;animation-delay:-8.7s;animation-duration:13.60s;--petal-drift:46px;--petal-spin:318deg;--petal-opacity:0.73"></span>
+          <span class="petal petal-gold" style="left:92%;width:21px;height:26px;animation-delay:-10.15s;animation-duration:15.70s;--petal-drift:-57px;--petal-spin:371deg;--petal-opacity:0.86"></span>
+          <span class="petal petal-ivory" style="left:89%;width:15px;height:19px;animation-delay:-11.6s;animation-duration:9.80s;--petal-drift:68px;--petal-spin:424deg;--petal-opacity:0.99"></span>
+          <span class="petal petal-rose" style="left:86%;width:22px;height:28px;animation-delay:-13.05s;animation-duration:11.90s;--petal-drift:-79px;--petal-spin:477deg;--petal-opacity:0.77"></span>
+          <span class="petal petal-gold" style="left:83%;width:16px;height:20px;animation-delay:-0.5s;animation-duration:14.00s;--petal-drift:35px;--petal-spin:290deg;--petal-opacity:0.90"></span>
+          <span class="petal petal-rose" style="left:80%;width:23px;height:29px;animation-delay:-1.95s;animation-duration:16.10s;--petal-drift:-46px;--petal-spin:343deg;--petal-opacity:0.68"></span>
+          <span class="petal petal-gold" style="left:77%;width:17px;height:21px;animation-delay:-3.4s;animation-duration:10.20s;--petal-drift:57px;--petal-spin:396deg;--petal-opacity:0.81"></span>
+          <span class="petal petal-ivory" style="left:74%;width:11px;height:14px;animation-delay:-4.85s;animation-duration:12.30s;--petal-drift:-68px;--petal-spin:449deg;--petal-opacity:0.94"></span>
+          <span class="petal petal-rose" style="left:71%;width:18px;height:23px;animation-delay:-6.3s;animation-duration:14.40s;--petal-drift:79px;--petal-spin:262deg;--petal-opacity:0.72"></span>
+          <span class="petal petal-gold" style="left:68%;width:12px;height:15px;animation-delay:-7.75s;animation-duration:16.50s;--petal-drift:-35px;--petal-spin:315deg;--petal-opacity:0.85"></span>
+          <span class="petal petal-rose" style="left:65%;width:19px;height:24px;animation-delay:-9.2s;animation-duration:10.60s;--petal-drift:46px;--petal-spin:368deg;--petal-opacity:0.98"></span>
+          <span class="petal petal-gold" style="left:62%;width:13px;height:16px;animation-delay:-10.65s;animation-duration:12.70s;--petal-drift:-57px;--petal-spin:421deg;--petal-opacity:0.76"></span>
+          <span class="petal petal-ivory" style="left:59%;width:20px;height:25px;animation-delay:-12.1s;animation-duration:14.80s;--petal-drift:68px;--petal-spin:474deg;--petal-opacity:0.89"></span>
+          <span class="petal petal-rose" style="left:56%;width:14px;height:18px;animation-delay:-13.55s;animation-duration:16.90s;--petal-drift:-79px;--petal-spin:287deg;--petal-opacity:0.67"></span>
+          <span class="petal petal-gold" style="left:53%;width:21px;height:26px;animation-delay:-1s;animation-duration:11.00s;--petal-drift:35px;--petal-spin:340deg;--petal-opacity:0.80"></span>
+          <span class="petal petal-rose" style="left:50%;width:15px;height:19px;animation-delay:-2.45s;animation-duration:13.10s;--petal-drift:-46px;--petal-spin:393deg;--petal-opacity:0.93"></span>
+          <span class="petal petal-gold" style="left:47%;width:22px;height:28px;animation-delay:-3.9s;animation-duration:15.20s;--petal-drift:57px;--petal-spin:446deg;--petal-opacity:0.71"></span>
+          <span class="petal petal-ivory" style="left:44%;width:16px;height:20px;animation-delay:-5.35s;animation-duration:9.30s;--petal-drift:-68px;--petal-spin:259deg;--petal-opacity:0.84"></span>
+        </div>
 
         <!-- Rain of Light Beams -->
         <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
@@ -1317,5 +1440,79 @@
 
       })();
     </script>
+  
+    <!-- Interactive Petal Scatter and Ambient Petal Effect -->
+    <script>
+      (function() {
+        // Create interactive petal layer for clicks and taps
+        var layer = document.createElement('div');
+        layer.className = 'interactive-petal-layer';
+        layer.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(layer);
+
+        function spawnPetals(x, y, isGilded) {
+          var count = 7;
+          for (var i = 0; i < count; i++) {
+            var span = document.createElement('span');
+            var drift = ((Math.random() - 0.5) * 140).toFixed(0);
+            var hue = Math.random();
+            var dur = (1.9 + hue * 0.8).toFixed(2);
+            var offsetX = (Math.random() - 0.5) * 48;
+            var offsetY = (Math.random() - 0.5) * 28;
+            var sizeW = Math.round(11 + Math.random() * 6);
+            var sizeH = Math.round(sizeW * 1.3);
+
+            span.style.position = 'absolute';
+            span.style.left = (x + offsetX) + 'px';
+            span.style.top = (y + offsetY) + 'px';
+            span.style.width = sizeW + 'px';
+            span.style.height = sizeH + 'px';
+            span.style.borderRadius = '70% 30% 65% 35% / 60% 60% 40% 40%';
+            span.style.setProperty('--drift', drift + 'px');
+            span.style.willChange = 'transform, opacity';
+            span.style.pointerEvents = 'none';
+
+            if (isGilded) {
+              if (hue > 0.6) {
+                span.style.background = 'radial-gradient(circle at 35% 35%, #fff2b8, #e9c879 50%, #c9973e 90%)';
+                span.style.boxShadow = '0 1px 4px rgba(169, 124, 42, 0.45)';
+              } else if (hue > 0.3) {
+                span.style.background = 'radial-gradient(circle at 30% 30%, #ffc24d, #f58a1f 55%, #d96a08)';
+                span.style.boxShadow = '0 1px 4px rgba(150, 70, 0, 0.35)';
+              } else {
+                span.style.background = 'radial-gradient(circle at 30% 30%, #ff9db1, #e0476a 60%, #b92c50)';
+                span.style.boxShadow = '0 1px 4px rgba(185, 44, 80, 0.35)';
+              }
+            } else {
+              if (hue > 0.5) {
+                span.style.background = 'radial-gradient(circle at 30% 30%, #ffffff, #fdf6e7 65%, #edd9b5)';
+                span.style.boxShadow = '0 1px 3px rgba(120, 95, 60, 0.2)';
+              } else {
+                span.style.background = 'radial-gradient(circle at 35% 35%, #e2ecd9, #b8cca6 60%, #889e72)';
+                span.style.boxShadow = '0 1px 3px rgba(100, 120, 80, 0.2)';
+              }
+            }
+
+            span.style.animation = 'petal-fall ' + dur + 's cubic-bezier(0.3, 0.6, 0.4, 1) forwards';
+            layer.appendChild(span);
+
+            (function(p, d) {
+              setTimeout(function() {
+                if (p && p.parentNode) p.parentNode.removeChild(p);
+              }, Math.round(d * 1000) + 100);
+            })(span, dur);
+          }
+        }
+
+        window.addEventListener('pointerdown', function(e) {
+          if (e.target && (e.target.closest('button') || e.target.closest('a') || e.target.closest('input') || e.target.closest('textarea'))) {
+            return;
+          }
+          var isGilded = !!(e.target && e.target.closest && e.target.closest('.gilded-wrapper'));
+          spawnPetals(e.clientX, e.clientY, isGilded);
+        }, { passive: true });
+      })();
+    </script>
+
   </body>
 </html>
