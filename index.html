@@ -6,12 +6,14 @@
     <title>Dr Binshi &amp; Joyel — Engagement &amp; Wedding Invitation</title>
     <meta
       name="description"
-      content="Join Dr Binshi Biju &amp; Joyel Paul for their Engagement on 14 Jan 2027 at Pavithram Convention Centre, Kollam, and Holy Matrimony &amp; Wedding Reception on 18 Jan 2027 at Kanakamala &amp; Chalakudy."
+      content="Join Dr Binshi Biju &amp; Joyel Paul for their Engagement on 14 Jan 2027 at Pavithram Convention Centre, Kollam, and Holy Matrimony &amp; Wedding Reception on 18 Jan 2027 at St. Antony's shrine, Kanakamala &amp; Kizhakuden's HeartLand, Chalakudy."
     />
-    <meta property="og:title" content="Dr Binshi Biju &amp; Joyel Paul | Wedding &amp; Engagement Invitation" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Dr Binshi &amp; Joyel — Wedding &amp; Engagement Invitation" />
     <meta
       property="og:description"
-      content="Engagement: 14 Jan 2027 (Kollam) · Holy Matrimony &amp; Reception: 18 Jan 2027 (Chalakudy)"
+      content="14 Jan 2027 (Engagement at Kundara, Kollam) &bull; 18 Jan 2027 (Holy Matrimony &amp; Reception at Chalakudy)"
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./seashell-vows/editable/assets/couple-walking.png" />
@@ -20,26 +22,64 @@
     <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/opener-frames/lantern-reveal-first.png" fetchpriority="high" />
     <link rel="preload" as="video" href="seashell-vows/editable/assets/wedding-opener.mp4" type="video/mp4" />
     <link rel="preload" as="image" href="seashell-vows/editable/assets/hero-arch.jpg" />
-    <link rel="preload" as="image" href="seashell-vows/editable/assets/couple-walking.png" />
+    <link rel="preload" as="image" href="seashell-vows/editable/assets/couple-walking.png" fetchpriority="high" />
     <link rel="preload" as="image" href="gilded-hall/editable/assets/hall.png" />
     <link rel="preload" as="video" href="gilded-hall/editable/assets/couple.mp4" type="video/mp4" />
-    <link rel="preload" as="image" href="gilded-hall/editable/assets/petals.png" />
-    <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png" />
-    <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/bougainvillea-divider.png" />
 
-    <!-- External Google Fonts: OG Seashell Vows Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Google Fonts for Authentic Typography -->
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-6476c501f8.css" />
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-86ad40e56c.css" />
-
-    <!-- External Google Fonts: OG Gilded Hall Fonts (Marcellus) -->
-    <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-3c9e6a6ae3.css" />
     <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-fde818cf20.css" />
 
-    <!-- Original CSS Bundles -->
+    <!-- Authentic Seashell Vows CSS Bundle (Image 4 font system everywhere) -->
     <link rel="stylesheet" href="seashell-vows/assets/styles-CbBzkN6m.css" />
-    <link rel="stylesheet" href="gilded-hall/assets/styles-B1fytZJn.css" />
 
     <style>
+      /* --- GLOBAL TYPOGRAPHY MATCHING IMAGE 4 EVERYWHERE --- */
+      :root {
+        --font-display: 'Cormorant Garamond', Georgia, serif;
+        --font-script: 'Petit Formal Script', cursive;
+        --font-body: 'Jost', system-ui, -apple-system, sans-serif;
+        --color-background: #fbf9f4;
+        --color-foreground: #1c150e;
+        --color-card: #ffffff;
+        --color-primary: #8b6b43;
+        --color-primary-foreground: #ffffff;
+        --color-secondary: #f4efe6;
+        --color-muted: #f4efe6;
+        --color-muted-foreground: #786b59;
+        --color-border: #e7decb;
+        --color-sage: #9ca38f;
+      }
+
+      body {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-body);
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: var(--font-display);
+        color: var(--color-foreground);
+      }
+
+      .font-display {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+      }
+      .script {
+        font-family: 'Petit Formal Script', cursive !important;
+      }
+      .font-body {
+        font-family: 'Jost', system-ui, -apple-system, sans-serif !important;
+      }
+
       /* Opener Gate Modal */
       .invitation-opener {
         position: fixed;
@@ -72,6 +112,7 @@
         backdrop-filter: blur(8px);
         cursor: pointer;
         z-index: 10;
+        font-family: var(--font-body);
       }
 
       /* Floating Audio Button */
@@ -108,13 +149,13 @@
         to { transform: rotate(360deg); }
       }
 
-      /* Ensure reveal elements are visible immediately */
+      /* Ensure reveal elements are visible */
       .reveal {
         opacity: 1 !important;
         transform: none !important;
       }
 
-      /* Gilded Hall First Page Scoped Theme & Fonts */
+      /* --- GILDED HALL FIRST PAGE SCOPED STYLES (IMAGE 5 ONLY) --- */
       .gilded-first-page {
         --hall-deep: #4a3312;
         --hall-amber: #8f6720;
@@ -128,119 +169,73 @@
         --grad-gold: linear-gradient(100deg, #a97c2a 0%, #e9c879 45%, #f7e9c6 60%, #c9973e 100%);
       }
       .gilded-first-page .font-title {
-        font-family: Marcellus, Georgia, serif !important;
+        font-family: 'Marcellus', Georgia, serif !important;
       }
       .gilded-first-page .font-display {
-        font-family: "Cormorant Garamond", Georgia, serif !important;
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
       }
       .gilded-first-page .font-body {
-        font-family: "Jost", system-ui, sans-serif !important;
+        font-family: 'Jost', system-ui, sans-serif !important;
       }
       .gilded-first-page .gold-text {
         background: var(--grad-gold);
-        color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
+        color: transparent;
+      }
+      .gilded-first-page .text-hall-light {
+        color: var(--hall-light);
+      }
+      .gilded-first-page .text-ivory {
+        color: var(--ivory);
+      }
+      .gilded-first-page .petal-veil {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0.18;
+        mix-blend-mode: screen;
+      }
+      .gilded-first-page .petal-veil img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: 18s ease-in-out infinite alternate petal-drift;
+      }
+      @keyframes petal-drift {
+        0% { transform: scale(1.05) translate(-1%, -2%); }
+        to { transform: scale(1.14) translate(2%, 2%) rotate(1deg); }
       }
 
-      /* RSVP & Paper Inputs in Seashell Theme */
-      .seashell-input {
-        width: 100%;
-        min-height: 48px;
-        background: #faf8f5;
-        border: 1px solid rgba(138, 99, 43, 0.3);
-        border-radius: 3px;
-        color: inherit;
-        padding: 0.75rem 1rem;
-        font-family: inherit;
-        font-size: 0.95rem;
-        outline: none;
-        transition: border-color 0.2s, box-shadow 0.2s;
+      /* Custom page spacing & transitions */
+      .page-spacer {
+        height: 3rem;
       }
-      .seashell-input:focus {
-        border-color: var(--color-primary);
-        box-shadow: 0 0 10px rgba(138, 99, 43, 0.25);
-        background: #ffffff;
-      }
-      .seashell-radio-pill {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem 1rem;
-        background: #faf8f5;
-        border: 1px solid rgba(138, 99, 43, 0.25);
-        border-radius: 3px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-      .seashell-radio-pill:hover {
-        border-color: var(--color-primary);
-        background: #ffffff;
-      }
-      .seashell-radio-pill input[type="radio"] {
-        accent-color: var(--color-primary);
-        width: 18px;
-        height: 18px;
-      }
-      .btn-whatsapp-rsvp {
-        display: flex;
-        min-height: 52px;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 0.6rem;
-        border-radius: 3px;
-        background: #25D366;
-        color: #ffffff;
-        padding: 0.85rem 1.5rem;
-        font-size: 0.76rem;
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
-        text-decoration: none;
-        font-weight: 700;
-        border: none;
-        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-        cursor: pointer;
-        transition: transform 0.18s, box-shadow 0.18s;
-      }
-      .btn-whatsapp-rsvp:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgba(37, 211, 102, 0.48);
-      }
-      .guest-btn {
-        width: 36px;
-        height: 36px;
-        border-radius: 3px;
-        background: rgba(138, 99, 43, 0.1);
-        border: 1px solid rgba(138, 99, 43, 0.35);
-        color: var(--color-primary);
-        font-size: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      .guest-btn:hover {
-        background: var(--color-primary);
-        color: #ffffff;
+      @media (min-width: 640px) {
+        .page-spacer {
+          height: 5rem;
+        }
       }
     </style>
   </head>
+
   <body>
-    <!-- Background Audio Element -->
-    <audio id="weddingBgm" loop preload="auto">
-      <source src="editable/assets/bgm.mp3" type="audio/mp3" />
+    <!-- Background Audio -->
+    <audio id="weddingBgm" loop preload="none">
+      <source src="editable/assets/bgm.mp3" type="audio/mpeg" />
     </audio>
 
     <!-- Floating Audio Toggle Button -->
     <button id="bgmToggleBtn" class="floating-bgm-btn" type="button" aria-label="Toggle background music">
-      <svg viewBox="0 0 24 24" id="bgmIconPlay">
+      <svg viewBox="0 0 24 24">
         <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
       </svg>
     </button>
 
-    <!-- Authentic Seashell Vows Video Opener Gate (Exact OG Template Intro) -->
-    <div id="invitationOpener" class="invitation-opener" role="dialog" aria-label="Open Dr Binshi and Joyel's wedding invitation">
+    <!-- Opener Gate Modal (Authentic Seashell Vows Video Opener) -->
+    <div id="invitationOpener" class="invitation-opener">
       <video
         id="openerVideo"
         src="seashell-vows/editable/assets/wedding-opener.mp4"
@@ -255,7 +250,7 @@
       <!-- Skip Button -->
       <button id="openerSkipBtn" class="opener-skip-btn" type="button">Skip &bull;&bull;</button>
 
-      <!-- Tap to Open Button Overlay (Exact Seashell Vows Signature) -->
+      <!-- Tap to Open Button Overlay (Authentic Seashell Vows Signature) -->
       <button
         id="openerEnterBtn"
         type="button"
@@ -264,121 +259,118 @@
         <span class="script text-2xl sm:text-3xl text-[#f4d8a1]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.85);">
           Dr Binshi &amp; Joyel
         </span>
-        <span class="mt-3 border-b border-white/60 pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-white">
+        <span class="mt-3 border-b border-white/60 pb-1 text-[0.72rem] font-bold uppercase tracking-[0.26em] text-white font-body">
           Tap to open
         </span>
       </button>
     </div>
 
-    <!-- MAIN INVITATION: OG SEASHELL VOWS FONTS & THEME ALL ACROSS -->
-    <main class="paper overflow-x-hidden">
+    <!-- MAIN INVITATION WRAPPER -->
+    <div class="relative min-h-screen">
 
-      <!-- ============================================== -->
-      <!-- PART 1: ENGAGEMENT (EXACT OG SEASHELL TEMPLATE) -->
-      <!-- ============================================== -->
-      <div class="relative">
-        <header class="relative min-h-[100svh] overflow-hidden paper">
-          <div class="absolute inset-x-0 top-0 h-[78svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
-            <img
-              src="seashell-vows/editable/assets/hero-arch.jpg"
-              alt="Watercolor beach wedding arch at sunset"
-              width="1024"
-              height="1536"
-              class="h-full w-full object-cover object-top animate-bloom"
-            />
-            <div class="absolute inset-0" style="background:var(--gradient-veil)"></div>
-          </div>
-
-          <!-- Decorative Floral Sprays from OG Template -->
+      <!-- ========================================================================= -->
+      <!-- PART 1: ENGAGEMENT HERO (SCALED BEAUTIFULLY TO FIT ANY DEVICE SCREEN)     -->
+      <!-- ========================================================================= -->
+      <header class="relative min-h-[100svh] overflow-hidden paper flex flex-col justify-between">
+        <!-- Watercolor Arch Background -->
+        <div class="absolute inset-x-0 top-0 h-[72svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
           <img
-            src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
-            alt=""
-            aria-hidden="true"
+            src="seashell-vows/editable/assets/hero-arch.jpg"
+            alt="Watercolor beach wedding arch at sunset"
             width="1024"
-            height="1024"
-            class="pointer-events-none absolute -left-10 top-6 w-36 opacity-70 animate-float-soft"
+            height="1536"
+            class="h-full w-full object-cover object-top animate-bloom"
           />
-          <img
-            src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
-            alt=""
-            aria-hidden="true"
-            width="1024"
-            height="1024"
-            class="pointer-events-none absolute -right-12 top-24 w-32 -scale-x-100 opacity-60 animate-float-soft"
-            style="animation-delay:1.4s;"
-          />
+          <div class="absolute inset-0" style="background:var(--gradient-veil)"></div>
+        </div>
 
-          <!-- Couple Walking Illustration -->
+        <!-- Decorative Floral Sprays from OG Template -->
+        <img
+          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
+          alt=""
+          aria-hidden="true"
+          width="1024"
+          height="1024"
+          class="pointer-events-none absolute -left-10 top-4 w-32 sm:w-36 opacity-70 animate-float-soft"
+        />
+        <img
+          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
+          alt=""
+          aria-hidden="true"
+          width="1024"
+          height="1024"
+          class="pointer-events-none absolute -right-10 top-16 w-28 sm:w-32 -scale-x-100 opacity-60 animate-float-soft"
+          style="animation-delay:1.4s;"
+        />
+
+        <!-- Bride & Groom Walking Illustration (Properly scaled to fit screen beautifully) -->
+        <div class="relative w-full flex justify-center pt-[10svh] sm:pt-[12svh] z-10 pointer-events-none">
           <img
             src="seashell-vows/editable/assets/couple-walking.png"
             alt="Bride and groom walking hand in hand"
             width="1024"
             height="1536"
-            class="pointer-events-none absolute bottom-[32%] sm:bottom-[30%] left-1/2 w-[62%] max-w-[290px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]"
-            style="transform:translate3d(-50%, 0px, 0)"
+            class="w-[46%] max-w-[210px] max-h-[35svh] sm:max-h-[38svh] object-contain animate-bloom drop-shadow-[0_14px_24px_rgba(92,80,68,0.18)]"
           />
+        </div>
 
-          <!-- OG Seashell Vows Typography & Details -->
-          <div class="relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-12 text-center" style="transform:translate3d(0, 0px, 0)">
-            <p class="script text-xl text-primary animate-ink" style="animation-delay:0.4s">
-              Together with our families
-            </p>
-            <h1 class="mt-2 font-display text-[clamp(2.6rem,10vw,3.3rem)] leading-[1.02] text-foreground animate-ink font-normal" style="animation-delay:0.7s">
-              Dr Binshi Biju<span class="script mx-2 block text-2xl text-primary my-1">&amp;</span>Joyel Paul
-            </h1>
-            <p class="mt-4 text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1s">
-              Thursday, 14 January 2027 &bull; 11:30 AM Onwards
-            </p>
-            <p class="mt-1.5 text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1.15s">
-              Pavithram Convention Centre &bull; Kundara, Kollam
-            </p>
-          </div>
-        </header>
-      </div>
+        <!-- Typography & Engagement Details (Reduced font sizes to fit screen beautifully) -->
+        <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-7 sm:pb-10 text-center">
+          <p class="script text-base sm:text-lg text-primary animate-ink" style="animation-delay:0.4s">
+            Together with our families
+          </p>
+          <h1 class="mt-1.5 font-display text-[clamp(1.75rem,6.8vw,2.35rem)] leading-[1.08] text-foreground animate-ink font-normal" style="animation-delay:0.7s">
+            Dr Binshi Biju<span class="script mx-2 inline-block text-xl sm:text-2xl text-primary my-0.5">&amp;</span>Joyel Paul
+          </h1>
+          <p class="mt-2.5 font-body text-[0.64rem] sm:text-[0.7rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1s">
+            Thursday, 14 January 2027 &bull; 11:30 AM Onwards
+          </p>
+          <p class="mt-1 font-body text-[0.64rem] sm:text-[0.7rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1.15s">
+            Pavithram Convention Centre &bull; Kundara, Kollam
+          </p>
+        </div>
+      </header>
 
-      <!-- Engagement Countdown (OG Seashell Style) -->
-      <section class="px-6 py-14">
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Engagement Countdown (OG Seashell Style - Image 4 Typography) -->
+      <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
-          <p class="text-center text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
             Counting down to the Engagement
           </p>
           <div class="mt-6">
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
-              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
                 <span id="engDays" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Days</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Days</span>
               </div>
               <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
                 <span id="engHours" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Hrs</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Hrs</span>
               </div>
               <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
                 <span id="engMins" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Min</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Min</span>
               </div>
               <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
                 <span id="engSecs" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Sec</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Sec</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Parents & Families (OG Seashell Style) -->
-      <section class="relative px-7 pb-16">
-        <img
-          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="1024"
-          height="1024"
-          class="pointer-events-none absolute -right-16 -top-6 w-40 opacity-50"
-        />
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Parents Blessing Section (OG Seashell Style - Image 4 Typography) -->
+      <section class="relative px-7 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
             <p class="script text-xl text-primary font-medium">With the blessings of our families</p>
@@ -390,9 +382,9 @@
             </div>
           </div>
 
-          <div class="mx-auto max-w-md space-y-4">
+          <div class="mx-auto max-w-md space-y-5">
             <!-- Bride's Parents -->
-            <div class="card-soft p-5 rounded-sm border border-primary/20 text-center">
+            <div class="card-soft p-6 rounded-sm border border-primary/20 text-center">
               <span class="script text-lg text-primary block">Bride's Parents</span>
               <h3 class="font-display text-xl font-semibold text-foreground mt-1">
                 Biju Yohannan &amp; Shini Biju
@@ -406,7 +398,7 @@
             </div>
 
             <!-- Groom's Parents -->
-            <div class="card-soft p-5 rounded-sm border border-primary/20 text-center">
+            <div class="card-soft p-6 rounded-sm border border-primary/20 text-center">
               <span class="script text-lg text-primary block">Groom's Parents</span>
               <h3 class="font-display text-xl font-semibold text-foreground mt-1">
                 Poulose Padinjarakaran Rappai &amp; Siji Devasia
@@ -422,11 +414,14 @@
         </div>
       </section>
 
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
       <!-- Engagement Ceremony & Venue Card (OG Seashell Style) -->
-      <section class="relative px-6 pb-16">
+      <section class="relative px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Our Engagement</p>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">Our Engagement</p>
             <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Ring Exchange &amp; Feast</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
@@ -435,12 +430,12 @@
             </div>
           </div>
 
-          <div class="mx-auto max-w-md card-soft p-6 rounded-sm border border-primary/25">
+          <div class="mx-auto max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
             <div class="flex items-center gap-3">
               <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">💍</span>
               <div>
                 <h3 class="font-display text-2xl font-semibold text-foreground">The Engagement Ceremony</h3>
-                <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
                   Thursday, 14 Jan 2027 &bull; 11:30 AM Onwards
                 </p>
               </div>
@@ -456,14 +451,14 @@
                 href="https://share.google/eKgdNtTLRLDoC2pMJ"
                 target="_blank"
                 rel="noreferrer"
-                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
               >
                 Open in Google Maps
               </a>
               <button
                 type="button"
                 onclick="addToCalendarEngagement()"
-                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/40 bg-secondary px-4 text-[0.68rem] font-semibold uppercase tracking-airy text-foreground"
+                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/40 bg-secondary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-foreground"
               >
                 Add to Calendar
               </button>
@@ -472,8 +467,11 @@
         </div>
       </section>
 
+      <!-- SPACE BEFORE WEDDING DETAILS FIRST PAGE -->
+      <div class="page-spacer"></div>
+
       <!-- ======================================================================== -->
-      <!-- PART 2: WEDDING DETAILS FIRST PAGE (EXACTLY AS IN OG GILDED HALL TEMPLATE) -->
+      <!-- PART 2: WEDDING DETAILS FIRST PAGE (OG GILDED HALL - IMAGE 5 ONLY)        -->
       <!-- ======================================================================== -->
       <section class="gilded-first-page relative flex min-h-[100svh] flex-col justify-start overflow-hidden bg-[#150e04]">
         <!-- Hall Image Underneath (from OG Gilded Hall) -->
@@ -509,15 +507,15 @@
         <!-- Shimmering Gradient Overlay (from OG Gilded Hall) -->
         <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(74,51,18,0.72) 0%, rgba(110,77,25,0.28) 45%, rgba(74,51,18,0.05) 65%, rgba(74,51,18,0.55) 100%)"></div>
 
-        <!-- Wedding Details Typography (EXACT OG GILDED HALL CLASSES & FONTS) -->
-        <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 10svh)">
-          <p class="font-body text-[0.58rem] uppercase tracking-[0.42em] text-hall-light/85 reveal" style="transition-delay:300ms">
+        <!-- Wedding Details Typography (Lifted date cleanly above; writings removed) -->
+        <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 8svh)">
+          <p class="font-body text-[0.62rem] uppercase tracking-[0.42em] text-hall-light/90 reveal" style="transition-delay:300ms">
             Shubh Vivah &bull; Holy Matrimony
           </p>
-          <h1 class="mt-5 font-display text-[clamp(3rem,17vw,5rem)] font-light leading-[0.95] gold-text reveal" style="transition-delay:900ms">
-            Joyel<span class="block font-title text-[0.32em] tracking-[0.3em] text-hall-light/90 my-3">&amp;</span>Dr Binshi
+          <h1 class="mt-3 sm:mt-5 font-display text-[clamp(2.6rem,14vw,4.5rem)] font-light leading-[0.95] gold-text reveal" style="transition-delay:900ms">
+            Joyel<span class="block font-title text-[0.34em] tracking-[0.3em] text-hall-light/90 my-2">&amp;</span>Dr Binshi
           </h1>
-          <div class="reveal" style="transition-delay:1200ms">
+          <div class="reveal mt-3 sm:mt-4" style="transition-delay:1200ms">
             <img
               src="gilded-hall/editable/assets/divider.png"
               alt=""
@@ -525,25 +523,30 @@
               loading="lazy"
               width="1200"
               height="512"
-              class="mx-auto h-auto opacity-80 mt-6"
-              style="width:200px"
+              class="mx-auto h-auto opacity-80"
+              style="width:160px"
             />
-            <p class="mt-4 font-title text-[0.82rem] tracking-[0.36em] text-hall-light">
+            <!-- Date lifted above and clearly visible -->
+            <p class="mt-2.5 sm:mt-3 font-title text-[0.95rem] sm:text-[1.1rem] tracking-[0.38em] text-[#fff6df] font-medium" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 16px rgba(233,200,121,0.6);">
               18 . 01 . 2027
             </p>
           </div>
-          <p class="mx-auto mt-5 max-w-[19rem] font-display text-[1.02rem] italic leading-relaxed text-ivory/90 reveal" style="transition-delay:1500ms">
-            Together with their families, request the honour of your presence at their Holy Matrimony &amp; Wedding Reception
-          </p>
         </div>
       </section>
 
       <!-- ========================================================================= -->
-      <!-- PART 3: WEDDING DETAILS & CELEBRATIONS (OG SEASHELL TEMPLATE ALL ACROSS) -->
+      <!-- ELEGANT PAGE TRANSITION SPACER (LEAVE SPACE IN BETWEEN PAGES)             -->
+      <!-- ========================================================================= -->
+      <div class="w-full py-8 sm:py-12 flex items-center justify-center bg-gradient-to-b from-[#150e04] to-[#fbf9f4]">
+        <div class="h-px w-28 bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent"></div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- PART 3: WEDDING DETAILS & CELEBRATIONS (IMAGE 4 FONTS EVERYWHERE)         -->
       <!-- ========================================================================= -->
 
       <!-- Wedding Holy Matrimony Message (OG Seashell Style) -->
-      <section class="relative px-7 pt-16 pb-12">
+      <section class="relative px-7 py-14 sm:py-20">
         <img
           src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
           alt=""
@@ -565,28 +568,59 @@
               <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
             </div>
           </div>
-          <p class="mx-auto max-w-md text-center text-sm leading-relaxed text-foreground/80 font-body">
-            &ldquo;Therefore what God has joined together, let no one separate.&rdquo;<br />
-            With hearts brimming with gratitude and devotion, we humbly invite you to witness our holy matrimony and share in the blessing of our nuptials and reception.
+          <p class="mx-auto max-w-lg text-center font-display text-lg italic leading-relaxed text-foreground/80">
+            &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
+          </p>
+          <p class="mt-2 text-center font-body text-xs uppercase tracking-airy text-muted-foreground">
+            Mark 10:9
           </p>
         </div>
       </section>
 
-      <!-- Wedding Celebrations & Itinerary (OG Seashell Style with Bougainvillea Divider) -->
-      <section class="relative px-6 pb-16">
-        <img
-          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/bougainvillea-divider.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="2172"
-          height="724"
-          class="pointer-events-none mx-auto mb-8 w-full max-w-md opacity-80"
-        />
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Wedding Countdown (OG Seashell Style) -->
+      <section class="px-6 py-12 sm:py-16">
+        <div class="reveal">
+          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+            Counting down to the Holy Matrimony
+          </p>
+          <div class="mt-6">
+            <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
+                <span id="wedDays" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Days</span>
+              </div>
+              <span class="text-primary/60 font-serif text-lg">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
+                <span id="wedHours" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Hrs</span>
+              </div>
+              <span class="text-primary/60 font-serif text-lg">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
+                <span id="wedMins" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Min</span>
+              </div>
+              <span class="text-primary/60 font-serif text-lg">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
+                <span id="wedSecs" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Sec</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Wedding Ceremonies: Holy Mass & Reception Cards (OG Seashell Style) -->
+      <section class="relative px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">The Sacred Sacrament</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Wedding Celebrations</h2>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">18 January 2027</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Wedding Ceremonies</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -594,52 +628,155 @@
             </div>
           </div>
 
-          <ul class="mx-auto max-w-md space-y-4">
-            <!-- Event 1: Holy Mass & Nuptial Ceremony -->
-            <li>
-              <article class="card-soft press p-5 rounded-sm border border-primary/25">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl font-bold">✞</span>
-                  <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl font-semibold text-foreground">Holy Mass &amp; Nuptial Ceremony</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
-                      Monday, 18 Jan 2027 &bull; 10:30 AM Onwards
-                    </p>
-                  </div>
+          <div class="mx-auto max-w-md space-y-6">
+            <!-- 1. Holy Mass Ceremony Card -->
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+              <div class="flex items-center gap-3">
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">⛪</span>
+                <div>
+                  <h3 class="font-display text-2xl font-semibold text-foreground">Holy Matrimony &amp; Mass</h3>
+                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                    Monday, 18 Jan 2027 &bull; 10:30 AM Onwards
+                  </p>
                 </div>
-                <p class="mt-4 text-sm font-semibold text-foreground">St. Antony's shrine &bull; Kanakamala</p>
-                <p class="mt-1 text-xs text-muted-foreground">Mechira - Kanakamala Rd, Perambra, Keralam</p>
-                <p class="mt-2 text-xs italic text-primary font-medium">Holy Mass followed by the Nuptial Blessing</p>
-              </article>
-            </li>
+              </div>
 
-            <!-- Event 2: Wedding Reception -->
-            <li>
-              <article class="card-soft press p-5 rounded-sm border border-primary/25">
-                <div class="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
-                  <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">⚜</span>
-                  <div class="min-w-0">
-                    <h3 class="truncate font-display text-2xl font-semibold text-foreground">Wedding Reception</h3>
-                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
-                      Monday, 18 Jan 2027 &bull; 12:30 PM Onwards
-                    </p>
-                  </div>
+              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body">
+                <p class="font-semibold text-foreground">St. Antony's Shrine, Kanakamala</p>
+                <p class="text-xs text-muted-foreground">Mechira - Kanakamala Rd, Perambra, Kerala</p>
+              </div>
+
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="https://maps.google.com/?q=St.+Antony's+Shrine+Kanakamala+Perambra+Kerala"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                >
+                  Church Directions
+                </a>
+                <button
+                  type="button"
+                  onclick="addToCalendarWedding()"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/40 bg-secondary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-foreground"
+                >
+                  Add to Calendar
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Reception Card -->
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+              <div class="flex items-center gap-3">
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">🥂</span>
+                <div>
+                  <h3 class="font-display text-2xl font-semibold text-foreground">Wedding Reception</h3>
+                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                    Monday, 18 Jan 2027 &bull; 12:30 PM Onwards
+                  </p>
                 </div>
-                <p class="mt-4 text-sm font-semibold text-foreground">Kizhakuden's HeartLand Convention Centre</p>
-                <p class="mt-1 text-xs text-muted-foreground">Athirapilly road, Koodapuzha, Chalakudy, Keralam 680721</p>
-                <p class="mt-2 text-xs italic text-primary font-medium">Join us for the grand feast and joyous celebrations</p>
-              </article>
-            </li>
-          </ul>
+              </div>
+
+              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body">
+                <p class="font-semibold text-foreground">Kizhakuden's HeartLand Convention Centre</p>
+                <p class="text-xs text-muted-foreground">Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721</p>
+              </div>
+
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="https://share.google/Os4UVfy3K6uJ26IiD"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                >
+                  Reception Map
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Wedding Venues & Google Maps (OG Seashell Style) -->
-      <section class="px-6 pb-16">
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Celebrations Timeline (EXACT IMAGE 4 STYLE & FONTS) -->
+      <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Find your way</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Wedding Venues</h2>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">Four Days of Joy</p>
+            <h2 class="mt-3 font-display text-[2rem] leading-tight text-foreground">Celebrations</h2>
+            <div class="flex items-center justify-center gap-3 py-6 text-primary/70">
+              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
+              <span class="text-[0.7rem] tracking-airy">❖</span>
+              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+            </div>
+          </div>
+
+          <div class="mx-auto max-w-lg space-y-4">
+            <!-- Event 1: Engagement -->
+            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary">
+                💍
+              </div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h3 class="font-display text-xl text-foreground">The Engagement</h3>
+                </div>
+                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+                  14 Jan 2027 &bull; 11:30 AM Onwards
+                </p>
+                <p class="mt-2 text-sm text-foreground/80 font-body">Pavithram Convention Centre, Kundara, Kollam</p>
+                <p class="mt-1 text-xs text-muted-foreground font-body italic">Ring exchange, family blessings &amp; luncheon.</p>
+              </div>
+            </article>
+
+            <!-- Event 2: Holy Mass -->
+            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary">
+                ⛪
+              </div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h3 class="font-display text-xl text-foreground">The Holy Matrimony</h3>
+                </div>
+                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+                  18 Jan 2027 &bull; 10:30 AM Onwards
+                </p>
+                <p class="mt-2 text-sm text-foreground/80 font-body">St. Antony's Shrine, Kanakamala, Chalakudy</p>
+                <p class="mt-1 text-xs text-muted-foreground font-body italic">Solemn Holy Mass &amp; sacred nuptial blessing.</p>
+              </div>
+            </article>
+
+            <!-- Event 3: Reception -->
+            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary">
+                🥂
+              </div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h3 class="font-display text-xl text-foreground">Wedding Reception</h3>
+                </div>
+                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+                  18 Jan 2027 &bull; 12:30 PM Onwards
+                </p>
+                <p class="mt-2 text-sm text-foreground/80 font-body">Kizhakuden's HeartLand Convention Centre</p>
+                <p class="mt-1 text-xs text-muted-foreground font-body italic">Dinner, music, joy &amp; celebration with loved ones.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Venues Section (OG Seashell Style) -->
+      <section class="px-6 py-12 sm:py-16">
+        <div class="reveal">
+          <div class="text-center">
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">Find Your Way</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Venues</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -648,351 +785,230 @@
           </div>
 
           <div class="mx-auto max-w-md space-y-5">
-            <!-- Church Venue Card -->
-            <div class="card-soft p-5 rounded-sm border border-primary/25">
-              <span class="text-[0.62rem] font-bold uppercase tracking-airy text-primary">Sacred Ceremony</span>
-              <h3 class="font-display text-2xl font-semibold text-foreground mt-1">St. Antony's shrine &bull; Kanakamala</h3>
-              <p class="mt-1 text-xs text-muted-foreground">Mechira - Kanakamala Rd, Perambra, Keralam</p>
+            <!-- Venue 1: Pavithram -->
+            <div class="card-soft p-6 rounded-sm border border-primary/20">
+              <span class="script text-lg text-primary block">Engagement Venue</span>
+              <h3 class="font-display text-xl font-semibold text-foreground mt-1">Pavithram Convention Centre</h3>
+              <p class="text-xs text-muted-foreground mt-1 font-body">
+                Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503
+              </p>
               <div class="mt-4">
                 <a
-                  href="https://maps.google.com/?q=St.+Antony's+shrine+Kanakamala+Perambra+Kerala"
+                  href="https://share.google/eKgdNtTLRLDoC2pMJ"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex min-h-[44px] items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
-                  Open in Google Maps
+                  <span>Open Maps</span>
+                  <span>&rarr;</span>
                 </a>
               </div>
             </div>
 
-            <!-- Reception Venue Card with Google Maps Embed -->
-            <div class="card-soft overflow-hidden rounded-sm border border-primary/25">
-              <div class="p-5">
-                <span class="text-[0.62rem] font-bold uppercase tracking-airy text-primary">Celebration &bull; Lunch</span>
-                <h3 class="font-display text-2xl font-semibold text-foreground mt-1">Kizhakuden's HeartLand Convention Centre</h3>
-                <p class="mt-1 text-xs text-muted-foreground">Athirapilly road, Koodapuzha, Chalakudy, Keralam 680721</p>
-                <div class="mt-4 flex flex-wrap gap-2">
-                  <a
-                    href="https://share.google/Os4UVfy3K6uJ26IiD"
-                    target="_blank"
-                    rel="noreferrer"
-                    class="press inline-flex min-h-[44px] items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
-                  >
-                    Open in Google Maps
-                  </a>
-                </div>
+            <!-- Venue 2: St. Antony's Shrine -->
+            <div class="card-soft p-6 rounded-sm border border-primary/20">
+              <span class="script text-lg text-primary block">Holy Matrimony Church</span>
+              <h3 class="font-display text-xl font-semibold text-foreground mt-1">St. Antony's Shrine</h3>
+              <p class="text-xs text-muted-foreground mt-1 font-body">
+                Mechira - Kanakamala Rd, Perambra, Kerala
+              </p>
+              <div class="mt-4">
+                <a
+                  href="https://maps.google.com/?q=St.+Antony's+Shrine+Kanakamala+Perambra+Kerala"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                >
+                  <span>Church Directions</span>
+                  <span>&rarr;</span>
+                </a>
               </div>
+            </div>
 
-              <!-- Embedded Interactive Map -->
-              <div class="h-56 w-full border-t border-primary/20">
-                <iframe
-                  src="https://maps.google.com/maps?q=Kizhakuden's+HeartLand+Convention+Centre+Chalakudy&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="Kizhakuden's HeartLand Reception Map"
-                ></iframe>
+            <!-- Venue 3: HeartLand -->
+            <div class="card-soft p-6 rounded-sm border border-primary/20">
+              <span class="script text-lg text-primary block">Wedding Reception Venue</span>
+              <h3 class="font-display text-xl font-semibold text-foreground mt-1">Kizhakuden's HeartLand Convention Centre</h3>
+              <p class="text-xs text-muted-foreground mt-1 font-body">
+                Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721
+              </p>
+              <div class="mt-4">
+                <a
+                  href="https://share.google/Os4UVfy3K6uJ26IiD"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                >
+                  <span>Reception Map</span>
+                  <span>&rarr;</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Wedding Save Our Date Section (OG Seashell Style) -->
-      <section class="px-6 pb-20">
-        <div class="reveal">
-          <div class="mx-auto max-w-md card-soft p-6 text-center rounded-sm border border-primary/25">
-            <p class="script text-xl text-primary font-medium">Save our date</p>
-            <p class="mt-2 text-sm text-muted-foreground font-body">Add our Holy Matrimony &amp; Reception to your calendar in one tap.</p>
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
+
+      <!-- Wish Sky / Floating Lanterns (OG Seashell Style) -->
+      <section class="wish-sky relative isolate overflow-hidden px-6 py-20 text-center text-white" style="background:#1a1510;">
+        <div class="relative z-10 mx-auto max-w-md">
+          <p class="script text-xl text-[#f4d8a1]">Send Your Blessings</p>
+          <h2 class="mt-2 font-display text-3xl font-medium text-[#fff6df]">Release a Sky Lantern</h2>
+          <p class="mt-3 text-xs leading-relaxed text-[#e6dcc6]/90 font-body">
+            Light a virtual lantern carrying your heartfelt prayers and wishes into the starlit sky for Binshi &amp; Joyel.
+          </p>
+
+          <div class="mt-6 flex justify-center">
             <button
               type="button"
-              onclick="addToCalendarWedding()"
-              class="press mt-5 flex min-h-[52px] w-full items-center justify-center rounded-sm border border-primary/45 bg-secondary text-[0.68rem] font-semibold uppercase tracking-airy text-foreground shadow-sm"
+              onclick="releaseLanterns()"
+              class="press flex items-center gap-2 rounded-full border border-[#d4af37]/60 bg-[#251707]/90 px-6 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,175,55,0.3)] backdrop-blur-md transition-all hover:border-[#d4af37] cursor-pointer"
             >
-              Add to Calendar &bull; 18 Jan 2027
+              <span class="text-lg">🏮</span>
+              <span class="font-body text-xs font-semibold uppercase tracking-widest text-[#f7e9c6]">Release Lantern</span>
             </button>
           </div>
+
+          <p id="lanternStatus" class="mt-4 font-body text-xs text-[#f4d8a1]/90 min-h-[1.5rem]"></p>
         </div>
       </section>
 
-      <!-- Wish Sky (Lanterns) from OG Seashell Template -->
-      <section class="wish-sky relative isolate overflow-hidden px-6 py-20 text-center">
-        <img
-          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/lantern-constellation.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="1024"
-          height="1536"
-          class="pointer-events-none absolute -right-28 -top-24 -z-10 h-[115%] w-auto opacity-45"
-        />
-        <div class="mx-auto max-w-sm">
-          <img
-            src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/watercolor-lantern.png"
-            alt="Watercolor paper lantern glowing warmly"
-            loading="lazy"
-            width="1024"
-            height="1536"
-            class="lantern-breathe mx-auto w-28 object-contain"
-          />
-          <h2 class="mt-2 font-display text-[2.35rem] leading-tight text-foreground font-medium">Send them a wish</h2>
-          <p class="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground font-body">
-            Release a sky full of light for their new beginning.
-          </p>
-          <button
-            type="button"
-            onclick="releaseLanterns()"
-            class="press mt-7 flex min-h-[50px] w-full items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] uppercase tracking-[0.22em] text-primary-foreground shadow-[0_14px_30px_-18px_rgba(112,82,42,0.75)]"
-          >
-            Release lanterns
-          </button>
-          <p id="lanternStatus" aria-live="polite" class="mt-3 min-h-5 text-xs text-muted-foreground font-body">
-            Tap to fill the sky with lanterns.
-          </p>
-        </div>
-      </section>
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
 
-      <!-- RSVP SECTION (OG SEASHELL CARD-SOFT STYLE) -->
-      <section id="rsvp" class="relative px-6 pb-20">
-        <div class="reveal mx-auto max-w-lg">
-          <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
-            <div class="text-center">
-              <p class="script text-xl text-primary font-medium">Your presence is our blessing</p>
-              <h2 class="mt-2 font-display text-[2.4rem] text-foreground font-medium">Kindly RSVP</h2>
-              <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
-                <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
-                <span class="text-[0.7rem] tracking-airy">❖</span>
-                <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
-              </div>
-              <p class="text-xs text-muted-foreground font-body">
-                Please respond by 30 December 2026 to assist us with hospitality arrangements.
-              </p>
+      <!-- RSVP Section (OG Seashell Style) -->
+      <section id="rsvp" class="relative px-6 py-16 sm:py-20">
+        <div class="reveal">
+          <div class="text-center">
+            <p class="script text-xl text-primary font-medium">Will you join us?</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">RSVP</h2>
+            <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
+              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
+              <span class="text-[0.7rem] tracking-airy">❖</span>
+              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
             </div>
+            <p class="mx-auto max-w-md font-body text-xs text-muted-foreground leading-relaxed">
+              Kindly confirm your presence so we may warmly prepare for your attendance at our Engagement and Wedding.
+            </p>
+          </div>
 
-            <!-- Interactive RSVP Form -->
-            <form id="rsvpForm" class="mt-6 space-y-4" onsubmit="event.preventDefault(); submitRsvp();">
+          <div class="mx-auto mt-8 max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+            <form onsubmit="event.preventDefault(); submitRsvp();" class="space-y-4">
               <div>
-                <label for="guestName" class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
-                  Your Full Name *
-                </label>
+                <label for="guestName" class="block font-body text-xs font-medium text-foreground">Your Full Name *</label>
                 <input
                   type="text"
                   id="guestName"
                   required
-                  placeholder="e.g. Mr. &amp; Mrs. Thomas"
-                  class="seashell-input"
+                  placeholder="e.g. John Doe"
+                  class="mt-1.5 w-full rounded-sm border border-primary/30 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground focus:border-primary focus:outline-none"
                 />
               </div>
 
               <div>
-                <label for="guestPhone" class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
-                  Contact Number
-                </label>
+                <label for="guestPhone" class="block font-body text-xs font-medium text-foreground">Phone Number</label>
                 <input
                   type="tel"
                   id="guestPhone"
-                  placeholder="+91 98765 43210"
-                  class="seashell-input"
+                  placeholder="e.g. +91 98765 43210"
+                  class="mt-1.5 w-full rounded-sm border border-primary/30 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground focus:border-primary focus:outline-none"
                 />
               </div>
 
               <div>
-                <label class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
-                  Will You Attend?
-                </label>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <label class="seashell-radio-pill">
-                    <input type="radio" name="attendance" value="attending" checked />
-                    <span class="text-xs font-medium text-foreground">Delighted to Attend</span>
+                <label class="block font-body text-xs font-medium text-foreground">Will you be attending?</label>
+                <div class="mt-2 flex gap-4 font-body text-xs text-foreground">
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="attendance" value="attending" checked class="accent-[#8b6b43]" />
+                    <span>Joyfully Accept</span>
                   </label>
-                  <label class="seashell-radio-pill">
-                    <input type="radio" name="attendance" value="declined" />
-                    <span class="text-xs font-medium text-foreground">Regretfully Unable</span>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="attendance" value="regret" class="accent-[#8b6b43]" />
+                    <span>Regretfully Decline</span>
                   </label>
                 </div>
               </div>
 
-              <!-- Guest Count Adjuster -->
               <div>
-                <label class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
-                  Number of Attending Guests
-                </label>
-                <div class="flex items-center gap-3">
-                  <button type="button" class="guest-btn" onclick="adjustGuest(-1)">&minus;</button>
-                  <span id="guestCountDisplay" class="font-display text-2xl font-semibold text-foreground w-12 text-center">
+                <label class="block font-body text-xs font-medium text-foreground">Number of Guests</label>
+                <div class="mt-2 flex items-center gap-3">
+                  <button
+                    type="button"
+                    onclick="adjustGuest(-1)"
+                    class="h-9 w-9 rounded-sm border border-primary/30 bg-secondary font-display text-base font-bold text-foreground hover:bg-primary hover:text-white"
+                  >
+                    -
+                  </button>
+                  <span id="guestCountDisplay" class="min-w-[2.5rem] text-center font-display text-lg font-semibold text-foreground">
                     2
                   </span>
-                  <button type="button" class="guest-btn" onclick="adjustGuest(1)">&#43;</button>
-                  <span class="text-xs text-muted-foreground font-body">guest(s) attending</span>
+                  <button
+                    type="button"
+                    onclick="adjustGuest(1)"
+                    class="h-9 w-9 rounded-sm border border-primary/30 bg-secondary font-display text-base font-bold text-foreground hover:bg-primary hover:text-white"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
 
               <div>
-                <label for="guestMessage" class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
-                  Blessings &amp; Wishes for Binshi &amp; Joyel
-                </label>
+                <label for="guestMessage" class="block font-body text-xs font-medium text-foreground">Wishes / Blessings</label>
                 <textarea
                   id="guestMessage"
                   rows="3"
-                  placeholder="Share your prayers and heartfelt blessings..."
-                  class="seashell-input"
-                  style="min-height: 80px;"
+                  placeholder="Leave a heartfelt message for Binshi & Joyel..."
+                  class="mt-1.5 w-full rounded-sm border border-primary/30 bg-white/70 px-3.5 py-2 font-body text-sm text-foreground focus:border-primary focus:outline-none"
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn-whatsapp-rsvp mt-2">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
-                </svg>
-                Send RSVP via WhatsApp
-              </button>
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="press w-full rounded-sm bg-primary py-3 font-body text-xs font-semibold uppercase tracking-airy text-primary-foreground shadow-sm hover:opacity-95"
+                >
+                  Send RSVP via WhatsApp &rarr;
+                </button>
+              </div>
             </form>
 
-            <!-- Family Residences Details -->
-            <div class="mt-8 border-t border-primary/20 pt-6">
-              <h4 class="font-title text-[0.72rem] font-bold uppercase tracking-airy text-primary text-center mb-4">
-                Family Residences &bull; Addresses
-              </h4>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                <div class="p-4 bg-[#faf8f5] rounded-sm border border-primary/15">
-                  <p class="font-display text-base font-semibold text-foreground">Bride's Family</p>
-                  <p class="text-xs text-muted-foreground mt-1">
-                    Manthottathil House<br />
-                    Elampalloor, Kundara<br />
-                    Kollam, Kerala 691501
-                  </p>
-                </div>
-                <div class="p-4 bg-[#faf8f5] rounded-sm border border-primary/15">
-                  <p class="font-display text-base font-semibold text-foreground">Groom's Family</p>
-                  <p class="text-xs text-muted-foreground mt-1">
-                    Padinjarakaran House<br />
-                    Kanakamala, Near Panampilly College<br />
-                    Potta, Chalakudy, Kerala
-                  </p>
-                </div>
-              </div>
+            <div class="mt-6 border-t border-primary/15 pt-5 text-center font-body text-[0.72rem] text-muted-foreground space-y-2">
+              <p class="font-semibold text-foreground">Family Residences:</p>
+              <p>Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501</p>
+              <p>Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ======================================================= -->
-      <!-- FOOTER SCENE (EXACT OG SEASHELL VOWS FOOTER TEMPLATE) -->
-      <!-- ======================================================= -->
-      <footer class="footer-scene relative isolate min-h-[38rem] overflow-hidden">
-        <img
-          src="seashell-vows/assets/footer-wash-DG1rtX_C.jpg"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="1024"
-          height="1280"
-          class="absolute inset-0 -z-30 h-full w-full object-cover"
-          style="transform:translate3d(0, 0px, 0) scale(1.12)"
-        />
-        <div class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,var(--color-background)_0%,transparent_24%,color-mix(in_oklab,var(--color-background)_38%,transparent)_100%)]"></div>
-        <img
-          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/lantern-constellation.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="1024"
-          height="1536"
-          class="pointer-events-none absolute -right-24 -top-32 -z-10 h-[110%] w-auto opacity-40"
-        />
-        <img
-          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/watercolor-lantern.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="1024"
-          height="1536"
-          class="lantern-breathe pointer-events-none absolute -left-10 top-24 -z-10 w-28 opacity-70"
-        />
+      <!-- SPACE BETWEEN PAGES -->
+      <div class="page-spacer"></div>
 
-        <div class="mx-auto flex min-h-[38rem] max-w-lg flex-col items-center justify-end px-7 pb-10 pt-32 text-center">
-          <img
-            src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            width="1024"
-            height="1024"
-            class="w-24 opacity-75"
-          />
-          <p class="mt-4 script text-xl text-primary font-medium">We cannot wait to celebrate with you</p>
-          <h2 class="mt-4 font-display text-[2.65rem] leading-[1.05] text-foreground font-normal">
-            Dr Binshi <span class="script text-2xl text-primary">&amp;</span> Joyel
-          </h2>
-
-          <div class="mt-7 grid w-full max-w-sm grid-cols-2 border-y border-primary/25 py-4 text-left">
-            <div class="border-r border-primary/25 pr-5">
-              <p class="text-xs text-muted-foreground uppercase tracking-airy">Engagement</p>
-              <p class="mt-1 font-display text-lg font-semibold text-foreground">14 Jan 2027</p>
-              <p class="text-[0.68rem] text-muted-foreground">Kundara, Kollam</p>
-            </div>
-            <div class="pl-5">
-              <p class="text-xs text-muted-foreground uppercase tracking-airy">Wedding</p>
-              <p class="mt-1 font-display text-lg font-semibold text-foreground">18 Jan 2027</p>
-              <p class="text-[0.68rem] text-muted-foreground">Kanakamala &bull; Chalakudy</p>
-            </div>
+      <!-- Footer Scene (OG Seashell Style) -->
+      <footer class="relative overflow-hidden px-6 pt-12 pb-24 text-center border-t border-primary/15">
+        <div class="reveal">
+          <p class="script text-2xl text-primary">Dr Binshi &amp; Joyel</p>
+          <p class="mt-2 font-display text-sm tracking-widest uppercase text-muted-foreground">
+            January 2027 &bull; Kollam &amp; Chalakudy
+          </p>
+          <div class="mt-6 flex justify-center gap-3">
+            <button
+              type="button"
+              onclick="shareInvitation()"
+              class="press inline-flex items-center gap-2 rounded-sm border border-primary/40 bg-secondary px-5 py-2.5 font-body text-xs font-semibold uppercase tracking-airy text-foreground"
+            >
+              <span>Share Invitation</span>
+              <span>🔗</span>
+            </button>
           </div>
-
-          <button
-            type="button"
-            onclick="shareInvitation()"
-            class="press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 font-body text-[0.68rem] uppercase tracking-airy text-foreground shadow-sm hover:bg-background"
-          >
-            Share this invitation
-          </button>
-
-          <p class="mt-12 text-[0.55rem] uppercase tracking-airy text-muted-foreground/75">
-            With love, blessings, and heartfelt gratitude &bull; 2027
+          <p class="mt-8 font-body text-[0.62rem] text-muted-foreground/75 tracking-wider uppercase">
+            Designed with love &bull; Binshi &amp; Joyel
           </p>
         </div>
       </footer>
-
-    </main>
-
-    <!-- Video Autoplay & Playback Assurance -->
-    <script>
-      (function() {
-        var vid = document.getElementById('weddingHeroVideo');
-        if (!vid) return;
-
-        function playVid() {
-          if (vid.paused) {
-            vid.muted = true;
-            var p = vid.play();
-            if (p !== undefined) {
-              p.catch(function() {});
-            }
-          }
-        }
-
-        playVid();
-
-        var events = ['pointerdown', 'touchstart', 'scroll'];
-        function onInteract() {
-          playVid();
-          events.forEach(function(e) {
-            window.removeEventListener(e, onInteract);
-          });
-        }
-        events.forEach(function(e) {
-          window.addEventListener(e, onInteract, { once: true, passive: true });
-        });
-
-        document.addEventListener('visibilitychange', function() {
-          if (!document.hidden) {
-            playVid();
-          }
-        });
-      })();
-    </script>
+    </div>
 
     <!-- General Page Interactivity (Opener, BGM, Countdown, RSVP, Lanterns) -->
     <script>
@@ -1055,6 +1071,7 @@
 
       if (bgmBtn) {
         bgmBtn.addEventListener('click', function() {
+          if (!bgm) return;
           if (bgm.paused) {
             bgm.play().then(function() {
               bgmBtn.classList.add('is-playing');
@@ -1066,29 +1083,46 @@
         });
       }
 
-      // 2. Engagement Countdown (14 Jan 2027 11:30:00 IST)
-      var engagementTarget = new Date('2027-01-14T11:30:00+05:30').getTime();
-      function updateCountdown() {
+      // 2. Countdowns
+      var engTarget = new Date('2027-01-14T11:30:00+05:30').getTime();
+      var wedTarget = new Date('2027-01-18T10:30:00+05:30').getTime();
+
+      function updateCountdowns() {
         var now = new Date().getTime();
-        var diff = Math.max(0, engagementTarget - now);
 
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        var secs = Math.floor((diff % (1000 * 60)) / 1000);
+        // Engagement
+        var diffEng = Math.max(0, engTarget - now);
+        var ed = Math.floor(diffEng / (1000 * 60 * 60 * 24));
+        var eh = Math.floor((diffEng % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var em = Math.floor((diffEng % (1000 * 60 * 60)) / (1000 * 60));
+        var es = Math.floor((diffEng % (1000 * 60)) / 1000);
 
-        var dEl = document.getElementById('engDays');
-        var hEl = document.getElementById('engHours');
-        var mEl = document.getElementById('engMins');
-        var sEl = document.getElementById('engSecs');
+        var engDaysEl = document.getElementById('engDays');
+        if (engDaysEl) {
+          engDaysEl.textContent = String(ed).padStart(2, '0');
+          document.getElementById('engHours').textContent = String(eh).padStart(2, '0');
+          document.getElementById('engMins').textContent = String(em).padStart(2, '0');
+          document.getElementById('engSecs').textContent = String(es).padStart(2, '0');
+        }
 
-        if (dEl) dEl.textContent = String(days).padStart(2, '0');
-        if (hEl) hEl.textContent = String(hours).padStart(2, '0');
-        if (mEl) mEl.textContent = String(mins).padStart(2, '0');
-        if (sEl) sEl.textContent = String(secs).padStart(2, '0');
+        // Wedding
+        var diffWed = Math.max(0, wedTarget - now);
+        var wd = Math.floor(diffWed / (1000 * 60 * 60 * 24));
+        var wh = Math.floor((diffWed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var wm = Math.floor((diffWed % (1000 * 60 * 60)) / (1000 * 60));
+        var ws = Math.floor((diffWed % (1000 * 60)) / 1000);
+
+        var wedDaysEl = document.getElementById('wedDays');
+        if (wedDaysEl) {
+          wedDaysEl.textContent = String(wd).padStart(2, '0');
+          document.getElementById('wedHours').textContent = String(wh).padStart(2, '0');
+          document.getElementById('wedMins').textContent = String(wm).padStart(2, '0');
+          document.getElementById('wedSecs').textContent = String(ws).padStart(2, '0');
+        }
       }
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
+
+      setInterval(updateCountdowns, 1000);
+      updateCountdowns();
 
       // 3. Guest Count Adjuster
       var guestCount = 2;
@@ -1189,7 +1223,7 @@
         var status = document.getElementById('lanternStatus');
         if (status) {
           status.textContent = '✨ ' + lanternCount + ' lantern(s) released into the starry sky with your blessings!';
-          status.style.color = 'var(--color-primary)';
+          status.style.color = '#f4d8a1';
           status.style.fontWeight = 'bold';
         }
       }
