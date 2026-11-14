@@ -17,7 +17,9 @@
     <meta property="og:image" content="./seashell-vows/editable/assets/couple-walking.png" />
 
     <!-- Preloads -->
-    <link rel="preload" as="image" href="seashell-vows/editable/assets/hero-arch.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/opener-frames/lantern-reveal-first.png" fetchpriority="high" />
+    <link rel="preload" as="video" href="seashell-vows/editable/assets/wedding-opener.mp4" type="video/mp4" />
+    <link rel="preload" as="image" href="seashell-vows/editable/assets/hero-arch.jpg" />
     <link rel="preload" as="image" href="seashell-vows/editable/assets/couple-walking.png" fetchpriority="high" />
     <link rel="preload" as="image" href="gilded-hall/editable/assets/hall.png" />
     <link rel="preload" as="video" href="gilded-hall/editable/assets/couple.mp4" type="video/mp4" />
@@ -28,16 +30,17 @@
     <!-- External Google Fonts -->
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-6476c501f8.css" />
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-86ad40e56c.css" />
-    <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-3c9e6a6ae3.css" />
-    <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-fde818cf20.css" />
-
     <!-- Original CSS Bundles -->
     <link rel="stylesheet" href="seashell-vows/assets/styles-CbBzkN6m.css" />
     <link rel="stylesheet" href="gilded-hall/assets/styles-B1fytZJn.css" />
 
     <style>
-      /* --- Scoped Global Theme --- */
+      
+      /* --- Seashell Vows Typography Everywhere --- */
       :root {
+        --font-display: 'Cormorant Garamond', Georgia, serif;
+        --font-script: 'Petit Formal Script', cursive;
+        --font-body: 'Jost', sans-serif;
         --color-background: #fbf9f4;
         --color-foreground: #1c150e;
         --color-card: #ffffff;
@@ -51,11 +54,25 @@
       body {
         background-color: var(--color-background);
         color: var(--color-foreground);
-        font-family: 'Jost', sans-serif;
+        font-family: var(--font-body);
         margin: 0;
         padding: 0;
         overflow-x: hidden;
       }
+
+      .font-display {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+      }
+      .script {
+        font-family: 'Petit Formal Script', cursive !important;
+      }
+      .font-body {
+        font-family: 'Jost', sans-serif !important;
+      }
+      .font-title {
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+      }
+
 
       /* Seashell Hero Text Enhancement */
       .seashell-hero-text-wrap {
@@ -367,60 +384,35 @@
       </svg>
     </button>
 
-    <!-- Opener Gate Modal (Seashell Vows Style) -->
-    <div id="invitationOpener" class="invitation-opener">
-      <img
-        src="seashell-vows/editable/assets/hero-arch.jpg"
-        alt="Seashell Vows Wedding Invitation"
-        class="absolute inset-0 h-full w-full object-cover object-center"
-      />
-      <div
-        class="pointer-events-none absolute inset-0"
-        style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(20,14,8,0.7) 80%, rgba(10,5,0,0.85) 100%)"
-      ></div>
+    <!-- Authentic Seashell Vows Video Opener Gate -->
+    <div id="invitationOpener" class="invitation-opener" role="dialog" aria-label="Open Dr Binshi and Joyel's wedding invitation">
+      <video
+        id="openerVideo"
+        src="seashell-vows/editable/assets/wedding-opener.mp4"
+        poster="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/opener-frames/lantern-reveal-first.png"
+        preload="auto"
+        playsinline
+        webkit-playsinline
+        muted
+        class="h-full w-full object-cover [transform:translateZ(0)]"
+      ></video>
 
-      <!-- Golden Petals on Opener -->
-      <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden z-10">
-            <span class="petal petal-gold" style="left:13%;width:11px;height:14px;animation-delay:0s;animation-duration:9.00s;--petal-drift:35px;--petal-spin:240deg;--petal-opacity:0.65"></span>
-            <span class="petal petal-amber" style="left:10%;width:18px;height:23px;animation-delay:-1.45s;animation-duration:11.10s;--petal-drift:-46px;--petal-spin:293deg;--petal-opacity:0.78"></span>
-            <span class="petal petal-champagne" style="left:7%;width:12px;height:15px;animation-delay:-2.9s;animation-duration:13.20s;--petal-drift:57px;--petal-spin:346deg;--petal-opacity:0.91"></span>
-            <span class="petal petal-gold" style="left:4%;width:19px;height:24px;animation-delay:-4.35s;animation-duration:15.30s;--petal-drift:-68px;--petal-spin:399deg;--petal-opacity:0.69"></span>
-            <span class="petal petal-gold" style="left:1%;width:13px;height:16px;animation-delay:-5.8s;animation-duration:9.40s;--petal-drift:79px;--petal-spin:452deg;--petal-opacity:0.82"></span>
-            <span class="petal petal-amber" style="left:98%;width:20px;height:25px;animation-delay:-7.25s;animation-duration:11.50s;--petal-drift:-35px;--petal-spin:265deg;--petal-opacity:0.95"></span>
-            <span class="petal petal-champagne" style="left:95%;width:14px;height:18px;animation-delay:-8.7s;animation-duration:13.60s;--petal-drift:46px;--petal-spin:318deg;--petal-opacity:0.73"></span>
-            <span class="petal petal-gold" style="left:92%;width:21px;height:26px;animation-delay:-10.15s;animation-duration:15.70s;--petal-drift:-57px;--petal-spin:371deg;--petal-opacity:0.86"></span>
-            <span class="petal petal-gold" style="left:89%;width:15px;height:19px;animation-delay:-11.6s;animation-duration:9.80s;--petal-drift:68px;--petal-spin:424deg;--petal-opacity:0.99"></span>
-            <span class="petal petal-amber" style="left:86%;width:22px;height:28px;animation-delay:-13.05s;animation-duration:11.90s;--petal-drift:-79px;--petal-spin:477deg;--petal-opacity:0.77"></span>
-            <span class="petal petal-champagne" style="left:83%;width:16px;height:20px;animation-delay:-0.5s;animation-duration:14.00s;--petal-drift:35px;--petal-spin:290deg;--petal-opacity:0.90"></span>
-            <span class="petal petal-gold" style="left:80%;width:23px;height:29px;animation-delay:-1.95s;animation-duration:16.10s;--petal-drift:-46px;--petal-spin:343deg;--petal-opacity:0.68"></span>
-      </div>
-
+      <!-- Skip Button -->
       <button id="openerSkipBtn" class="opener-skip-btn" type="button">Skip &bull;&bull;</button>
 
-      <div class="relative z-10 flex flex-col items-center gap-4 px-6 text-center">
-        <p class="font-body text-[0.68rem] font-semibold uppercase tracking-[0.38em] text-[#f7e9c6]" style="text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
-          The Wedding &amp; Engagement of
-        </p>
-        <h1 class="font-display text-[clamp(2.4rem,10vw,3.6rem)] font-light leading-tight text-white" style="text-shadow: 0 3px 12px rgba(0,0,0,0.9);">
-          Dr Binshi Biju <span class="script text-2xl text-[#f7e9c6] block sm:inline my-1">&amp;</span> Joyel Paul
-        </h1>
-        <p class="font-body text-[0.74rem] uppercase tracking-[0.28em] text-[#faecc9]" style="text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
-          14 Jan 2027 &bull; 18 Jan 2027
-        </p>
-
-        <button
-          id="openerEnterBtn"
-          type="button"
-          class="press group relative mt-4 flex items-center gap-3 rounded-full border border-[#f7e9c6]/80 bg-[#251707]/90 px-8 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_24px_rgba(233,200,121,0.5)] backdrop-blur-md transition-all duration-300 hover:border-[#f7e9c6] hover:bg-[#34200a] cursor-pointer"
-        >
-          <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#f7e9c6]/25 text-[#f7e9c6] shadow-[0_0_12px_rgba(233,200,121,0.6)]">
-            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-current ml-0.5"><path d="M8 5v14l11-7z" /></svg>
-          </span>
-          <span class="font-title text-[0.74rem] font-semibold uppercase tracking-[0.38em] text-[#fff6df]">
-            Tap To Open
-          </span>
-        </button>
-      </div>
+      <!-- Tap to Open Button Overlay (Exact Seashell Vows Signature) -->
+      <button
+        id="openerEnterBtn"
+        type="button"
+        class="absolute inset-0 flex w-full flex-col items-center justify-end bg-[linear-gradient(180deg,transparent_42%,rgba(25,29,38,0.58)_100%)] px-6 pb-14 text-center text-white focus-visible:outline-none cursor-pointer transition-opacity duration-500"
+      >
+        <span class="script text-2xl sm:text-3xl text-[#f4d8a1]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.85);">
+          Dr Binshi &amp; Joyel
+        </span>
+        <span class="mt-3 border-b border-white/60 pb-1 text-[0.72rem] font-bold uppercase tracking-[0.26em] text-white">
+          Tap to open
+        </span>
+      </button>
     </div>
 
     <!-- MAIN INVITATION: SEASHELL THEME ALL ACROSS -->
@@ -1296,12 +1288,14 @@
 
     <!-- General Page Interactivity (Opener, BGM, Countdown, RSVP, Lanterns) -->
     <script>
-      // 1. Audio and Opener Handling
+      // 1. Audio and Seashell Video Opener Handling
       var bgm = document.getElementById('weddingBgm');
       var bgmBtn = document.getElementById('bgmToggleBtn');
       var opener = document.getElementById('invitationOpener');
+      var openerVideo = document.getElementById('openerVideo');
       var openerEnterBtn = document.getElementById('openerEnterBtn');
       var openerSkipBtn = document.getElementById('openerSkipBtn');
+      var hasOpened = false;
 
       function startAudio() {
         if (bgm) {
@@ -1311,18 +1305,45 @@
         }
       }
 
-      function closeOpener() {
+      function finishOpener() {
+        if (hasOpened) return;
+        hasOpened = true;
         if (opener) {
           opener.classList.add('is-closing');
           setTimeout(function() {
             opener.style.display = 'none';
+            document.body.style.overflow = '';
           }, 800);
         }
         startAudio();
       }
 
-      if (openerEnterBtn) openerEnterBtn.addEventListener('click', closeOpener);
-      if (openerSkipBtn) openerSkipBtn.addEventListener('click', closeOpener);
+      if (openerEnterBtn) {
+        openerEnterBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openerEnterBtn.style.opacity = '0';
+          openerEnterBtn.style.pointerEvents = 'none';
+          startAudio();
+
+          if (openerVideo) {
+            openerVideo.currentTime = 0;
+            openerVideo.play().catch(function() {
+              finishOpener();
+            });
+            openerVideo.onended = finishOpener;
+          } else {
+            finishOpener();
+          }
+        });
+      }
+
+      if (openerSkipBtn) {
+        openerSkipBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (openerVideo) openerVideo.pause();
+          finishOpener();
+        });
+      }
 
       if (bgmBtn) {
         bgmBtn.addEventListener('click', function() {
