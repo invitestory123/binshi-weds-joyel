@@ -20,282 +20,26 @@
     <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/opener-frames/lantern-reveal-first.png" fetchpriority="high" />
     <link rel="preload" as="video" href="seashell-vows/editable/assets/wedding-opener.mp4" type="video/mp4" />
     <link rel="preload" as="image" href="seashell-vows/editable/assets/hero-arch.jpg" />
-    <link rel="preload" as="image" href="seashell-vows/editable/assets/couple-walking.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="seashell-vows/editable/assets/couple-walking.png" />
     <link rel="preload" as="image" href="gilded-hall/editable/assets/hall.png" />
     <link rel="preload" as="video" href="gilded-hall/editable/assets/couple.mp4" type="video/mp4" />
     <link rel="preload" as="image" href="gilded-hall/editable/assets/petals.png" />
     <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png" />
     <link rel="preload" as="image" href="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/bougainvillea-divider.png" />
 
-    <!-- External Google Fonts -->
+    <!-- External Google Fonts: OG Seashell Vows Fonts -->
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-6476c501f8.css" />
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-86ad40e56c.css" />
+
+    <!-- External Google Fonts: OG Gilded Hall Fonts (Marcellus) -->
+    <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-3c9e6a6ae3.css" />
+    <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-fde818cf20.css" />
+
     <!-- Original CSS Bundles -->
     <link rel="stylesheet" href="seashell-vows/assets/styles-CbBzkN6m.css" />
     <link rel="stylesheet" href="gilded-hall/assets/styles-B1fytZJn.css" />
 
     <style>
-      
-      /* --- Seashell Vows Typography Everywhere --- */
-      :root {
-        --font-display: 'Cormorant Garamond', Georgia, serif;
-        --font-script: 'Petit Formal Script', cursive;
-        --font-body: 'Jost', sans-serif;
-        --color-background: #fbf9f4;
-        --color-foreground: #1c150e;
-        --color-card: #ffffff;
-        --color-primary: #8a632b;
-        --color-muted-foreground: #4a3d31;
-        --color-sage: #889e72;
-        --gradient-veil: linear-gradient(180deg, transparent 0%, rgba(251, 249, 244, 0.95) 92%);
-        --shadow-soft: 0 18px 40px -24px rgba(92, 80, 68, 0.28);
-      }
-
-      body {
-        background-color: var(--color-background);
-        color: var(--color-foreground);
-        font-family: var(--font-body);
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-      }
-
-      .font-display {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
-      }
-      .script {
-        font-family: 'Petit Formal Script', cursive !important;
-      }
-      .font-body {
-        font-family: 'Jost', sans-serif !important;
-      }
-      .font-title {
-        font-family: 'Cormorant Garamond', Georgia, serif !important;
-      }
-
-
-      /* Seashell Hero Text Enhancement */
-      .seashell-hero-text-wrap {
-        background: linear-gradient(180deg, transparent 0%, rgba(253, 251, 247, 0.72) 18%, rgba(253, 251, 247, 0.97) 50%, #fcfbf7 100%);
-        width: 100%;
-        padding-top: 2.5rem;
-        padding-bottom: 2.8rem;
-      }
-
-      /* Gilded Hall First Page Wedding Hero */
-      .gilded-hero-section {
-        --hall-deep: #4a3312;
-        --hall-amber: #8f6720;
-        --hall-glow: #e9c879;
-        --hall-light: #f7e9c6;
-        --ivory: #ffffff;
-        position: relative;
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        overflow: hidden;
-        background-color: #150e04;
-      }
-
-      /* Decongested & Masked Rain of Light Beams */
-      .gilded-rain-beams {
-        pointer-events: none;
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-        opacity: 0.45;
-        /* Mask beams away from the center text area to prevent obstruction */
-        -webkit-mask-image: radial-gradient(ellipse at 50% 28%, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.55) 48%, black 80%);
-        mask-image: radial-gradient(ellipse at 50% 28%, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.55) 48%, black 80%);
-      }
-
-      /* Protected Dark Gold Backdrop for Wedding Hero Typography */
-      .gilded-hero-content {
-        position: relative;
-        z-index: 25;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        text-align: center;
-        /* Comfortable safe top spacing */
-        padding-top: max(2.8rem, calc(env(safe-area-inset-top, 24px) + 2.2rem));
-        padding-bottom: 3.5rem;
-      }
-
-      .gilded-hero-box {
-        background: radial-gradient(ellipse at 50% 45%, rgba(18, 11, 4, 0.78) 0%, rgba(18, 11, 4, 0.38) 65%, transparent 100%);
-        padding: 1.25rem 1rem;
-        border-radius: 16px;
-        max-width: 32rem;
-        margin: 0 auto;
-      }
-
-      .gilded-hero-names {
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-weight: 600;
-        line-height: 1.05;
-        background: linear-gradient(180deg, #ffffff 0%, #fff2bf 40%, #ffd666 75%, #dfa535 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 20px rgba(18, 10, 3, 0.95));
-      }
-
-      /* --- Falling Petal Rain (Pure Royal Gold & Amber) --- */
-      @keyframes petal-rain-fall {
-        0% {
-          transform: translate3d(0, -8vh, 0) rotate(0deg);
-          opacity: 0;
-        }
-        8% {
-          opacity: var(--petal-opacity, 0.85);
-        }
-        92% {
-          opacity: var(--petal-opacity, 0.85);
-        }
-        100% {
-          transform: translate3d(var(--petal-drift, 40px), 108vh, 0) rotate(var(--petal-spin, 320deg));
-          opacity: 0;
-        }
-      }
-
-      .petal {
-        position: absolute;
-        top: 0;
-        border-radius: 60% 4% 60% 60%;
-        background: radial-gradient(circle at 30% 30%, #ffc24d, #f58a1f 55%, #d96a08);
-        box-shadow: 0 1px 3px rgba(150, 70, 0, 0.25);
-        animation: petal-rain-fall linear infinite;
-        will-change: transform;
-        pointer-events: none;
-      }
-      .petal.petal-gold {
-        background: radial-gradient(circle at 35% 35%, #fff2b8, #e9c879 50%, #c9973e 90%);
-        box-shadow: 0 1px 3px rgba(169, 124, 42, 0.35);
-      }
-      .petal.petal-amber {
-        background: radial-gradient(circle at 30% 30%, #ffc24d, #f58a1f 55%, #d96a08);
-        box-shadow: 0 1px 3px rgba(150, 70, 0, 0.3);
-      }
-      .petal.petal-champagne {
-        background: radial-gradient(circle at 35% 35%, #fce9bc, #dfb35a 55%, #b38323);
-        box-shadow: 0 1px 3px rgba(179, 131, 35, 0.3);
-      }
-      .petal.petal-sage {
-        background: radial-gradient(circle at 35% 35%, #e2ecd9, #b8cca6 60%, #889e72);
-        box-shadow: 0 1px 3px rgba(100, 120, 80, 0.2);
-      }
-
-      /* Interactive Tap/Click Petal Scatter */
-      @keyframes petal-fall {
-        0% {
-          opacity: 0;
-          transform: translateY(-10px) rotate(0deg) scale(0.7);
-        }
-        15% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-          transform: translate3d(var(--drift, 30px), 240px, 0) rotate(320deg) scale(1);
-        }
-      }
-
-      .interactive-petal-layer {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 9998;
-        overflow: hidden;
-      }
-
-      /* RSVP & Paper Inputs in Seashell Theme */
-      .seashell-card {
-        background: #ffffff;
-        border: 1px solid rgba(138, 99, 43, 0.18);
-        box-shadow: 0 14px 34px -14px rgba(92, 80, 68, 0.16);
-        border-radius: 4px;
-      }
-      .seashell-input {
-        width: 100%;
-        min-height: 48px;
-        background: #faf8f5;
-        border: 1px solid rgba(138, 99, 43, 0.3);
-        border-radius: 3px;
-        color: #1c150e;
-        padding: 0.75rem 1rem;
-        font-family: 'Jost', sans-serif;
-        font-size: 0.95rem;
-        outline: none;
-        transition: border-color 0.2s, box-shadow 0.2s;
-      }
-      .seashell-input:focus {
-        border-color: #8a632b;
-        box-shadow: 0 0 10px rgba(138, 99, 43, 0.25);
-        background: #ffffff;
-      }
-      .seashell-radio-pill {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem 1rem;
-        background: #faf8f5;
-        border: 1px solid rgba(138, 99, 43, 0.25);
-        border-radius: 3px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-      .seashell-radio-pill:hover {
-        border-color: #8a632b;
-        background: #ffffff;
-      }
-      .seashell-radio-pill input[type="radio"] {
-        accent-color: #8a632b;
-        width: 18px;
-        height: 18px;
-      }
-      .btn-whatsapp-rsvp {
-        display: flex;
-        min-height: 52px;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 0.6rem;
-        border-radius: 3px;
-        background: #25D366;
-        color: #ffffff;
-        padding: 0.85rem 1.5rem;
-        font-size: 0.76rem;
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
-        text-decoration: none;
-        font-weight: 700;
-        border: none;
-        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-        cursor: pointer;
-        transition: transform 0.18s, box-shadow 0.18s;
-      }
-      .btn-whatsapp-rsvp:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgba(37, 211, 102, 0.48);
-      }
-      .guest-btn {
-        width: 36px;
-        height: 36px;
-        border-radius: 3px;
-        background: rgba(138, 99, 43, 0.1);
-        border: 1px solid rgba(138, 99, 43, 0.35);
-        color: #7d5727;
-        font-size: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      .guest-btn:hover {
-        background: #8a632b;
-        color: #ffffff;
-      }
-
       /* Opener Gate Modal */
       .invitation-opener {
         position: fixed;
@@ -369,6 +113,117 @@
         opacity: 1 !important;
         transform: none !important;
       }
+
+      /* Gilded Hall First Page Scoped Theme & Fonts */
+      .gilded-first-page {
+        --hall-deep: #4a3312;
+        --hall-amber: #8f6720;
+        --hall-mid: #a97c2a;
+        --hall-warm: #c9973e;
+        --hall-glow: #e9c879;
+        --hall-light: #f7e9c6;
+        --ivory: #f3ebdc;
+        --ivory-soft: #e6dcc6;
+        --ink: #2a1d09;
+        --grad-gold: linear-gradient(100deg, #a97c2a 0%, #e9c879 45%, #f7e9c6 60%, #c9973e 100%);
+      }
+      .gilded-first-page .font-title {
+        font-family: Marcellus, Georgia, serif !important;
+      }
+      .gilded-first-page .font-display {
+        font-family: "Cormorant Garamond", Georgia, serif !important;
+      }
+      .gilded-first-page .font-body {
+        font-family: "Jost", system-ui, sans-serif !important;
+      }
+      .gilded-first-page .gold-text {
+        background: var(--grad-gold);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      /* RSVP & Paper Inputs in Seashell Theme */
+      .seashell-input {
+        width: 100%;
+        min-height: 48px;
+        background: #faf8f5;
+        border: 1px solid rgba(138, 99, 43, 0.3);
+        border-radius: 3px;
+        color: inherit;
+        padding: 0.75rem 1rem;
+        font-family: inherit;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .seashell-input:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 10px rgba(138, 99, 43, 0.25);
+        background: #ffffff;
+      }
+      .seashell-radio-pill {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: #faf8f5;
+        border: 1px solid rgba(138, 99, 43, 0.25);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .seashell-radio-pill:hover {
+        border-color: var(--color-primary);
+        background: #ffffff;
+      }
+      .seashell-radio-pill input[type="radio"] {
+        accent-color: var(--color-primary);
+        width: 18px;
+        height: 18px;
+      }
+      .btn-whatsapp-rsvp {
+        display: flex;
+        min-height: 52px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        border-radius: 3px;
+        background: #25D366;
+        color: #ffffff;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+        cursor: pointer;
+        transition: transform 0.18s, box-shadow 0.18s;
+      }
+      .btn-whatsapp-rsvp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(37, 211, 102, 0.48);
+      }
+      .guest-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 3px;
+        background: rgba(138, 99, 43, 0.1);
+        border: 1px solid rgba(138, 99, 43, 0.35);
+        color: var(--color-primary);
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .guest-btn:hover {
+        background: var(--color-primary);
+        color: #ffffff;
+      }
     </style>
   </head>
   <body>
@@ -384,7 +239,7 @@
       </svg>
     </button>
 
-    <!-- Authentic Seashell Vows Video Opener Gate -->
+    <!-- Authentic Seashell Vows Video Opener Gate (Exact OG Template Intro) -->
     <div id="invitationOpener" class="invitation-opener" role="dialog" aria-label="Open Dr Binshi and Joyel's wedding invitation">
       <video
         id="openerVideo"
@@ -409,20 +264,19 @@
         <span class="script text-2xl sm:text-3xl text-[#f4d8a1]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.85);">
           Dr Binshi &amp; Joyel
         </span>
-        <span class="mt-3 border-b border-white/60 pb-1 text-[0.72rem] font-bold uppercase tracking-[0.26em] text-white">
+        <span class="mt-3 border-b border-white/60 pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-white">
           Tap to open
         </span>
       </button>
     </div>
 
-    <!-- MAIN INVITATION: SEASHELL THEME ALL ACROSS -->
+    <!-- MAIN INVITATION: OG SEASHELL VOWS FONTS & THEME ALL ACROSS -->
     <main class="paper overflow-x-hidden">
 
-      <!-- ========================================== -->
-      <!-- PART 1: ENGAGEMENT (SEASHELL VOWS TEMPLATE) -->
-      <!-- ========================================== -->
+      <!-- ============================================== -->
+      <!-- PART 1: ENGAGEMENT (EXACT OG SEASHELL TEMPLATE) -->
+      <!-- ============================================== -->
       <div class="relative">
-        <!-- Seashell Hero: Fixed Font Visibility & Vertical Spacing -->
         <header class="relative min-h-[100svh] overflow-hidden paper">
           <div class="absolute inset-x-0 top-0 h-[78svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
             <img
@@ -432,29 +286,10 @@
               height="1536"
               class="h-full w-full object-cover object-top animate-bloom"
             />
-            <!-- Seashell Falling Golden & Sage Petals -->
-            <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden z-20">
-            <span class="petal petal-gold" style="left:7%;width:10px;height:13px;animation-delay:0s;animation-duration:10.00s;--petal-drift:30px;--petal-spin:220deg;--petal-opacity:0.55"></span>
-            <span class="petal petal-sage" style="left:96%;width:16px;height:20px;animation-delay:-1.3s;animation-duration:12.20s;--petal-drift:-39px;--petal-spin:267deg;--petal-opacity:0.66"></span>
-            <span class="petal petal-champagne" style="left:85%;width:10px;height:13px;animation-delay:-2.6s;animation-duration:14.40s;--petal-drift:48px;--petal-spin:314deg;--petal-opacity:0.77"></span>
-            <span class="petal petal-gold" style="left:74%;width:16px;height:20px;animation-delay:-3.9s;animation-duration:16.60s;--petal-drift:-57px;--petal-spin:361deg;--petal-opacity:0.88"></span>
-            <span class="petal petal-gold" style="left:63%;width:10px;height:13px;animation-delay:-5.2s;animation-duration:11.80s;--petal-drift:66px;--petal-spin:408deg;--petal-opacity:0.64"></span>
-            <span class="petal petal-sage" style="left:52%;width:16px;height:20px;animation-delay:-6.5s;animation-duration:14.00s;--petal-drift:-30px;--petal-spin:235deg;--petal-opacity:0.75"></span>
-            <span class="petal petal-champagne" style="left:41%;width:10px;height:13px;animation-delay:-7.8s;animation-duration:16.20s;--petal-drift:39px;--petal-spin:282deg;--petal-opacity:0.86"></span>
-            <span class="petal petal-gold" style="left:30%;width:16px;height:20px;animation-delay:-9.1s;animation-duration:11.40s;--petal-drift:-48px;--petal-spin:329deg;--petal-opacity:0.62"></span>
-            <span class="petal petal-gold" style="left:19%;width:10px;height:13px;animation-delay:-10.4s;animation-duration:13.60s;--petal-drift:57px;--petal-spin:376deg;--petal-opacity:0.73"></span>
-            <span class="petal petal-sage" style="left:8%;width:16px;height:20px;animation-delay:-11.7s;animation-duration:15.80s;--petal-drift:-66px;--petal-spin:423deg;--petal-opacity:0.84"></span>
-            <span class="petal petal-champagne" style="left:97%;width:10px;height:13px;animation-delay:-1s;animation-duration:11.00s;--petal-drift:30px;--petal-spin:250deg;--petal-opacity:0.60"></span>
-            <span class="petal petal-gold" style="left:86%;width:16px;height:20px;animation-delay:-2.3s;animation-duration:13.20s;--petal-drift:-39px;--petal-spin:297deg;--petal-opacity:0.71"></span>
-            <span class="petal petal-gold" style="left:75%;width:10px;height:13px;animation-delay:-3.6s;animation-duration:15.40s;--petal-drift:48px;--petal-spin:344deg;--petal-opacity:0.82"></span>
-            <span class="petal petal-sage" style="left:64%;width:16px;height:20px;animation-delay:-4.9s;animation-duration:10.60s;--petal-drift:-57px;--petal-spin:391deg;--petal-opacity:0.58"></span>
-            <span class="petal petal-champagne" style="left:53%;width:10px;height:13px;animation-delay:-6.2s;animation-duration:12.80s;--petal-drift:66px;--petal-spin:438deg;--petal-opacity:0.69"></span>
-            <span class="petal petal-gold" style="left:42%;width:16px;height:20px;animation-delay:-7.5s;animation-duration:15.00s;--petal-drift:-30px;--petal-spin:265deg;--petal-opacity:0.80"></span>
-            </div>
             <div class="absolute inset-0" style="background:var(--gradient-veil)"></div>
           </div>
 
-          <!-- Decorative Floral Sprays -->
+          <!-- Decorative Floral Sprays from OG Template -->
           <img
             src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
             alt=""
@@ -473,75 +308,59 @@
             style="animation-delay:1.4s;"
           />
 
-          <!-- Couple Walking Illustration: Elevated so it NEVER overlaps text -->
+          <!-- Couple Walking Illustration -->
           <img
             src="seashell-vows/editable/assets/couple-walking.png"
             alt="Bride and groom walking hand in hand"
             width="1024"
             height="1536"
-            class="pointer-events-none absolute bottom-[38%] sm:bottom-[34%] left-1/2 w-[60%] max-w-[280px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_16px_26px_rgba(92,80,68,0.2)]"
+            class="pointer-events-none absolute bottom-[32%] sm:bottom-[30%] left-1/2 w-[62%] max-w-[290px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]"
             style="transform:translate3d(-50%, 0px, 0)"
           />
 
-          <!-- Seashell Hero Typography (High-Contrast, Crisp, 100% Readable) -->
-          <div class="relative flex min-h-[100svh] flex-col items-center justify-end text-center">
-            <div class="seashell-hero-text-wrap px-6">
-              <p
-                class="script text-[1.35rem] font-medium text-[#7d5727] animate-ink"
-                style="animation-delay:0.4s; text-shadow: 0 1px 2px rgba(255,255,255,0.85);"
-              >
-                Together with our families
-              </p>
-              <h1
-                class="mt-2 font-display text-[clamp(2.3rem,8vw,3.2rem)] font-medium leading-[1.08] text-[#1c150e] animate-ink"
-                style="animation-delay:0.7s; text-shadow: 0 1px 2px rgba(255,255,255,0.9);"
-              >
-                Dr Binshi Biju
-                <span class="script mx-2 block text-3xl font-normal text-[#9d7237] my-1">&amp;</span>
-                Joyel Paul
-              </h1>
-              <p
-                class="mt-4 font-body text-[0.78rem] font-bold uppercase tracking-[0.22em] text-[#2c2219] animate-ink"
-                style="animation-delay:1s;"
-              >
-                Thursday, 14 January 2027 &bull; 11:30 AM Onwards
-              </p>
-              <p
-                class="mt-2 font-body text-[0.74rem] font-semibold uppercase tracking-[0.2em] text-[#423425] animate-ink"
-                style="animation-delay:1.15s;"
-              >
-                Pavithram Convention Centre &bull; Kundara, Kollam
-              </p>
-            </div>
+          <!-- OG Seashell Vows Typography & Details -->
+          <div class="relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-12 text-center" style="transform:translate3d(0, 0px, 0)">
+            <p class="script text-xl text-primary animate-ink" style="animation-delay:0.4s">
+              Together with our families
+            </p>
+            <h1 class="mt-2 font-display text-[clamp(2.6rem,10vw,3.3rem)] leading-[1.02] text-foreground animate-ink font-normal" style="animation-delay:0.7s">
+              Dr Binshi Biju<span class="script mx-2 block text-2xl text-primary my-1">&amp;</span>Joyel Paul
+            </h1>
+            <p class="mt-4 text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1s">
+              Thursday, 14 January 2027 &bull; 11:30 AM Onwards
+            </p>
+            <p class="mt-1.5 text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1.15s">
+              Pavithram Convention Centre &bull; Kundara, Kollam
+            </p>
           </div>
         </header>
       </div>
 
-      <!-- Engagement Countdown Section -->
+      <!-- Engagement Countdown (OG Seashell Style) -->
       <section class="px-6 py-14">
         <div class="reveal">
-          <p class="text-center text-[0.68rem] font-semibold uppercase tracking-airy text-[#5c4a38]">
+          <p class="text-center text-[0.62rem] uppercase tracking-airy text-muted-foreground">
             Counting down to the Engagement
           </p>
           <div class="mt-6">
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
               <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engDays" class="font-display text-2xl sm:text-3xl font-semibold text-[#1c150e]">00</span>
+                <span id="engDays" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
                 <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Days</span>
               </div>
               <span class="text-primary/60 font-serif text-lg">:</span>
               <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engHours" class="font-display text-2xl sm:text-3xl font-semibold text-[#1c150e]">00</span>
+                <span id="engHours" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
                 <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Hrs</span>
               </div>
               <span class="text-primary/60 font-serif text-lg">:</span>
               <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engMins" class="font-display text-2xl sm:text-3xl font-semibold text-[#1c150e]">00</span>
+                <span id="engMins" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
                 <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Min</span>
               </div>
               <span class="text-primary/60 font-serif text-lg">:</span>
               <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engSecs" class="font-display text-2xl sm:text-3xl font-semibold text-[#1c150e]">00</span>
+                <span id="engSecs" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
                 <span class="block text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Sec</span>
               </div>
             </div>
@@ -549,7 +368,7 @@
         </div>
       </section>
 
-      <!-- Engagement Parents & Families Card -->
+      <!-- Parents & Families (OG Seashell Style) -->
       <section class="relative px-7 pb-16">
         <img
           src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
@@ -581,7 +400,7 @@
               <p class="text-xs text-muted-foreground mt-1 font-body">
                 Parents of Dr Binshi Biju
               </p>
-              <p class="text-xs text-foreground/70 mt-2 font-body">
+              <p class="text-xs text-foreground/75 mt-2 font-body">
                 Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501
               </p>
             </div>
@@ -595,7 +414,7 @@
               <p class="text-xs text-muted-foreground mt-1 font-body">
                 Parents of Joyel Paul
               </p>
-              <p class="text-xs text-foreground/70 mt-2 font-body">
+              <p class="text-xs text-foreground/75 mt-2 font-body">
                 Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala
               </p>
             </div>
@@ -603,11 +422,11 @@
         </div>
       </section>
 
-      <!-- Engagement Ceremony & Venue Section -->
+      <!-- Engagement Ceremony & Venue Card (OG Seashell Style) -->
       <section class="relative px-6 pb-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="text-[0.66rem] uppercase tracking-airy text-muted-foreground font-semibold">Our Engagement</p>
+            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Our Engagement</p>
             <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Ring Exchange &amp; Feast</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
@@ -621,13 +440,13 @@
               <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">💍</span>
               <div>
                 <h3 class="font-display text-2xl font-semibold text-foreground">The Engagement Ceremony</h3>
-                <p class="text-[0.66rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
                   Thursday, 14 Jan 2027 &bull; 11:30 AM Onwards
                 </p>
               </div>
             </div>
 
-            <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1">
+            <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body">
               <p class="font-semibold text-foreground">Pavithram Convention Centre</p>
               <p class="text-xs text-muted-foreground">Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503</p>
             </div>
@@ -639,25 +458,25 @@
                 rel="noreferrer"
                 class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
               >
-                📍 Open Engagement Map
+                Open in Google Maps
               </a>
               <button
                 type="button"
                 onclick="addToCalendarEngagement()"
                 class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/40 bg-secondary px-4 text-[0.68rem] font-semibold uppercase tracking-airy text-foreground"
               >
-                📅 Add Engagement
+                Add to Calendar
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============================================================== -->
-      <!-- PART 2: THE WEDDING FIRST PAGE (GILDED HALL PALACE HERO ONLY) -->
-      <!-- ============================================================== -->
-      <section class="gilded-hero-section">
-        <!-- Palace Hall Poster Underneath -->
+      <!-- ======================================================================== -->
+      <!-- PART 2: WEDDING DETAILS FIRST PAGE (EXACTLY AS IN OG GILDED HALL TEMPLATE) -->
+      <!-- ======================================================================== -->
+      <section class="gilded-first-page relative flex min-h-[100svh] flex-col justify-start overflow-hidden bg-[#150e04]">
+        <!-- Hall Image Underneath (from OG Gilded Hall) -->
         <img
           src="gilded-hall/editable/assets/hall.png"
           alt="Golden reception hall with illuminated arches, ivory floral pillars and cascading light"
@@ -665,7 +484,7 @@
           class="absolute inset-0 h-full w-full object-cover object-bottom"
         />
 
-        <!-- Animated Bride, Groom & Floral Stage Video (Exact Gilded Hall OG Template Animation) -->
+        <!-- Animated Couple & Floral Stage Video (from OG Gilded Hall) -->
         <video
           id="weddingHeroVideo"
           src="gilded-hall/editable/assets/couple.mp4"
@@ -679,98 +498,51 @@
           class="absolute inset-0 h-full w-full object-cover object-bottom z-10 transition-opacity duration-700"
         ></video>
 
-        <!-- Petal Veil Overlay (drifting sheet from OG template) -->
+        <!-- Petal Veil (from OG Gilded Hall) -->
         <div class="petal-veil" aria-hidden="true">
           <img src="gilded-hall/editable/assets/petals.png" alt="" />
         </div>
 
-        <!-- Falling Golden Petal Rain (Pure Royal Gold & Amber, Zero Pink/White) -->
-        <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden z-20">
-            <span class="petal petal-gold" style="left:13%;width:11px;height:14px;animation-delay:0s;animation-duration:9.00s;--petal-drift:35px;--petal-spin:240deg;--petal-opacity:0.65"></span>
-            <span class="petal petal-amber" style="left:10%;width:18px;height:23px;animation-delay:-1.45s;animation-duration:11.10s;--petal-drift:-46px;--petal-spin:293deg;--petal-opacity:0.78"></span>
-            <span class="petal petal-champagne" style="left:7%;width:12px;height:15px;animation-delay:-2.9s;animation-duration:13.20s;--petal-drift:57px;--petal-spin:346deg;--petal-opacity:0.91"></span>
-            <span class="petal petal-gold" style="left:4%;width:19px;height:24px;animation-delay:-4.35s;animation-duration:15.30s;--petal-drift:-68px;--petal-spin:399deg;--petal-opacity:0.69"></span>
-            <span class="petal petal-gold" style="left:1%;width:13px;height:16px;animation-delay:-5.8s;animation-duration:9.40s;--petal-drift:79px;--petal-spin:452deg;--petal-opacity:0.82"></span>
-            <span class="petal petal-amber" style="left:98%;width:20px;height:25px;animation-delay:-7.25s;animation-duration:11.50s;--petal-drift:-35px;--petal-spin:265deg;--petal-opacity:0.95"></span>
-            <span class="petal petal-champagne" style="left:95%;width:14px;height:18px;animation-delay:-8.7s;animation-duration:13.60s;--petal-drift:46px;--petal-spin:318deg;--petal-opacity:0.73"></span>
-            <span class="petal petal-gold" style="left:92%;width:21px;height:26px;animation-delay:-10.15s;animation-duration:15.70s;--petal-drift:-57px;--petal-spin:371deg;--petal-opacity:0.86"></span>
-            <span class="petal petal-gold" style="left:89%;width:15px;height:19px;animation-delay:-11.6s;animation-duration:9.80s;--petal-drift:68px;--petal-spin:424deg;--petal-opacity:0.99"></span>
-            <span class="petal petal-amber" style="left:86%;width:22px;height:28px;animation-delay:-13.05s;animation-duration:11.90s;--petal-drift:-79px;--petal-spin:477deg;--petal-opacity:0.77"></span>
-            <span class="petal petal-champagne" style="left:83%;width:16px;height:20px;animation-delay:-0.5s;animation-duration:14.00s;--petal-drift:35px;--petal-spin:290deg;--petal-opacity:0.90"></span>
-            <span class="petal petal-gold" style="left:80%;width:23px;height:29px;animation-delay:-1.95s;animation-duration:16.10s;--petal-drift:-46px;--petal-spin:343deg;--petal-opacity:0.68"></span>
-            <span class="petal petal-gold" style="left:77%;width:17px;height:21px;animation-delay:-3.4s;animation-duration:10.20s;--petal-drift:57px;--petal-spin:396deg;--petal-opacity:0.81"></span>
-            <span class="petal petal-amber" style="left:74%;width:11px;height:14px;animation-delay:-4.85s;animation-duration:12.30s;--petal-drift:-68px;--petal-spin:449deg;--petal-opacity:0.94"></span>
-            <span class="petal petal-champagne" style="left:71%;width:18px;height:23px;animation-delay:-6.3s;animation-duration:14.40s;--petal-drift:79px;--petal-spin:262deg;--petal-opacity:0.72"></span>
-            <span class="petal petal-gold" style="left:68%;width:12px;height:15px;animation-delay:-7.75s;animation-duration:16.50s;--petal-drift:-35px;--petal-spin:315deg;--petal-opacity:0.85"></span>
-            <span class="petal petal-gold" style="left:65%;width:19px;height:24px;animation-delay:-9.2s;animation-duration:10.60s;--petal-drift:46px;--petal-spin:368deg;--petal-opacity:0.98"></span>
-            <span class="petal petal-amber" style="left:62%;width:13px;height:16px;animation-delay:-10.65s;animation-duration:12.70s;--petal-drift:-57px;--petal-spin:421deg;--petal-opacity:0.76"></span>
-            <span class="petal petal-champagne" style="left:59%;width:20px;height:25px;animation-delay:-12.1s;animation-duration:14.80s;--petal-drift:68px;--petal-spin:474deg;--petal-opacity:0.89"></span>
-            <span class="petal petal-gold" style="left:56%;width:14px;height:18px;animation-delay:-13.55s;animation-duration:16.90s;--petal-drift:-79px;--petal-spin:287deg;--petal-opacity:0.67"></span>
-            <span class="petal petal-gold" style="left:53%;width:21px;height:26px;animation-delay:-1s;animation-duration:11.00s;--petal-drift:35px;--petal-spin:340deg;--petal-opacity:0.80"></span>
-            <span class="petal petal-amber" style="left:50%;width:15px;height:19px;animation-delay:-2.45s;animation-duration:13.10s;--petal-drift:-46px;--petal-spin:393deg;--petal-opacity:0.93"></span>
-            <span class="petal petal-champagne" style="left:47%;width:22px;height:28px;animation-delay:-3.9s;animation-duration:15.20s;--petal-drift:57px;--petal-spin:446deg;--petal-opacity:0.71"></span>
-            <span class="petal petal-gold" style="left:44%;width:16px;height:20px;animation-delay:-5.35s;animation-duration:9.30s;--petal-drift:-68px;--petal-spin:259deg;--petal-opacity:0.84"></span>
-        </div>
+        <!-- Royal Bottom Radial Glow (from OG Gilded Hall) -->
+        <div aria-hidden="true" class="pointer-events-none absolute -bottom-10 left-1/2 h-56 w-[130%] -translate-x-1/2 rounded-[50%]" style="background:radial-gradient(ellipse at center, rgba(233,200,121,0.35), transparent 70%)"></div>
 
-        <!-- Decongested & Masked Rain of Light Beams (Softened away from center text) -->
-        <div aria-hidden="true" class="gilded-rain-beams">
-          <span class="absolute top-0 w-px" style="left:3.1%;height:22%;opacity:0.25;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 7s linear 0s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:9.9%;height:34%;opacity:0.35;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 8.6s linear 1.5s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:16.8%;height:46%;opacity:0.4;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 10.2s linear 3s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:21.8%;height:58%;opacity:0.45;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 11.8s linear 3.3s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:78.1%;height:22%;opacity:0.25;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 10.2s linear 5.5s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:84.9%;height:34%;opacity:0.35;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 11.8s linear 7s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:91.8%;height:46%;opacity:0.4;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 13.4s linear 0.8s infinite"></span>
-          <span class="absolute top-0 w-px" style="left:96.8%;height:58%;opacity:0.45;background:linear-gradient(180deg, transparent, #e9c879 30%, #f7e9c6 60%, transparent);animation:rain-light 7s linear 1.1s infinite"></span>
-        </div>
+        <!-- Shimmering Gradient Overlay (from OG Gilded Hall) -->
+        <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(74,51,18,0.72) 0%, rgba(110,77,25,0.28) 45%, rgba(74,51,18,0.05) 65%, rgba(74,51,18,0.55) 100%)"></div>
 
-        <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(74,51,18,0.72) 0%, rgba(110,77,25,0.2) 45%, rgba(74,51,18,0.05) 65%, rgba(74,51,18,0.6) 100%)"></div>
-
-        <!-- Gilded Hero Royal Content (Crystal Clear, High Contrast, Decongested Spacing) -->
-        <div class="gilded-hero-content">
-          <div class="gilded-hero-box">
-            <p
-              class="font-body text-[0.72rem] font-bold uppercase tracking-[0.38em] text-white"
-              style="text-shadow: 0 2px 8px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.85);"
-            >
-              Shubh Vivah &bull; Holy Matrimony
-            </p>
-            <h1 class="mt-4 font-display text-[clamp(2.5rem,11vw,3.8rem)] gilded-hero-names">
-              Joyel<span class="block font-title text-[0.42em] tracking-[0.3em] text-[#fff4c2] my-1 font-normal" style="text-shadow: 0 2px 8px rgba(0,0,0,0.95); -webkit-text-fill-color: #fff4c2;">&amp;</span>Dr Binshi
-            </h1>
-            <div>
-              <img
-                src="gilded-hall/editable/assets/divider.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="1200"
-                height="512"
-                class="mx-auto h-auto mt-4"
-                style="width:180px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9));"
-              />
-              <p
-                class="mt-3 font-title text-[0.88rem] font-bold tracking-[0.36em] text-[#fff6cc]"
-                style="text-shadow: 0 2px 8px rgba(0,0,0,0.95);"
-              >
-                18 . 01 . 2027
-              </p>
-            </div>
-            <p
-              class="mx-auto mt-4 max-w-[22rem] font-display text-[clamp(1.05rem,4.2vw,1.25rem)] italic text-white leading-relaxed font-medium"
-              style="text-shadow: 0 2px 8px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.85);"
-            >
-              Together with their families, request the honour of your presence at their Holy Matrimony &amp; Wedding Reception
+        <!-- Wedding Details Typography (EXACT OG GILDED HALL CLASSES & FONTS) -->
+        <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 10svh)">
+          <p class="font-body text-[0.58rem] uppercase tracking-[0.42em] text-hall-light/85 reveal" style="transition-delay:300ms">
+            Shubh Vivah &bull; Holy Matrimony
+          </p>
+          <h1 class="mt-5 font-display text-[clamp(3rem,17vw,5rem)] font-light leading-[0.95] gold-text reveal" style="transition-delay:900ms">
+            Joyel<span class="block font-title text-[0.32em] tracking-[0.3em] text-hall-light/90 my-3">&amp;</span>Dr Binshi
+          </h1>
+          <div class="reveal" style="transition-delay:1200ms">
+            <img
+              src="gilded-hall/editable/assets/divider.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="1200"
+              height="512"
+              class="mx-auto h-auto opacity-80 mt-6"
+              style="width:200px"
+            />
+            <p class="mt-4 font-title text-[0.82rem] tracking-[0.36em] text-hall-light">
+              18 . 01 . 2027
             </p>
           </div>
+          <p class="mx-auto mt-5 max-w-[19rem] font-display text-[1.02rem] italic leading-relaxed text-ivory/90 reveal" style="transition-delay:1500ms">
+            Together with their families, request the honour of your presence at their Holy Matrimony &amp; Wedding Reception
+          </p>
         </div>
       </section>
 
       <!-- ========================================================================= -->
-      <!-- PART 3: WEDDING DETAILS & CELEBRATIONS (SEASHELL VOWS TEMPLATE ALL ACROSS) -->
+      <!-- PART 3: WEDDING DETAILS & CELEBRATIONS (OG SEASHELL TEMPLATE ALL ACROSS) -->
       <!-- ========================================================================= -->
 
-      <!-- Wedding Holy Matrimony Message & Blessing -->
+      <!-- Wedding Holy Matrimony Message (OG Seashell Style) -->
       <section class="relative px-7 pt-16 pb-12">
         <img
           src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
@@ -800,7 +572,7 @@
         </div>
       </section>
 
-      <!-- Wedding Celebrations & Itinerary (Seashell Vows Card-Soft Style) -->
+      <!-- Wedding Celebrations & Itinerary (OG Seashell Style with Bougainvillea Divider) -->
       <section class="relative px-6 pb-16">
         <img
           src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/bougainvillea-divider.png"
@@ -813,7 +585,7 @@
         />
         <div class="reveal">
           <div class="text-center">
-            <p class="text-[0.66rem] uppercase tracking-airy text-muted-foreground font-semibold">Program &bull; 18 Jan 2027</p>
+            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">The Sacred Sacrament</p>
             <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Wedding Celebrations</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
@@ -830,7 +602,7 @@
                   <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl font-bold">✞</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl font-semibold text-foreground">Holy Mass &amp; Nuptial Ceremony</h3>
-                    <p class="text-[0.66rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
                       Monday, 18 Jan 2027 &bull; 10:30 AM Onwards
                     </p>
                   </div>
@@ -848,7 +620,7 @@
                   <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">⚜</span>
                   <div class="min-w-0">
                     <h3 class="truncate font-display text-2xl font-semibold text-foreground">Wedding Reception</h3>
-                    <p class="text-[0.66rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                    <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
                       Monday, 18 Jan 2027 &bull; 12:30 PM Onwards
                     </p>
                   </div>
@@ -862,11 +634,11 @@
         </div>
       </section>
 
-      <!-- Wedding Venues & Google Maps (Seashell Style) -->
+      <!-- Wedding Venues & Google Maps (OG Seashell Style) -->
       <section class="px-6 pb-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="text-[0.66rem] uppercase tracking-airy text-muted-foreground font-semibold">Find your way</p>
+            <p class="text-[0.62rem] uppercase tracking-airy text-muted-foreground">Find your way</p>
             <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Wedding Venues</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
@@ -888,7 +660,7 @@
                   rel="noreferrer"
                   class="press inline-flex min-h-[44px] items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
-                  📍 Open Church Map
+                  Open in Google Maps
                 </a>
               </div>
             </div>
@@ -906,7 +678,7 @@
                     rel="noreferrer"
                     class="press inline-flex min-h-[44px] items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
                   >
-                    📍 Open Reception Map
+                    Open in Google Maps
                   </a>
                 </div>
               </div>
@@ -929,24 +701,24 @@
         </div>
       </section>
 
-      <!-- Wedding Save Our Date Section -->
+      <!-- Wedding Save Our Date Section (OG Seashell Style) -->
       <section class="px-6 pb-20">
         <div class="reveal">
           <div class="mx-auto max-w-md card-soft p-6 text-center rounded-sm border border-primary/25">
-            <p class="script text-xl text-primary font-medium">Save our wedding date</p>
+            <p class="script text-xl text-primary font-medium">Save our date</p>
             <p class="mt-2 text-sm text-muted-foreground font-body">Add our Holy Matrimony &amp; Reception to your calendar in one tap.</p>
             <button
               type="button"
               onclick="addToCalendarWedding()"
-              class="press mt-5 flex min-h-[52px] w-full items-center justify-center rounded-sm border border-primary/45 bg-secondary text-[0.72rem] font-bold uppercase tracking-airy text-foreground shadow-sm"
+              class="press mt-5 flex min-h-[52px] w-full items-center justify-center rounded-sm border border-primary/45 bg-secondary text-[0.68rem] font-semibold uppercase tracking-airy text-foreground shadow-sm"
             >
-              📅 Add Wedding to Calendar &bull; 18 Jan 2027
+              Add to Calendar &bull; 18 Jan 2027
             </button>
           </div>
         </div>
       </section>
 
-      <!-- Wish Sky (Lanterns) from Seashell Vows -->
+      <!-- Wish Sky (Lanterns) from OG Seashell Template -->
       <section class="wish-sky relative isolate overflow-hidden px-6 py-20 text-center">
         <img
           src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/lantern-constellation.png"
@@ -973,7 +745,7 @@
           <button
             type="button"
             onclick="releaseLanterns()"
-            class="press mt-7 flex min-h-[50px] w-full items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-primary-foreground shadow-[0_14px_30px_-18px_rgba(112,82,42,0.75)]"
+            class="press mt-7 flex min-h-[50px] w-full items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] uppercase tracking-[0.22em] text-primary-foreground shadow-[0_14px_30px_-18px_rgba(112,82,42,0.75)]"
           >
             Release lanterns
           </button>
@@ -983,12 +755,10 @@
         </div>
       </section>
 
-      <!-- ============================================== -->
-      <!-- RSVP SECTION (SEASHELL VOWS PAPER CARD STYLE) -->
-      <!-- ============================================== -->
+      <!-- RSVP SECTION (OG SEASHELL CARD-SOFT STYLE) -->
       <section id="rsvp" class="relative px-6 pb-20">
         <div class="reveal mx-auto max-w-lg">
-          <div class="seashell-card p-6 sm:p-8">
+          <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
             <div class="text-center">
               <p class="script text-xl text-primary font-medium">Your presence is our blessing</p>
               <h2 class="mt-2 font-display text-[2.4rem] text-foreground font-medium">Kindly RSVP</h2>
@@ -1005,7 +775,7 @@
             <!-- Interactive RSVP Form -->
             <form id="rsvpForm" class="mt-6 space-y-4" onsubmit="event.preventDefault(); submitRsvp();">
               <div>
-                <label for="guestName" class="block text-xs font-bold uppercase tracking-airy text-[#423425] mb-1.5 font-body">
+                <label for="guestName" class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
                   Your Full Name *
                 </label>
                 <input
@@ -1018,7 +788,7 @@
               </div>
 
               <div>
-                <label for="guestPhone" class="block text-xs font-bold uppercase tracking-airy text-[#423425] mb-1.5 font-body">
+                <label for="guestPhone" class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
                   Contact Number
                 </label>
                 <input
@@ -1030,24 +800,24 @@
               </div>
 
               <div>
-                <label class="block text-xs font-bold uppercase tracking-airy text-[#423425] mb-1.5 font-body">
+                <label class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
                   Will You Attend?
                 </label>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <label class="seashell-radio-pill">
                     <input type="radio" name="attendance" value="attending" checked />
-                    <span class="text-xs font-semibold text-foreground">Delighted to Attend</span>
+                    <span class="text-xs font-medium text-foreground">Delighted to Attend</span>
                   </label>
                   <label class="seashell-radio-pill">
                     <input type="radio" name="attendance" value="declined" />
-                    <span class="text-xs font-semibold text-foreground">Regretfully Unable</span>
+                    <span class="text-xs font-medium text-foreground">Regretfully Unable</span>
                   </label>
                 </div>
               </div>
 
               <!-- Guest Count Adjuster -->
               <div>
-                <label class="block text-xs font-bold uppercase tracking-airy text-[#423425] mb-1.5 font-body">
+                <label class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
                   Number of Attending Guests
                 </label>
                 <div class="flex items-center gap-3">
@@ -1061,7 +831,7 @@
               </div>
 
               <div>
-                <label for="guestMessage" class="block text-xs font-bold uppercase tracking-airy text-[#423425] mb-1.5 font-body">
+                <label for="guestMessage" class="block text-xs uppercase tracking-airy text-muted-foreground mb-1.5 font-body">
                   Blessings &amp; Wishes for Binshi &amp; Joyel
                 </label>
                 <textarea
@@ -1109,9 +879,9 @@
         </div>
       </section>
 
-      <!-- ============================================== -->
-      <!-- FOOTER SCENE (SEASHELL VOWS EXACT SIGNATURE) -->
-      <!-- ============================================== -->
+      <!-- ======================================================= -->
+      <!-- FOOTER SCENE (EXACT OG SEASHELL VOWS FOOTER TEMPLATE) -->
+      <!-- ======================================================= -->
       <footer class="footer-scene relative isolate min-h-[38rem] overflow-hidden">
         <img
           src="seashell-vows/assets/footer-wash-DG1rtX_C.jpg"
@@ -1154,18 +924,18 @@
             class="w-24 opacity-75"
           />
           <p class="mt-4 script text-xl text-primary font-medium">We cannot wait to celebrate with you</p>
-          <h2 class="mt-4 font-display text-[2.65rem] leading-[1.05] font-medium text-foreground">
+          <h2 class="mt-4 font-display text-[2.65rem] leading-[1.05] text-foreground font-normal">
             Dr Binshi <span class="script text-2xl text-primary">&amp;</span> Joyel
           </h2>
 
           <div class="mt-7 grid w-full max-w-sm grid-cols-2 border-y border-primary/25 py-4 text-left">
             <div class="border-r border-primary/25 pr-5">
-              <p class="text-xs text-muted-foreground font-semibold uppercase tracking-airy">Engagement</p>
+              <p class="text-xs text-muted-foreground uppercase tracking-airy">Engagement</p>
               <p class="mt-1 font-display text-lg font-semibold text-foreground">14 Jan 2027</p>
               <p class="text-[0.68rem] text-muted-foreground">Kundara, Kollam</p>
             </div>
             <div class="pl-5">
-              <p class="text-xs text-muted-foreground font-semibold uppercase tracking-airy">Wedding</p>
+              <p class="text-xs text-muted-foreground uppercase tracking-airy">Wedding</p>
               <p class="mt-1 font-display text-lg font-semibold text-foreground">18 Jan 2027</p>
               <p class="text-[0.68rem] text-muted-foreground">Kanakamala &bull; Chalakudy</p>
             </div>
@@ -1174,9 +944,9 @@
           <button
             type="button"
             onclick="shareInvitation()"
-            class="press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 font-body text-[0.68rem] font-bold uppercase tracking-airy text-foreground shadow-sm hover:bg-background"
+            class="press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 font-body text-[0.68rem] uppercase tracking-airy text-foreground shadow-sm hover:bg-background"
           >
-            🔗 Share this invitation
+            Share this invitation
           </button>
 
           <p class="mt-12 text-[0.55rem] uppercase tracking-airy text-muted-foreground/75">
@@ -1186,68 +956,6 @@
       </footer>
 
     </main>
-
-    <!-- Interactive Tap/Click Petal Scatter Script -->
-    <script>
-      (function() {
-        var layer = document.createElement('div');
-        layer.className = 'interactive-petal-layer';
-        layer.setAttribute('aria-hidden', 'true');
-        document.body.appendChild(layer);
-
-        function spawnPetals(x, y) {
-          var count = 7;
-          for (var i = 0; i < count; i++) {
-            var span = document.createElement('span');
-            var drift = ((Math.random() - 0.5) * 140).toFixed(0);
-            var hue = Math.random();
-            var dur = (1.9 + hue * 0.8).toFixed(2);
-            var offsetX = (Math.random() - 0.5) * 48;
-            var offsetY = (Math.random() - 0.5) * 28;
-            var sizeW = Math.round(11 + Math.random() * 6);
-            var sizeH = Math.round(sizeW * 1.3);
-
-            span.style.position = 'absolute';
-            span.style.left = (x + offsetX) + 'px';
-            span.style.top = (y + offsetY) + 'px';
-            span.style.width = sizeW + 'px';
-            span.style.height = sizeH + 'px';
-            span.style.borderRadius = '70% 30% 65% 35% / 60% 60% 40% 40%';
-            span.style.setProperty('--drift', drift + 'px');
-            span.style.willChange = 'transform, opacity';
-            span.style.pointerEvents = 'none';
-
-            // Pure Royal Gold & Amber Petals
-            if (hue > 0.6) {
-              span.style.background = 'radial-gradient(circle at 35% 35%, #fff2b8, #e9c879 50%, #c9973e 90%)';
-              span.style.boxShadow = '0 1px 4px rgba(169, 124, 42, 0.45)';
-            } else if (hue > 0.3) {
-              span.style.background = 'radial-gradient(circle at 30% 30%, #ffc24d, #f58a1f 55%, #d96a08)';
-              span.style.boxShadow = '0 1px 4px rgba(150, 70, 0, 0.35)';
-            } else {
-              span.style.background = 'radial-gradient(circle at 35% 35%, #fce9bc, #dfb35a 55%, #b38323)';
-              span.style.boxShadow = '0 1px 4px rgba(179, 131, 35, 0.35)';
-            }
-
-            span.style.animation = 'petal-fall ' + dur + 's cubic-bezier(0.3, 0.6, 0.4, 1) forwards';
-            layer.appendChild(span);
-
-            (function(p, d) {
-              setTimeout(function() {
-                if (p && p.parentNode) p.parentNode.removeChild(p);
-              }, Math.round(d * 1000) + 100);
-            })(span, dur);
-          }
-        }
-
-        window.addEventListener('pointerdown', function(e) {
-          if (e.target && (e.target.closest('button') || e.target.closest('a') || e.target.closest('input') || e.target.closest('textarea'))) {
-            return;
-          }
-          spawnPetals(e.clientX, e.clientY);
-        }, { passive: true });
-      })();
-    </script>
 
     <!-- Video Autoplay & Playback Assurance -->
     <script>
@@ -1481,7 +1189,7 @@
         var status = document.getElementById('lanternStatus');
         if (status) {
           status.textContent = '✨ ' + lanternCount + ' lantern(s) released into the starry sky with your blessings!';
-          status.style.color = '#8a632b';
+          status.style.color = 'var(--color-primary)';
           status.style.fontWeight = 'bold';
         }
       }
