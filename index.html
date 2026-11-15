@@ -29,16 +29,16 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <!-- Google Fonts for Authentic Typography -->
+    <!-- Authentic Google Fonts for Seashell Vows & Gilded Hall -->
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-6476c501f8.css" />
     <link rel="stylesheet" href="seashell-vows/external/fonts.googleapis.com/css2-86ad40e56c.css" />
     <link rel="stylesheet" href="gilded-hall/external/fonts.googleapis.com/css2-fde818cf20.css" />
 
-    <!-- Authentic Seashell Vows CSS Bundle (Image 4 font system everywhere) -->
+    <!-- Authentic Seashell Vows CSS Bundle -->
     <link rel="stylesheet" href="seashell-vows/assets/styles-CbBzkN6m.css" />
 
     <style>
-      /* --- GLOBAL TYPOGRAPHY MATCHING IMAGE 4 EVERYWHERE --- */
+      /* --- GLOBAL TYPOGRAPHY MATCHING AUTHENTIC SEASHELL VOWS EVERYWHERE --- */
       :root {
         --font-display: 'Cormorant Garamond', Georgia, serif;
         --font-script: 'Petit Formal Script', cursive;
@@ -59,25 +59,31 @@
         background-color: var(--color-background);
         color: var(--color-foreground);
         font-family: var(--font-body);
+        font-weight: 300;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
       }
 
+      /* Heading typography: light, elegant, serif, never bold */
       h1, h2, h3, h4 {
         font-family: var(--font-display);
+        font-weight: 300;
         color: var(--color-foreground);
       }
 
       .font-display {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-weight: 300;
       }
       .script {
         font-family: 'Petit Formal Script', cursive !important;
+        font-weight: 400;
       }
       .font-body {
         font-family: 'Jost', system-ui, -apple-system, sans-serif !important;
+        font-weight: 300;
       }
 
       /* Opener Gate Modal */
@@ -113,6 +119,7 @@
         cursor: pointer;
         z-index: 10;
         font-family: var(--font-body);
+        font-weight: 400;
       }
 
       /* Floating Audio Button */
@@ -155,7 +162,7 @@
         transform: none !important;
       }
 
-      /* --- GILDED HALL FIRST PAGE SCOPED STYLES (IMAGE 5 ONLY) --- */
+      /* --- GILDED HALL FIRST PAGE SCOPED STYLES (WEDDING HERO ONLY) --- */
       .gilded-first-page {
         --hall-deep: #4a3312;
         --hall-amber: #8f6720;
@@ -170,12 +177,15 @@
       }
       .gilded-first-page .font-title {
         font-family: 'Marcellus', Georgia, serif !important;
+        font-weight: 400;
       }
       .gilded-first-page .font-display {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-weight: 300;
       }
       .gilded-first-page .font-body {
         font-family: 'Jost', system-ui, sans-serif !important;
+        font-weight: 300;
       }
       .gilded-first-page .gold-text {
         background: var(--grad-gold);
@@ -211,11 +221,11 @@
 
       /* Custom page spacing & transitions */
       .page-spacer {
-        height: 3rem;
+        height: 3.5rem;
       }
       @media (min-width: 640px) {
         .page-spacer {
-          height: 5rem;
+          height: 5.5rem;
         }
       }
     </style>
@@ -250,16 +260,16 @@
       <!-- Skip Button -->
       <button id="openerSkipBtn" class="opener-skip-btn" type="button">Skip &bull;&bull;</button>
 
-      <!-- Tap to Open Button Overlay (Authentic Seashell Vows Signature) -->
+      <!-- Tap to Open Button Overlay (Grand, elegant names) -->
       <button
         id="openerEnterBtn"
         type="button"
         class="absolute inset-0 flex w-full flex-col items-center justify-end bg-[linear-gradient(180deg,transparent_42%,rgba(25,29,38,0.58)_100%)] px-6 pb-14 text-center text-white focus-visible:outline-none cursor-pointer transition-opacity duration-500"
       >
-        <span class="script text-2xl sm:text-3xl text-[#f4d8a1]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.85);">
+        <span class="script text-3xl sm:text-4xl text-[#f4d8a1]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.85);">
           Dr Binshi &amp; Joyel
         </span>
-        <span class="mt-3 border-b border-white/60 pb-1 text-[0.72rem] font-bold uppercase tracking-[0.26em] text-white font-body">
+        <span class="mt-3 border-b border-white/60 pb-1 font-body text-[0.72rem] uppercase tracking-[0.26em] text-white">
           Tap to open
         </span>
       </button>
@@ -269,11 +279,11 @@
     <div class="relative min-h-screen">
 
       <!-- ========================================================================= -->
-      <!-- PART 1: ENGAGEMENT HERO (SCALED BEAUTIFULLY TO FIT ANY DEVICE SCREEN)     -->
+      <!-- PART 1: ENGAGEMENT HERO (DELICATE IMAGE, GRAND NAMES, AIRY DETAILS)       -->
       <!-- ========================================================================= -->
       <header class="relative min-h-[100svh] overflow-hidden paper flex flex-col justify-between">
         <!-- Watercolor Arch Background -->
-        <div class="absolute inset-x-0 top-0 h-[72svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
+        <div class="absolute inset-x-0 top-0 h-[75svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
           <img
             src="seashell-vows/editable/assets/hero-arch.jpg"
             alt="Watercolor beach wedding arch at sunset"
@@ -303,29 +313,29 @@
           style="animation-delay:1.4s;"
         />
 
-        <!-- Bride & Groom Walking Illustration (Properly scaled to fit screen beautifully) -->
-        <div class="relative w-full flex justify-center pt-[10svh] sm:pt-[12svh] z-10 pointer-events-none">
+        <!-- Bride & Groom Walking Illustration (Delicate and refined sizing) -->
+        <div class="relative w-full flex justify-center pt-[7svh] sm:pt-[8svh] z-10 pointer-events-none">
           <img
             src="seashell-vows/editable/assets/couple-walking.png"
             alt="Bride and groom walking hand in hand"
             width="1024"
             height="1536"
-            class="w-[46%] max-w-[210px] max-h-[35svh] sm:max-h-[38svh] object-contain animate-bloom drop-shadow-[0_14px_24px_rgba(92,80,68,0.18)]"
+            class="w-[34%] max-w-[150px] sm:max-w-[170px] max-h-[25svh] sm:max-h-[28svh] object-contain animate-bloom drop-shadow-[0_12px_22px_rgba(92,80,68,0.15)]"
           />
         </div>
 
-        <!-- Typography & Engagement Details (Reduced font sizes to fit screen beautifully) -->
-        <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-7 sm:pb-10 text-center">
-          <p class="script text-base sm:text-lg text-primary animate-ink" style="animation-delay:0.4s">
+        <!-- Typography & Engagement Details (Grand romantic names, light airy metadata) -->
+        <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-10 sm:pb-14 text-center">
+          <p class="script text-xl sm:text-2xl text-primary animate-ink" style="animation-delay:0.4s">
             Together with our families
           </p>
-          <h1 class="mt-1.5 font-display text-[clamp(1.75rem,6.8vw,2.35rem)] leading-[1.08] text-foreground animate-ink font-normal" style="animation-delay:0.7s">
-            Dr Binshi Biju<span class="script mx-2 inline-block text-xl sm:text-2xl text-primary my-0.5">&amp;</span>Joyel Paul
+          <h1 class="mt-2 sm:mt-3 font-display text-[clamp(2.5rem,8.5vw,3.5rem)] leading-[1.02] text-foreground animate-ink font-light" style="animation-delay:0.7s">
+            Dr Binshi Biju<span class="script mx-2 block text-2xl sm:text-3xl text-primary my-1">&amp;</span>Joyel Paul
           </h1>
-          <p class="mt-2.5 font-body text-[0.64rem] sm:text-[0.7rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1s">
+          <p class="mt-4 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1s">
             Thursday, 14 January 2027 &bull; 11:30 AM Onwards
           </p>
-          <p class="mt-1 font-body text-[0.64rem] sm:text-[0.7rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium" style="animation-delay:1.15s">
+          <p class="mt-1.5 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1.15s">
             Pavithram Convention Centre &bull; Kundara, Kollam
           </p>
         </div>
@@ -334,32 +344,32 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Engagement Countdown (OG Seashell Style - Image 4 Typography) -->
+      <!-- Engagement Countdown (Delicate light numbers, no harsh bold) -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
-          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
             Counting down to the Engagement
           </p>
           <div class="mt-6">
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engDays" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Days</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="engDays" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Days</span>
               </div>
-              <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engHours" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Hrs</span>
+              <span class="text-primary/50 font-serif text-lg font-light">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="engHours" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Hrs</span>
               </div>
-              <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engMins" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Min</span>
+              <span class="text-primary/50 font-serif text-lg font-light">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="engMins" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Min</span>
               </div>
-              <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="engSecs" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Sec</span>
+              <span class="text-primary/50 font-serif text-lg font-light">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="engSecs" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Sec</span>
               </div>
             </div>
           </div>
@@ -369,12 +379,12 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Parents Blessing Section (OG Seashell Style - Image 4 Typography) -->
+      <!-- Parents Blessing Section (Airy, elegant light typography) -->
       <section class="relative px-7 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="script text-xl text-primary font-medium">With the blessings of our families</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Parents</h2>
+            <p class="script text-xl text-primary font-normal">With the blessings of our families</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Parents</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -384,29 +394,29 @@
 
           <div class="mx-auto max-w-md space-y-5">
             <!-- Bride's Parents -->
-            <div class="card-soft p-6 rounded-sm border border-primary/20 text-center">
-              <span class="script text-lg text-primary block">Bride's Parents</span>
-              <h3 class="font-display text-xl font-semibold text-foreground mt-1">
+            <div class="card-soft p-6 rounded-sm border border-primary/15 text-center">
+              <span class="script text-lg text-primary block font-normal">Bride's Parents</span>
+              <h3 class="font-display text-2xl text-foreground mt-1 font-light">
                 Biju Yohannan &amp; Shini Biju
               </h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body">
+              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
                 Parents of Dr Binshi Biju
               </p>
-              <p class="text-xs text-foreground/75 mt-2 font-body">
+              <p class="text-xs text-foreground/75 mt-2 font-body font-light leading-relaxed">
                 Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501
               </p>
             </div>
 
             <!-- Groom's Parents -->
-            <div class="card-soft p-6 rounded-sm border border-primary/20 text-center">
-              <span class="script text-lg text-primary block">Groom's Parents</span>
-              <h3 class="font-display text-xl font-semibold text-foreground mt-1">
+            <div class="card-soft p-6 rounded-sm border border-primary/15 text-center">
+              <span class="script text-lg text-primary block font-normal">Groom's Parents</span>
+              <h3 class="font-display text-2xl text-foreground mt-1 font-light">
                 Poulose Padinjarakaran Rappai &amp; Siji Devasia
               </h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body">
+              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
                 Parents of Joyel Paul
               </p>
-              <p class="text-xs text-foreground/75 mt-2 font-body">
+              <p class="text-xs text-foreground/75 mt-2 font-body font-light leading-relaxed">
                 Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala
               </p>
             </div>
@@ -417,12 +427,12 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Engagement Ceremony & Venue Card (OG Seashell Style) -->
+      <!-- Engagement Ceremony & Venue Card -->
       <section class="relative px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">Our Engagement</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Ring Exchange &amp; Feast</h2>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">Our Engagement</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Ring Exchange &amp; Feast</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -430,19 +440,19 @@
             </div>
           </div>
 
-          <div class="mx-auto max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+          <div class="mx-auto max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
             <div class="flex items-center gap-3">
-              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">💍</span>
+              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">💍</span>
               <div>
-                <h3 class="font-display text-2xl font-semibold text-foreground">The Engagement Ceremony</h3>
-                <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                <h3 class="font-display text-2xl text-foreground font-light">The Engagement Ceremony</h3>
+                <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5 font-light">
                   Thursday, 14 Jan 2027 &bull; 11:30 AM Onwards
                 </p>
               </div>
             </div>
 
-            <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body">
-              <p class="font-semibold text-foreground">Pavithram Convention Centre</p>
+            <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
+              <p class="font-normal text-foreground">Pavithram Convention Centre</p>
               <p class="text-xs text-muted-foreground">Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503</p>
             </div>
 
@@ -451,14 +461,14 @@
                 href="https://share.google/eKgdNtTLRLDoC2pMJ"
                 target="_blank"
                 rel="noreferrer"
-                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
               >
                 Open in Google Maps
               </a>
               <button
                 type="button"
                 onclick="addToCalendarEngagement()"
-                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/40 bg-secondary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-foreground"
+                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/30 bg-secondary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-foreground"
               >
                 Add to Calendar
               </button>
@@ -471,7 +481,7 @@
       <div class="page-spacer"></div>
 
       <!-- ======================================================================== -->
-      <!-- PART 2: WEDDING DETAILS FIRST PAGE (OG GILDED HALL - IMAGE 5 ONLY)        -->
+      <!-- PART 2: WEDDING DETAILS FIRST PAGE (GRAND NAMES, PROMINENT LIFTED DATE)  -->
       <!-- ======================================================================== -->
       <section class="gilded-first-page relative flex min-h-[100svh] flex-col justify-start overflow-hidden bg-[#150e04]">
         <!-- Hall Image Underneath (from OG Gilded Hall) -->
@@ -507,13 +517,14 @@
         <!-- Shimmering Gradient Overlay (from OG Gilded Hall) -->
         <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(74,51,18,0.72) 0%, rgba(110,77,25,0.28) 45%, rgba(74,51,18,0.05) 65%, rgba(74,51,18,0.55) 100%)"></div>
 
-        <!-- Wedding Details Typography (Lifted date cleanly above; writings removed) -->
+        <!-- Wedding Details Typography (Grand romantic names, lifted date, no clashing text) -->
         <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 8svh)">
-          <p class="font-body text-[0.62rem] uppercase tracking-[0.42em] text-hall-light/90 reveal" style="transition-delay:300ms">
+          <p class="font-body text-[0.62rem] uppercase tracking-[0.42em] text-hall-light/90 reveal font-light" style="transition-delay:300ms">
             Shubh Vivah &bull; Holy Matrimony
           </p>
-          <h1 class="mt-3 sm:mt-5 font-display text-[clamp(2.6rem,14vw,4.5rem)] font-light leading-[0.95] gold-text reveal" style="transition-delay:900ms">
-            Joyel<span class="block font-title text-[0.34em] tracking-[0.3em] text-hall-light/90 my-2">&amp;</span>Dr Binshi
+          <!-- Grand Names of Bride and Groom -->
+          <h1 class="mt-4 sm:mt-6 font-display text-[clamp(3.2rem,16vw,5.2rem)] font-light leading-[0.92] gold-text reveal" style="transition-delay:900ms">
+            Joyel<span class="block font-title text-[0.32em] tracking-[0.3em] text-hall-light/90 my-2">&amp;</span>Dr Binshi
           </h1>
           <div class="reveal mt-3 sm:mt-4" style="transition-delay:1200ms">
             <img
@@ -526,8 +537,8 @@
               class="mx-auto h-auto opacity-80"
               style="width:160px"
             />
-            <!-- Date lifted above and clearly visible -->
-            <p class="mt-2.5 sm:mt-3 font-title text-[0.95rem] sm:text-[1.1rem] tracking-[0.38em] text-[#fff6df] font-medium" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 16px rgba(233,200,121,0.6);">
+            <!-- Date lifted cleanly above the stage arches -->
+            <p class="mt-2.5 sm:mt-3 font-title text-[0.95rem] sm:text-[1.1rem] tracking-[0.38em] text-[#fff6df] font-normal" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 16px rgba(233,200,121,0.6);">
               18 . 01 . 2027
             </p>
           </div>
@@ -558,8 +569,8 @@
         />
         <div class="reveal">
           <div class="text-center">
-            <p class="script text-xl text-primary font-medium">A love united in faith</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">
+            <p class="script text-xl text-primary font-normal">A love united in faith</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">
               The Sacred Sacrament
             </h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
@@ -568,10 +579,10 @@
               <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
             </div>
           </div>
-          <p class="mx-auto max-w-lg text-center font-display text-lg italic leading-relaxed text-foreground/80">
+          <p class="mx-auto max-w-lg text-center font-display text-lg italic leading-relaxed text-foreground/80 font-light">
             &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
           </p>
-          <p class="mt-2 text-center font-body text-xs uppercase tracking-airy text-muted-foreground">
+          <p class="mt-2 text-center font-body text-xs uppercase tracking-airy text-muted-foreground font-light">
             Mark 10:9
           </p>
         </div>
@@ -580,32 +591,32 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Wedding Countdown (OG Seashell Style) -->
+      <!-- Wedding Countdown (Light airy numerals) -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
-          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
             Counting down to the Holy Matrimony
           </p>
           <div class="mt-6">
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="wedDays" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Days</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="wedDays" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Days</span>
               </div>
-              <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="wedHours" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Hrs</span>
+              <span class="text-primary/50 font-serif text-lg font-light">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="wedHours" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Hrs</span>
               </div>
-              <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="wedMins" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Min</span>
+              <span class="text-primary/50 font-serif text-lg font-light">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="wedMins" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Min</span>
               </div>
-              <span class="text-primary/60 font-serif text-lg">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/25">
-                <span id="wedSecs" class="font-display text-2xl sm:text-3xl font-semibold text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1">Sec</span>
+              <span class="text-primary/50 font-serif text-lg font-light">:</span>
+              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
+                <span id="wedSecs" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
+                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Sec</span>
               </div>
             </div>
           </div>
@@ -615,12 +626,12 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Wedding Ceremonies: Holy Mass & Reception Cards (OG Seashell Style) -->
+      <!-- Wedding Ceremonies: Holy Mass & Reception Cards -->
       <section class="relative px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">18 January 2027</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Wedding Ceremonies</h2>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">18 January 2027</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Wedding Ceremonies</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -630,19 +641,19 @@
 
           <div class="mx-auto max-w-md space-y-6">
             <!-- 1. Holy Mass Ceremony Card -->
-            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
               <div class="flex items-center gap-3">
-                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">⛪</span>
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">⛪</span>
                 <div>
-                  <h3 class="font-display text-2xl font-semibold text-foreground">Holy Matrimony &amp; Mass</h3>
-                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                  <h3 class="font-display text-2xl text-foreground font-light">Holy Matrimony &amp; Mass</h3>
+                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5 font-light">
                     Monday, 18 Jan 2027 &bull; 10:30 AM Onwards
                   </p>
                 </div>
               </div>
 
-              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body">
-                <p class="font-semibold text-foreground">St. Antony's Shrine, Kanakamala</p>
+              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
+                <p class="font-normal text-foreground">St. Antony's Shrine, Kanakamala</p>
                 <p class="text-xs text-muted-foreground">Mechira - Kanakamala Rd, Perambra, Kerala</p>
               </div>
 
@@ -651,14 +662,14 @@
                   href="https://maps.google.com/?q=St.+Antony's+Shrine+Kanakamala+Perambra+Kerala"
                   target="_blank"
                   rel="noreferrer"
-                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
                   Church Directions
                 </a>
                 <button
                   type="button"
                   onclick="addToCalendarWedding()"
-                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/40 bg-secondary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-foreground"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/30 bg-secondary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-foreground"
                 >
                   Add to Calendar
                 </button>
@@ -666,19 +677,19 @@
             </div>
 
             <!-- 2. Reception Card -->
-            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
               <div class="flex items-center gap-3">
-                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl">🥂</span>
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">🥂</span>
                 <div>
-                  <h3 class="font-display text-2xl font-semibold text-foreground">Wedding Reception</h3>
-                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5">
+                  <h3 class="font-display text-2xl text-foreground font-light">Wedding Reception</h3>
+                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5 font-light">
                     Monday, 18 Jan 2027 &bull; 12:30 PM Onwards
                   </p>
                 </div>
               </div>
 
-              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body">
-                <p class="font-semibold text-foreground">Kizhakuden's HeartLand Convention Centre</p>
+              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
+                <p class="font-normal text-foreground">Kizhakuden's HeartLand Convention Centre</p>
                 <p class="text-xs text-muted-foreground">Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721</p>
               </div>
 
@@ -687,7 +698,7 @@
                   href="https://share.google/Os4UVfy3K6uJ26IiD"
                   target="_blank"
                   rel="noreferrer"
-                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
                   Reception Map
                 </a>
@@ -700,12 +711,12 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Celebrations Timeline (EXACT IMAGE 4 STYLE & FONTS) -->
+      <!-- Celebrations Timeline (EXACT IMAGE 4 STYLE & LIGHT TYPOGRAPHY) -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">Four Days of Joy</p>
-            <h2 class="mt-3 font-display text-[2rem] leading-tight text-foreground">Celebrations</h2>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">Four Days of Joy</p>
+            <h2 class="mt-3 font-display text-[2rem] leading-tight text-foreground font-light">Celebrations</h2>
             <div class="flex items-center justify-center gap-3 py-6 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -716,52 +727,52 @@
           <div class="mx-auto max-w-lg space-y-4">
             <!-- Event 1: Engagement -->
             <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
-              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/20 bg-secondary text-primary">
                 💍
               </div>
               <div class="flex-1">
                 <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="font-display text-xl text-foreground">The Engagement</h3>
+                  <h3 class="font-display text-xl text-foreground font-light">The Engagement</h3>
                 </div>
-                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
                   14 Jan 2027 &bull; 11:30 AM Onwards
                 </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body">Pavithram Convention Centre, Kundara, Kollam</p>
-                <p class="mt-1 text-xs text-muted-foreground font-body italic">Ring exchange, family blessings &amp; luncheon.</p>
+                <p class="mt-2 text-sm text-foreground/80 font-body font-light">Pavithram Convention Centre, Kundara, Kollam</p>
+                <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Ring exchange, family blessings &amp; luncheon.</p>
               </div>
             </article>
 
             <!-- Event 2: Holy Mass -->
             <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
-              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/20 bg-secondary text-primary">
                 ⛪
               </div>
               <div class="flex-1">
                 <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="font-display text-xl text-foreground">The Holy Matrimony</h3>
+                  <h3 class="font-display text-xl text-foreground font-light">The Holy Matrimony</h3>
                 </div>
-                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
                   18 Jan 2027 &bull; 10:30 AM Onwards
                 </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body">St. Antony's Shrine, Kanakamala, Chalakudy</p>
-                <p class="mt-1 text-xs text-muted-foreground font-body italic">Solemn Holy Mass &amp; sacred nuptial blessing.</p>
+                <p class="mt-2 text-sm text-foreground/80 font-body font-light">St. Antony's Shrine, Kanakamala, Chalakudy</p>
+                <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Solemn Holy Mass &amp; sacred nuptial blessing.</p>
               </div>
             </article>
 
             <!-- Event 3: Reception -->
             <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
-              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/20 bg-secondary text-primary">
                 🥂
               </div>
               <div class="flex-1">
                 <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="font-display text-xl text-foreground">Wedding Reception</h3>
+                  <h3 class="font-display text-xl text-foreground font-light">Wedding Reception</h3>
                 </div>
-                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">
+                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
                   18 Jan 2027 &bull; 12:30 PM Onwards
                 </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body">Kizhakuden's HeartLand Convention Centre</p>
-                <p class="mt-1 text-xs text-muted-foreground font-body italic">Dinner, music, joy &amp; celebration with loved ones.</p>
+                <p class="mt-2 text-sm text-foreground/80 font-body font-light">Kizhakuden's HeartLand Convention Centre</p>
+                <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Dinner, music, joy &amp; celebration with loved ones.</p>
               </div>
             </article>
           </div>
@@ -771,12 +782,12 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Venues Section (OG Seashell Style) -->
+      <!-- Venues Section -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground">Find Your Way</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">Venues</h2>
+            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">Find Your Way</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Venues</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -786,10 +797,10 @@
 
           <div class="mx-auto max-w-md space-y-5">
             <!-- Venue 1: Pavithram -->
-            <div class="card-soft p-6 rounded-sm border border-primary/20">
-              <span class="script text-lg text-primary block">Engagement Venue</span>
-              <h3 class="font-display text-xl font-semibold text-foreground mt-1">Pavithram Convention Centre</h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body">
+            <div class="card-soft p-6 rounded-sm border border-primary/15">
+              <span class="script text-lg text-primary block font-normal">Engagement Venue</span>
+              <h3 class="font-display text-2xl text-foreground mt-1 font-light">Pavithram Convention Centre</h3>
+              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
                 Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503
               </p>
               <div class="mt-4">
@@ -797,7 +808,7 @@
                   href="https://share.google/eKgdNtTLRLDoC2pMJ"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
                   <span>Open Maps</span>
                   <span>&rarr;</span>
@@ -806,10 +817,10 @@
             </div>
 
             <!-- Venue 2: St. Antony's Shrine -->
-            <div class="card-soft p-6 rounded-sm border border-primary/20">
-              <span class="script text-lg text-primary block">Holy Matrimony Church</span>
-              <h3 class="font-display text-xl font-semibold text-foreground mt-1">St. Antony's Shrine</h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body">
+            <div class="card-soft p-6 rounded-sm border border-primary/15">
+              <span class="script text-lg text-primary block font-normal">Holy Matrimony Church</span>
+              <h3 class="font-display text-2xl text-foreground mt-1 font-light">St. Antony's Shrine</h3>
+              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
                 Mechira - Kanakamala Rd, Perambra, Kerala
               </p>
               <div class="mt-4">
@@ -817,7 +828,7 @@
                   href="https://maps.google.com/?q=St.+Antony's+Shrine+Kanakamala+Perambra+Kerala"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
                   <span>Church Directions</span>
                   <span>&rarr;</span>
@@ -826,10 +837,10 @@
             </div>
 
             <!-- Venue 3: HeartLand -->
-            <div class="card-soft p-6 rounded-sm border border-primary/20">
-              <span class="script text-lg text-primary block">Wedding Reception Venue</span>
-              <h3 class="font-display text-xl font-semibold text-foreground mt-1">Kizhakuden's HeartLand Convention Centre</h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body">
+            <div class="card-soft p-6 rounded-sm border border-primary/15">
+              <span class="script text-lg text-primary block font-normal">Wedding Reception Venue</span>
+              <h3 class="font-display text-2xl text-foreground mt-1 font-light">Kizhakuden's HeartLand Convention Centre</h3>
+              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
                 Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721
               </p>
               <div class="mt-4">
@@ -837,7 +848,7 @@
                   href="https://share.google/Os4UVfy3K6uJ26IiD"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-semibold uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
                 >
                   <span>Reception Map</span>
                   <span>&rarr;</span>
@@ -854,9 +865,9 @@
       <!-- Wish Sky / Floating Lanterns (OG Seashell Style) -->
       <section class="wish-sky relative isolate overflow-hidden px-6 py-20 text-center text-white" style="background:#1a1510;">
         <div class="relative z-10 mx-auto max-w-md">
-          <p class="script text-xl text-[#f4d8a1]">Send Your Blessings</p>
-          <h2 class="mt-2 font-display text-3xl font-medium text-[#fff6df]">Release a Sky Lantern</h2>
-          <p class="mt-3 text-xs leading-relaxed text-[#e6dcc6]/90 font-body">
+          <p class="script text-xl text-[#f4d8a1] font-normal">Send Your Blessings</p>
+          <h2 class="mt-2 font-display text-3xl font-light text-[#fff6df]">Release a Sky Lantern</h2>
+          <p class="mt-3 text-xs leading-relaxed text-[#e6dcc6]/90 font-body font-light">
             Light a virtual lantern carrying your heartfelt prayers and wishes into the starlit sky for Binshi &amp; Joyel.
           </p>
 
@@ -867,59 +878,59 @@
               class="press flex items-center gap-2 rounded-full border border-[#d4af37]/60 bg-[#251707]/90 px-6 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,175,55,0.3)] backdrop-blur-md transition-all hover:border-[#d4af37] cursor-pointer"
             >
               <span class="text-lg">🏮</span>
-              <span class="font-body text-xs font-semibold uppercase tracking-widest text-[#f7e9c6]">Release Lantern</span>
+              <span class="font-body text-xs font-normal uppercase tracking-widest text-[#f7e9c6]">Release Lantern</span>
             </button>
           </div>
 
-          <p id="lanternStatus" class="mt-4 font-body text-xs text-[#f4d8a1]/90 min-h-[1.5rem]"></p>
+          <p id="lanternStatus" class="mt-4 font-body text-xs text-[#f4d8a1]/90 min-h-[1.5rem] font-light"></p>
         </div>
       </section>
 
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- RSVP Section (OG Seashell Style) -->
+      <!-- RSVP Section (Delicate, elegant light typography) -->
       <section id="rsvp" class="relative px-6 py-16 sm:py-20">
         <div class="reveal">
           <div class="text-center">
-            <p class="script text-xl text-primary font-medium">Will you join us?</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-medium">RSVP</h2>
+            <p class="script text-xl text-primary font-normal">Will you join us?</p>
+            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">RSVP</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
               <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
             </div>
-            <p class="mx-auto max-w-md font-body text-xs text-muted-foreground leading-relaxed">
+            <p class="mx-auto max-w-md font-body text-xs text-muted-foreground leading-relaxed font-light">
               Kindly confirm your presence so we may warmly prepare for your attendance at our Engagement and Wedding.
             </p>
           </div>
 
-          <div class="mx-auto mt-8 max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/25">
+          <div class="mx-auto mt-8 max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
             <form onsubmit="event.preventDefault(); submitRsvp();" class="space-y-4">
               <div>
-                <label for="guestName" class="block font-body text-xs font-medium text-foreground">Your Full Name *</label>
+                <label for="guestName" class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Your Full Name *</label>
                 <input
                   type="text"
                   id="guestName"
                   required
                   placeholder="e.g. John Doe"
-                  class="mt-1.5 w-full rounded-sm border border-primary/30 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground focus:border-primary focus:outline-none"
+                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground font-light focus:border-primary focus:outline-none"
                 />
               </div>
 
               <div>
-                <label for="guestPhone" class="block font-body text-xs font-medium text-foreground">Phone Number</label>
+                <label for="guestPhone" class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Phone Number</label>
                 <input
                   type="tel"
                   id="guestPhone"
                   placeholder="e.g. +91 98765 43210"
-                  class="mt-1.5 w-full rounded-sm border border-primary/30 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground focus:border-primary focus:outline-none"
+                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground font-light focus:border-primary focus:outline-none"
                 />
               </div>
 
               <div>
-                <label class="block font-body text-xs font-medium text-foreground">Will you be attending?</label>
-                <div class="mt-2 flex gap-4 font-body text-xs text-foreground">
+                <label class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Will you be attending?</label>
+                <div class="mt-2 flex gap-4 font-body text-xs text-foreground font-light">
                   <label class="flex items-center gap-2 cursor-pointer">
                     <input type="radio" name="attendance" value="attending" checked class="accent-[#8b6b43]" />
                     <span>Joyfully Accept</span>
@@ -932,22 +943,22 @@
               </div>
 
               <div>
-                <label class="block font-body text-xs font-medium text-foreground">Number of Guests</label>
+                <label class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Number of Guests</label>
                 <div class="mt-2 flex items-center gap-3">
                   <button
                     type="button"
                     onclick="adjustGuest(-1)"
-                    class="h-9 w-9 rounded-sm border border-primary/30 bg-secondary font-display text-base font-bold text-foreground hover:bg-primary hover:text-white"
+                    class="h-9 w-9 rounded-sm border border-primary/25 bg-secondary font-display text-base font-light text-foreground hover:bg-primary hover:text-white"
                   >
                     -
                   </button>
-                  <span id="guestCountDisplay" class="min-w-[2.5rem] text-center font-display text-lg font-semibold text-foreground">
+                  <span id="guestCountDisplay" class="min-w-[2.5rem] text-center font-display text-lg font-light text-foreground">
                     2
                   </span>
                   <button
                     type="button"
                     onclick="adjustGuest(1)"
-                    class="h-9 w-9 rounded-sm border border-primary/30 bg-secondary font-display text-base font-bold text-foreground hover:bg-primary hover:text-white"
+                    class="h-9 w-9 rounded-sm border border-primary/25 bg-secondary font-display text-base font-light text-foreground hover:bg-primary hover:text-white"
                   >
                     +
                   </button>
@@ -955,27 +966,27 @@
               </div>
 
               <div>
-                <label for="guestMessage" class="block font-body text-xs font-medium text-foreground">Wishes / Blessings</label>
+                <label for="guestMessage" class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Wishes / Blessings</label>
                 <textarea
                   id="guestMessage"
                   rows="3"
                   placeholder="Leave a heartfelt message for Binshi & Joyel..."
-                  class="mt-1.5 w-full rounded-sm border border-primary/30 bg-white/70 px-3.5 py-2 font-body text-sm text-foreground focus:border-primary focus:outline-none"
+                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2 font-body text-sm text-foreground font-light focus:border-primary focus:outline-none"
                 ></textarea>
               </div>
 
               <div class="pt-2">
                 <button
                   type="submit"
-                  class="press w-full rounded-sm bg-primary py-3 font-body text-xs font-semibold uppercase tracking-airy text-primary-foreground shadow-sm hover:opacity-95"
+                  class="press w-full rounded-sm bg-primary py-3 font-body text-xs font-normal uppercase tracking-airy text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   Send RSVP via WhatsApp &rarr;
                 </button>
               </div>
             </form>
 
-            <div class="mt-6 border-t border-primary/15 pt-5 text-center font-body text-[0.72rem] text-muted-foreground space-y-2">
-              <p class="font-semibold text-foreground">Family Residences:</p>
+            <div class="mt-6 border-t border-primary/15 pt-5 text-center font-body text-[0.72rem] text-muted-foreground space-y-2 font-light">
+              <p class="font-normal text-foreground">Family Residences:</p>
               <p>Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501</p>
               <p>Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala</p>
             </div>
@@ -986,24 +997,24 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Footer Scene (OG Seashell Style) -->
+      <!-- Footer Scene (Grand names, light airy text) -->
       <footer class="relative overflow-hidden px-6 pt-12 pb-24 text-center border-t border-primary/15">
         <div class="reveal">
-          <p class="script text-2xl text-primary">Dr Binshi &amp; Joyel</p>
-          <p class="mt-2 font-display text-sm tracking-widest uppercase text-muted-foreground">
+          <p class="script text-3xl sm:text-4xl text-primary font-normal">Dr Binshi &amp; Joyel</p>
+          <p class="mt-2 font-display text-sm tracking-widest uppercase text-muted-foreground font-light">
             January 2027 &bull; Kollam &amp; Chalakudy
           </p>
           <div class="mt-6 flex justify-center gap-3">
             <button
               type="button"
               onclick="shareInvitation()"
-              class="press inline-flex items-center gap-2 rounded-sm border border-primary/40 bg-secondary px-5 py-2.5 font-body text-xs font-semibold uppercase tracking-airy text-foreground"
+              class="press inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-secondary px-5 py-2.5 font-body text-xs font-normal uppercase tracking-airy text-foreground"
             >
               <span>Share Invitation</span>
               <span>🔗</span>
             </button>
           </div>
-          <p class="mt-8 font-body text-[0.62rem] text-muted-foreground/75 tracking-wider uppercase">
+          <p class="mt-8 font-body text-[0.62rem] text-muted-foreground/75 tracking-wider uppercase font-light">
             Designed with love &bull; Binshi &amp; Joyel
           </p>
         </div>
@@ -1224,7 +1235,6 @@
         if (status) {
           status.textContent = '✨ ' + lanternCount + ' lantern(s) released into the starry sky with your blessings!';
           status.style.color = '#f4d8a1';
-          status.style.fontWeight = 'bold';
         }
       }
     </script>
