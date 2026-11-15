@@ -187,20 +187,16 @@
         font-weight: 300;
       }
 
-      /* Grand, High-contrast, radiant luminous gold typography for bride & groom */
-      .gold-luminous-text {
-        color: #fffdf7;
-        background: linear-gradient(180deg, #ffffff 0%, #fff7e6 30%, #fae6ba 70%, #f0c978 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 3px 14px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px rgba(233, 200, 121, 0.75));
-      }
-
-      .gilded-first-page .text-hall-light {
-        color: var(--hall-light);
-      }
-      .gilded-first-page .text-ivory {
-        color: var(--ivory);
+      /* All writings in Gilded Hall first page strictly pure white */
+      .gilded-first-page,
+      .gilded-first-page p,
+      .gilded-first-page h1,
+      .gilded-first-page span,
+      .gilded-first-page .font-title,
+      .gilded-first-page .font-display,
+      .gilded-first-page .font-body {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
       }
       .gilded-first-page .petal-veil {
         position: absolute;
@@ -528,15 +524,15 @@
         <!-- Shimmering Gradient Overlay (Softens vertical rain lines across text area) -->
         <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(21,14,4,0.88) 0%, rgba(35,22,7,0.75) 32%, rgba(74,51,18,0.18) 65%, rgba(21,14,4,0.75) 100%)"></div>
 
-        <!-- Wedding Details Typography (Radiant, grand names, no line clutter) -->
+        <!-- Wedding Details Typography (All writings in pure brilliant white) -->
         <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 7svh)">
-          <div class="mx-auto max-w-md rounded-2xl py-3 px-4" style="background:radial-gradient(ellipse at center, rgba(21,14,4,0.75) 0%, rgba(21,14,4,0.4) 60%, transparent 90%);">
-            <p class="font-body text-[0.68rem] uppercase tracking-[0.45em] text-[#fce5b8] reveal font-light" style="transition-delay:300ms; text-shadow:0 2px 8px rgba(0,0,0,0.95);">
+          <div class="mx-auto max-w-md rounded-2xl py-3 px-4" style="background:radial-gradient(ellipse at center, rgba(21,14,4,0.78) 0%, rgba(21,14,4,0.45) 60%, transparent 90%);">
+            <p class="font-body text-[0.72rem] uppercase tracking-[0.45em] reveal font-light text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition-delay:300ms; text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.9);">
               Shubh Vivah &bull; Holy Matrimony
             </p>
-            <!-- Doubled Grand, Highly Visible Names of Bride & Groom -->
-            <h1 class="mt-4 sm:mt-6 font-display text-[clamp(6.5rem,28vw,11rem)] font-light leading-[0.88] reveal gold-luminous-text" style="transition-delay:900ms">
-              Joyel<span class="block font-title text-[0.38em] tracking-[0.3em] text-[#fce5b8] my-3 sm:my-4">&amp;</span>Dr Binshi
+            <!-- Doubled Grand, Highly Visible Names of Bride & Groom in PURE WHITE -->
+            <h1 class="mt-4 sm:mt-6 font-display text-[clamp(6.5rem,28vw,11rem)] font-light leading-[0.88] reveal text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition-delay:900ms; text-shadow: 0 4px 18px rgba(0,0,0,0.95), 0 0 25px rgba(0,0,0,0.9);">
+              Joyel<span class="block font-title text-[0.38em] tracking-[0.3em] my-3 sm:my-4 text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 3px 12px rgba(0,0,0,0.95);">&amp;</span>Dr Binshi
             </h1>
             <div class="reveal mt-3 sm:mt-4" style="transition-delay:1200ms">
               <img
@@ -546,11 +542,11 @@
                 loading="lazy"
                 width="1200"
                 height="512"
-                class="mx-auto h-auto opacity-85"
-                style="width:160px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.8));"
+                class="mx-auto h-auto opacity-90"
+                style="width:160px; filter: brightness(1.2) drop-shadow(0 2px 8px rgba(0,0,0,0.9));"
               />
-              <!-- Date lifted cleanly above the stage arches -->
-              <p class="mt-2.5 sm:mt-3 font-title text-[1.05rem] sm:text-[1.2rem] tracking-[0.4em] text-[#fffdf7] font-normal" style="text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 0 18px rgba(233,200,121,0.75);">
+              <!-- Date lifted cleanly above the stage arches in PURE WHITE -->
+              <p class="mt-2.5 sm:mt-3 font-title text-[1.1rem] sm:text-[1.25rem] tracking-[0.4em] font-normal text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 0 18px rgba(0,0,0,0.9);">
                 18 . 01 . 2027
               </p>
             </div>
