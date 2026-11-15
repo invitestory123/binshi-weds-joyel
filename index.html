@@ -229,70 +229,12 @@
         }
       }
 
-      /* --- INVITATION LETTER & ROSE FLOWER BORDER STYLING --- */
+      /* --- INVITATION LETTER BOX STYLING --- */
       .wedding-letter-card {
         background: #ffffff;
         position: relative;
-        border: 2px solid rgba(155, 34, 52, 0.35);
-        box-shadow: 0 16px 40px rgba(155, 34, 52, 0.08), 0 0 0 6px rgba(252, 241, 242, 0.75);
-      }
-      .letter-inner-border {
-        position: absolute;
-        inset: 10px;
-        border: 1px solid rgba(155, 34, 52, 0.24);
-        pointer-events: none;
-      }
-      .rose-corner-tl {
-        position: absolute;
-        top: -18px;
-        left: -18px;
-        width: 72px;
-        height: auto;
-        pointer-events: none;
-        z-index: 25;
-        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
-      }
-      .rose-corner-tr {
-        position: absolute;
-        top: -18px;
-        right: -18px;
-        width: 72px;
-        height: auto;
-        transform: scaleX(-1);
-        pointer-events: none;
-        z-index: 25;
-        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
-      }
-      .rose-corner-bl {
-        position: absolute;
-        bottom: -18px;
-        left: -18px;
-        width: 72px;
-        height: auto;
-        transform: scaleY(-1);
-        pointer-events: none;
-        z-index: 25;
-        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
-      }
-      .rose-corner-br {
-        position: absolute;
-        bottom: -18px;
-        right: -18px;
-        width: 72px;
-        height: auto;
-        transform: scale(-1, -1);
-        pointer-events: none;
-        z-index: 25;
-        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
-      }
-      @media (max-width: 640px) {
-        .rose-corner-tl, .rose-corner-tr, .rose-corner-bl, .rose-corner-br {
-          width: 54px;
-        }
-        .rose-corner-tl { top: -14px; left: -14px; }
-        .rose-corner-tr { top: -14px; right: -14px; }
-        .rose-corner-bl { bottom: -14px; left: -14px; }
-        .rose-corner-br { bottom: -14px; right: -14px; }
+        border: 1.5px solid rgba(155, 34, 52, 0.3);
+        box-shadow: 0 12px 35px rgba(155, 34, 52, 0.06);
       }
     </style>
   </head>
@@ -388,14 +330,14 @@
           style="animation-delay:1.4s;transform:translate3d(0, 0px, 0)"
         />
 
-        <!-- Bride & Groom Walking Illustration (Properly reduced size in upper arch) -->
+        <!-- Bride & Groom Walking Illustration (Delicate compact sizing in upper arch) -->
         <div class="relative w-full flex justify-center pt-[7svh] sm:pt-[8svh] z-10 pointer-events-none">
           <img
             src="seashell-vows/editable/assets/couple-walking.png"
             alt="Bride and groom walking hand in hand"
             width="1024"
             height="1536"
-            class="w-[36%] max-w-[150px] sm:max-w-[170px] max-h-[25svh] sm:max-h-[28svh] object-contain animate-bloom drop-shadow-[0_12px_22px_rgba(92,80,68,0.15)]"
+            class="w-[24%] max-w-[95px] sm:max-w-[115px] max-h-[17svh] sm:max-h-[20svh] object-contain animate-bloom drop-shadow-[0_12px_22px_rgba(92,80,68,0.15)]"
           />
         </div>
 
@@ -629,85 +571,63 @@
       </section>
 
       <!-- ========================================================================= -->
-      <!-- ELEGANT PAGE TRANSITION SPACER (LEAVE SPACE IN BETWEEN PAGES)             -->
+      <!-- ELEGANT PAGE TRANSITION SPACER (GENEROUS SPACE AFTER WEDDING FIRST PAGE)  -->
       <!-- ========================================================================= -->
-      <div class="w-full py-8 sm:py-12 flex items-center justify-center bg-gradient-to-b from-[#150e04] to-[#fbf9f4]">
-        <div class="h-px w-28 bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent"></div>
+      <div class="w-full py-16 sm:py-24 flex items-center justify-center bg-gradient-to-b from-[#150e04] via-[#241712] to-[var(--color-background)]">
+        <div class="flex items-center gap-3 text-[#d4af37]/75">
+          <span class="h-px w-20 sm:w-32 bg-gradient-to-r from-transparent to-[#d4af37]/60"></span>
+          <span class="text-xs">❖</span>
+          <span class="h-px w-20 sm:w-32 bg-gradient-to-l from-transparent to-[#d4af37]/60"></span>
+        </div>
       </div>
 
       <!-- ========================================================================= -->
-      <!-- PART 3: WEDDING DETAILS & CELEBRATIONS (IMAGE 4 FONTS EVERYWHERE)         -->
+      <!-- PART 3: WEDDING DETAILS & CELEBRATIONS                                    -->
       <!-- ========================================================================= -->
 
       <!-- ========================================================================= -->
-      <!-- WEDDING INVITATION LETTER WITH ROSE / FLOWER BORDER ELEMENTS               -->
+      <!-- WEDDING INVITATION LETTER (CLEAN BORDERS, PERFECTLY FITTED CONTENTS)     -->
       <!-- ========================================================================= -->
-      <section class="relative px-5 sm:px-8 py-12 sm:py-16 overflow-hidden">
+      <section class="relative px-5 sm:px-8 pt-6 pb-12 sm:pb-16 overflow-hidden">
         <div class="reveal mx-auto max-w-lg">
-          <!-- The Invitation Letter Card with Rose Borders -->
-          <div class="wedding-letter-card relative p-7 sm:p-10 rounded-sm">
-            <!-- Inner delicate border -->
-            <div class="letter-inner-border"></div>
-
-            <!-- 4 Corner Rose Floral Elements -->
-            <img
-              src="editable/assets/rose-element.png"
-              alt=""
-              aria-hidden="true"
-              class="rose-corner-tl"
-            />
-            <img
-              src="editable/assets/rose-element.png"
-              alt=""
-              aria-hidden="true"
-              class="rose-corner-tr"
-            />
-            <img
-              src="editable/assets/rose-element.png"
-              alt=""
-              aria-hidden="true"
-              class="rose-corner-bl"
-            />
-            <img
-              src="editable/assets/rose-element.png"
-              alt=""
-              aria-hidden="true"
-              class="rose-corner-br"
-            />
-
-            <!-- Letter Header -->
-            <div class="relative z-10 text-center pt-1">
-              <p class="script text-xl sm:text-2xl text-primary font-normal">A love united in faith</p>
-              <h2 class="mt-1 font-display text-[2.2rem] sm:text-[2.5rem] leading-tight text-foreground font-light">
-                The Sacred Sacrament
-              </h2>
-              <div class="flex items-center justify-center gap-3 py-3 text-primary/70">
-                <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
-                <span class="text-[0.7rem] tracking-airy">❖</span>
-                <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+          <!-- The Invitation Letter Box -->
+          <div class="rounded-sm p-2 sm:p-2.5 bg-card border border-primary/30 shadow-[0_8px_30px_rgba(155,34,52,0.06)]">
+            <!-- Nested Inner Border Frame (guarantees all contents fit cleanly inside) -->
+            <div class="border border-primary/25 rounded-[2px] px-5 py-7 sm:px-8 sm:py-9 text-center space-y-4">
+              <!-- Header -->
+              <div>
+                <p class="script text-xl sm:text-2xl text-primary font-normal">A love united in faith</p>
+                <h2 class="mt-1 font-display text-[2rem] sm:text-[2.4rem] leading-tight text-foreground font-light">
+                  The Sacred Sacrament
+                </h2>
+                <div class="flex items-center justify-center gap-3 py-2.5 text-primary/70">
+                  <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
+                  <span class="text-[0.65rem] tracking-airy">❖</span>
+                  <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+                </div>
               </div>
-            </div>
 
-            <!-- Scripture Verse & Invitation Copy -->
-            <div class="relative z-10 text-center space-y-3 px-2 sm:px-4">
-              <p class="font-display italic text-base sm:text-lg leading-relaxed text-foreground/80 font-light">
-                &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
-              </p>
-              <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
-                Mark 10:9
-              </p>
+              <!-- Scripture Verse -->
+              <div>
+                <p class="font-display italic text-base sm:text-lg leading-relaxed text-foreground/80 font-light">
+                  &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
+                </p>
+                <p class="font-body text-[0.6rem] uppercase tracking-airy text-muted-foreground font-light mt-1">
+                  Mark 10:9
+                </p>
+              </div>
 
               <!-- Formal Invitation Letter Note -->
-              <div class="mt-4 pt-3 border-t border-primary/20 space-y-2">
+              <div class="pt-3 border-t border-primary/20 space-y-2.5">
                 <p class="font-body text-[0.68rem] uppercase tracking-[0.25em] text-primary font-medium">
                   Together with their families
                 </p>
-                <p class="font-body text-xs sm:text-[0.82rem] leading-relaxed text-foreground/85 font-light">
+                <p class="font-body text-xs sm:text-[0.82rem] leading-relaxed text-foreground/85 font-light max-w-sm mx-auto">
                   Request the honour of your esteemed presence and heartfelt prayers at the Holy Matrimony &amp; Wedding Reception celebrating the union of
                 </p>
                 
                 <!-- Couple Names inside Letter -->
-                <div class="py-2">
+                <div class="py-1">
                   <h3 class="font-display text-2xl sm:text-3xl text-foreground font-bold">
                     Joyel Paul
                   </h3>
@@ -717,10 +637,14 @@
                   </h3>
                 </div>
 
-                <p class="font-body text-xs text-muted-foreground font-light leading-relaxed">
-                  Monday, 18 January 2027 &bull; 10:30 AM Onwards<br />
-                  <span class="text-foreground font-normal">St. Antony's Church, Kanakamala</span>
-                </p>
+                <div class="pt-1.5 space-y-1">
+                  <p class="font-body text-xs sm:text-[0.78rem] uppercase tracking-wider text-muted-foreground font-light">
+                    Monday, 18 January 2027 &bull; 10:30 AM Onwards
+                  </p>
+                  <p class="font-body text-xs sm:text-sm text-foreground font-normal">
+                    St. Antony's Church, Kanakamala
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -780,13 +704,7 @@
 
           <div class="mx-auto max-w-md space-y-6">
             <!-- 1. Holy Mass Ceremony Card -->
-            <div class="card-soft relative p-6 sm:p-8 rounded-sm border border-primary/25 overflow-hidden">
-              <img
-                src="editable/assets/rose-element.png"
-                alt=""
-                aria-hidden="true"
-                class="pointer-events-none absolute -top-5 -right-5 w-16 h-auto opacity-75"
-              />
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
               <div class="flex items-center gap-3">
                 <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">⛪</span>
                 <div>
@@ -822,13 +740,7 @@
             </div>
 
             <!-- 2. Reception Card -->
-            <div class="card-soft relative p-6 sm:p-8 rounded-sm border border-primary/25 overflow-hidden">
-              <img
-                src="editable/assets/rose-element.png"
-                alt=""
-                aria-hidden="true"
-                class="pointer-events-none absolute -top-5 -right-5 w-16 h-auto -scale-x-100 opacity-75"
-              />
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
               <div class="flex items-center gap-3">
                 <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">🥂</span>
                 <div>
