@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Dr Binshi &amp; Joyel — Engagement &amp; Wedding Invitation</title>
+    <title>Joyel Paul Weds Dr. Binshi Biju — Engagement &amp; Wedding Invitation</title>
     <meta
       name="description"
-      content="Join Dr Binshi Biju &amp; Joyel Paul for their Engagement on 14 Jan 2027 at Pavithram Convention Centre, Kollam, and Holy Matrimony &amp; Wedding Reception on 18 Jan 2027 at St. Antony's Church, Kanakamala &amp; Kizhakuden's HeartLand, Chalakudy."
+      content="Join Joyel Paul &amp; Dr. Binshi Biju for their Engagement on 14 Jan 2027 at Pavithram Convention Centre, Kollam, and Holy Matrimony &amp; Wedding Reception on 18 Jan 2027 at St. Antony's Church, Kanakamala &amp; Kizhakuden's HeartLand, Chalakudy."
     />
 
     <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Dr Binshi &amp; Joyel — Wedding &amp; Engagement Invitation" />
+    <meta property="og:title" content="Joyel Paul Weds Dr. Binshi Biju — Wedding &amp; Engagement Invitation" />
     <meta
       property="og:description"
       content="14 Jan 2027 (Engagement at Kundara, Kollam) &bull; 18 Jan 2027 (Holy Matrimony at St. Antony's Church, Kanakamala &amp; Reception at Chalakudy)"
@@ -43,15 +43,16 @@
         --font-display: 'Cormorant Garamond', Georgia, serif;
         --font-script: 'Petit Formal Script', cursive;
         --font-body: 'Jost', system-ui, -apple-system, sans-serif;
-        --color-background: #fbf9f4;
-        --color-foreground: #1c150e;
+        --color-background: #fffcf9;
+        --color-foreground: #221417;
         --color-card: #ffffff;
-        --color-primary: #8b6b43;
+        --color-primary: #9b2234; /* Elegant Romantic Ruby Rose Red */
         --color-primary-foreground: #ffffff;
-        --color-secondary: #f4efe6;
-        --color-muted: #f4efe6;
-        --color-muted-foreground: #786b59;
-        --color-border: #e7decb;
+        --color-secondary: #fcf1f2; /* Soft Rose Blush Tint */
+        --color-muted: #fcf1f2;
+        --color-muted-foreground: #7e5a62; /* Rosewood Muted Tone */
+        --color-border: #edd2d7; /* Delicate Rose Gold / Blush Border */
+        --color-rose: #b82d43;
         --color-sage: #9ca38f;
       }
 
@@ -227,6 +228,72 @@
           height: 5.5rem;
         }
       }
+
+      /* --- INVITATION LETTER & ROSE FLOWER BORDER STYLING --- */
+      .wedding-letter-card {
+        background: #ffffff;
+        position: relative;
+        border: 2px solid rgba(155, 34, 52, 0.35);
+        box-shadow: 0 16px 40px rgba(155, 34, 52, 0.08), 0 0 0 6px rgba(252, 241, 242, 0.75);
+      }
+      .letter-inner-border {
+        position: absolute;
+        inset: 10px;
+        border: 1px solid rgba(155, 34, 52, 0.24);
+        pointer-events: none;
+      }
+      .rose-corner-tl {
+        position: absolute;
+        top: -18px;
+        left: -18px;
+        width: 72px;
+        height: auto;
+        pointer-events: none;
+        z-index: 25;
+        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
+      }
+      .rose-corner-tr {
+        position: absolute;
+        top: -18px;
+        right: -18px;
+        width: 72px;
+        height: auto;
+        transform: scaleX(-1);
+        pointer-events: none;
+        z-index: 25;
+        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
+      }
+      .rose-corner-bl {
+        position: absolute;
+        bottom: -18px;
+        left: -18px;
+        width: 72px;
+        height: auto;
+        transform: scaleY(-1);
+        pointer-events: none;
+        z-index: 25;
+        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
+      }
+      .rose-corner-br {
+        position: absolute;
+        bottom: -18px;
+        right: -18px;
+        width: 72px;
+        height: auto;
+        transform: scale(-1, -1);
+        pointer-events: none;
+        z-index: 25;
+        filter: drop-shadow(0 4px 10px rgba(155, 34, 52, 0.22));
+      }
+      @media (max-width: 640px) {
+        .rose-corner-tl, .rose-corner-tr, .rose-corner-bl, .rose-corner-br {
+          width: 54px;
+        }
+        .rose-corner-tl { top: -14px; left: -14px; }
+        .rose-corner-tr { top: -14px; right: -14px; }
+        .rose-corner-bl { bottom: -14px; left: -14px; }
+        .rose-corner-br { bottom: -14px; right: -14px; }
+      }
     </style>
   </head>
 
@@ -266,14 +333,14 @@
         class="absolute inset-0 flex w-full flex-col items-center justify-end bg-[linear-gradient(180deg,transparent_30%,rgba(15,10,5,0.78)_100%)] px-6 pb-14 text-center text-white focus-visible:outline-none cursor-pointer transition-opacity duration-500"
       >
         <div class="flex flex-col items-center text-center">
-          <span class="script text-[clamp(5.5rem,18vw,8rem)] sm:text-[7.5rem] text-[#fff2d4] leading-[0.92]" style="text-shadow: 0 4px 20px rgba(0,0,0,0.95), 0 0 35px rgba(233,200,121,0.8);">
-            Dr. Binshi
+          <span class="script text-[clamp(4.2rem,14vw,6.2rem)] sm:text-[6.2rem] text-[#fff2d4] leading-[0.95]" style="text-shadow: 0 4px 20px rgba(0,0,0,0.95), 0 0 35px rgba(233,200,121,0.8);">
+            Joyel Paul
           </span>
-          <span class="script text-5xl sm:text-7xl text-[#f5d799] my-2 sm:my-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
-            &amp;
+          <span class="script text-3xl sm:text-5xl text-[#f5d799] my-1 sm:my-2" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+            Weds
           </span>
-          <span class="script text-[clamp(5.5rem,18vw,8rem)] sm:text-[7.5rem] text-[#fff2d4] leading-[0.92]" style="text-shadow: 0 4px 20px rgba(0,0,0,0.95), 0 0 35px rgba(233,200,121,0.8);">
-            Joyel
+          <span class="script text-[clamp(4.2rem,14vw,6.2rem)] sm:text-[6.2rem] text-[#fff2d4] leading-[0.95]" style="text-shadow: 0 4px 20px rgba(0,0,0,0.95), 0 0 35px rgba(233,200,121,0.8);">
+            Dr. Binshi Biju
           </span>
         </div>
         <span class="mt-6 border-b border-white/60 pb-1 font-body text-[0.82rem] uppercase tracking-[0.28em] text-white">
@@ -332,15 +399,17 @@
           />
         </div>
 
-        <!-- Typography & Engagement Details (Swapped sizes: small tagline, grand couple names) -->
+        <!-- Typography & Engagement Details (In Center, Big & Bold: Joyel Paul Weds Dr. Binshi Biju) -->
         <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-8 sm:pb-12 text-center">
-          <!-- Small delicate tagline (Swapped font size) -->
-          <p class="script text-sm sm:text-base text-primary animate-ink font-normal mb-1.5" style="animation-delay:0.4s">
+          <!-- Delicate tagline -->
+          <p class="script text-base sm:text-lg text-primary animate-ink font-normal mb-1.5" style="animation-delay:0.4s">
             Together with our families
           </p>
-          <!-- Large, grand names of bride and groom (Swapped font size) -->
-          <h1 class="font-display text-[clamp(2.4rem,8vw,3.3rem)] leading-[1.04] text-foreground animate-ink font-light" style="animation-delay:0.7s">
-            Dr Binshi Biju<span class="script mx-2 block text-2xl sm:text-3xl text-primary my-1">&amp;</span>Joyel Paul
+          <!-- Big and bold names in center: Joyel Paul Weds Dr. Binshi Biju -->
+          <h1 class="font-display text-[clamp(2.4rem,7.5vw,3.6rem)] leading-[1.08] text-foreground animate-ink font-bold text-center" style="animation-delay:0.7s; font-weight: 700;">
+            Joyel Paul
+            <span class="script block text-2xl sm:text-3xl text-primary my-1 font-bold">Weds</span>
+            Dr. Binshi Biju
           </h1>
           <p class="mt-3 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1s">
             Thursday, 14 January 2027 &bull; 11:30 AM Onwards
@@ -533,9 +602,11 @@
             <p class="font-body text-[0.72rem] uppercase tracking-[0.45em] reveal font-light text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition-delay:300ms; text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.9);">
               Shubh Vivah &bull; Holy Matrimony
             </p>
-            <!-- Doubled Grand, Highly Visible Names of Bride & Groom in PURE WHITE -->
-            <h1 class="mt-4 sm:mt-6 font-display text-[clamp(6.5rem,28vw,11rem)] font-light leading-[0.88] reveal text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition-delay:900ms; text-shadow: 0 4px 18px rgba(0,0,0,0.95), 0 0 25px rgba(0,0,0,0.9);">
-              Joyel<span class="block font-title text-[0.38em] tracking-[0.3em] my-3 sm:my-4 text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 3px 12px rgba(0,0,0,0.95);">&amp;</span>Dr Binshi
+            <!-- Grand Big & Bold Names in PURE WHITE with Capital starting words: Joyel Paul Weds Dr. Binshi Biju -->
+            <h1 class="mt-4 sm:mt-5 font-display text-[clamp(3.6rem,12vw,6.2rem)] font-bold leading-[1.04] reveal text-white text-center" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 700 !important; transition-delay:900ms; text-shadow: 0 4px 22px rgba(0,0,0,0.98), 0 0 32px rgba(0,0,0,0.95), 0 0 14px rgba(255,255,255,0.45);">
+              Joyel Paul
+              <span class="block font-title text-[0.42em] tracking-[0.35em] uppercase my-2 sm:my-3 text-white font-bold" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 700 !important; text-shadow: 0 3px 14px rgba(0,0,0,0.95);">Weds</span>
+              Dr. Binshi Biju
             </h1>
             <div class="reveal mt-3 sm:mt-4" style="transition-delay:1200ms">
               <img
@@ -568,35 +639,91 @@
       <!-- PART 3: WEDDING DETAILS & CELEBRATIONS (IMAGE 4 FONTS EVERYWHERE)         -->
       <!-- ========================================================================= -->
 
-      <!-- Wedding Holy Matrimony Message (OG Seashell Style) -->
-      <section class="relative px-7 py-14 sm:py-20">
-        <img
-          src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="1024"
-          height="1024"
-          class="pointer-events-none absolute -left-12 -top-8 w-36 opacity-60"
-        />
-        <div class="reveal">
-          <div class="text-center">
-            <p class="script text-xl text-primary font-normal">A love united in faith</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">
-              The Sacred Sacrament
-            </h2>
-            <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
-              <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
-              <span class="text-[0.7rem] tracking-airy">❖</span>
-              <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+      <!-- ========================================================================= -->
+      <!-- WEDDING INVITATION LETTER WITH ROSE / FLOWER BORDER ELEMENTS               -->
+      <!-- ========================================================================= -->
+      <section class="relative px-5 sm:px-8 py-12 sm:py-16 overflow-hidden">
+        <div class="reveal mx-auto max-w-lg">
+          <!-- The Invitation Letter Card with Rose Borders -->
+          <div class="wedding-letter-card relative p-7 sm:p-10 rounded-sm">
+            <!-- Inner delicate border -->
+            <div class="letter-inner-border"></div>
+
+            <!-- 4 Corner Rose Floral Elements -->
+            <img
+              src="editable/assets/rose-element.png"
+              alt=""
+              aria-hidden="true"
+              class="rose-corner-tl"
+            />
+            <img
+              src="editable/assets/rose-element.png"
+              alt=""
+              aria-hidden="true"
+              class="rose-corner-tr"
+            />
+            <img
+              src="editable/assets/rose-element.png"
+              alt=""
+              aria-hidden="true"
+              class="rose-corner-bl"
+            />
+            <img
+              src="editable/assets/rose-element.png"
+              alt=""
+              aria-hidden="true"
+              class="rose-corner-br"
+            />
+
+            <!-- Letter Header -->
+            <div class="relative z-10 text-center pt-1">
+              <p class="script text-xl sm:text-2xl text-primary font-normal">A love united in faith</p>
+              <h2 class="mt-1 font-display text-[2.2rem] sm:text-[2.5rem] leading-tight text-foreground font-light">
+                The Sacred Sacrament
+              </h2>
+              <div class="flex items-center justify-center gap-3 py-3 text-primary/70">
+                <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
+                <span class="text-[0.7rem] tracking-airy">❖</span>
+                <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
+              </div>
+            </div>
+
+            <!-- Scripture Verse & Invitation Copy -->
+            <div class="relative z-10 text-center space-y-3 px-2 sm:px-4">
+              <p class="font-display italic text-base sm:text-lg leading-relaxed text-foreground/80 font-light">
+                &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
+              </p>
+              <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
+                Mark 10:9
+              </p>
+
+              <!-- Formal Invitation Letter Note -->
+              <div class="mt-4 pt-3 border-t border-primary/20 space-y-2">
+                <p class="font-body text-[0.68rem] uppercase tracking-[0.25em] text-primary font-medium">
+                  Together with their families
+                </p>
+                <p class="font-body text-xs sm:text-[0.82rem] leading-relaxed text-foreground/85 font-light">
+                  Request the honour of your esteemed presence and heartfelt prayers at the Holy Matrimony &amp; Wedding Reception celebrating the union of
+                </p>
+                
+                <!-- Couple Names inside Letter -->
+                <div class="py-2">
+                  <h3 class="font-display text-2xl sm:text-3xl text-foreground font-bold">
+                    Joyel Paul
+                  </h3>
+                  <span class="script text-xl text-primary my-0.5 block font-normal">weds</span>
+                  <h3 class="font-display text-2xl sm:text-3xl text-foreground font-bold">
+                    Dr. Binshi Biju
+                  </h3>
+                </div>
+
+                <p class="font-body text-xs text-muted-foreground font-light leading-relaxed">
+                  Monday, 18 January 2027 &bull; 10:30 AM Onwards<br />
+                  <span class="text-foreground font-normal">St. Antony's Church, Kanakamala</span>
+                </p>
+              </div>
             </div>
           </div>
-          <p class="mx-auto max-w-lg text-center font-display text-lg italic leading-relaxed text-foreground/80 font-light">
-            &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
-          </p>
-          <p class="mt-2 text-center font-body text-xs uppercase tracking-airy text-muted-foreground font-light">
-            Mark 10:9
-          </p>
         </div>
       </section>
 
@@ -653,7 +780,13 @@
 
           <div class="mx-auto max-w-md space-y-6">
             <!-- 1. Holy Mass Ceremony Card -->
-            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
+            <div class="card-soft relative p-6 sm:p-8 rounded-sm border border-primary/25 overflow-hidden">
+              <img
+                src="editable/assets/rose-element.png"
+                alt=""
+                aria-hidden="true"
+                class="pointer-events-none absolute -top-5 -right-5 w-16 h-auto opacity-75"
+              />
               <div class="flex items-center gap-3">
                 <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">⛪</span>
                 <div>
@@ -689,7 +822,13 @@
             </div>
 
             <!-- 2. Reception Card -->
-            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
+            <div class="card-soft relative p-6 sm:p-8 rounded-sm border border-primary/25 overflow-hidden">
+              <img
+                src="editable/assets/rose-element.png"
+                alt=""
+                aria-hidden="true"
+                class="pointer-events-none absolute -top-5 -right-5 w-16 h-auto -scale-x-100 opacity-75"
+              />
               <div class="flex items-center gap-3">
                 <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">🥂</span>
                 <div>

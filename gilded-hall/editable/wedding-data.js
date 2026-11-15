@@ -28,7 +28,7 @@ window.WEDDING_DATA = {
       name: "Holy Mass & Nuptial Ceremony",
       date: "18 January 2027",
       time: "10:30 AM onwards",
-      venue: "St. Antony's shrine, Kanakamala",
+      venue: "St. Antony's Church, Kanakamala",
       address: "Mechira - Kanakamala Rd, Perambra, Keralam",
       note: "Solemn Nuptial Blessing with Holy Mass.",
     },
@@ -43,9 +43,9 @@ window.WEDDING_DATA = {
   ],
 
   churchVenue: {
-    name: "St. Antony's shrine, Kanakamala",
+    name: "St. Antony's Church, Kanakamala",
     address: "Mechira - Kanakamala Rd, Perambra, Keralam",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=St.+Antony%27s+shrine+Kanakamala+Mechira+Perambra",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=St.+Antony%27s+Church+Kanakamala+Mechira+Perambra",
   },
 
   venue: {

@@ -17,7 +17,7 @@ This website harmoniously unites two luxury themes:
    - Shimmering gold couple typography
    - Embedded couple loop video in golden filigree frame (`couple.mp4`)
    - Live Wedding countdown timer (18 Jan 2027, 10:30 AM)
-   - Holy Mass Ceremony at St. Antony's shrine, Kanakamala
+   - Holy Mass Ceremony at St. Antony's Church, Kanakamala
    - Wedding Reception at Kizhakuden's HeartLand Convention Centre, Chalakudy
    - Dual venue navigation & Add Wedding to Calendar export (`.ics`)
 3. **Interactive RSVP Section**:
@@ -48,7 +48,7 @@ This website harmoniously unites two luxury themes:
 
 ### Wedding Nuptial Ceremony & Holy Mass:
 - Date: Monday, 18 January 2027 (10:30 AM onwards)
-- Church: St. Antony's shrine, Kanakamala, Mechira - Kanakamala Rd, Perambra, Keralam
+- Church: St. Antony's Church, Kanakamala, Mechira - Kanakamala Rd, Perambra, Keralam
 
 ### Wedding Reception:
 - Date: Monday, 18 January 2027 (12:30 PM onwards)
