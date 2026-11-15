@@ -6,14 +6,14 @@
     <title>Dr Binshi &amp; Joyel — Engagement &amp; Wedding Invitation</title>
     <meta
       name="description"
-      content="Join Dr Binshi Biju &amp; Joyel Paul for their Engagement on 14 Jan 2027 at Pavithram Convention Centre, Kollam, and Holy Matrimony &amp; Wedding Reception on 18 Jan 2027 at St. Antony's shrine, Kanakamala &amp; Kizhakuden's HeartLand, Chalakudy."
+      content="Join Dr Binshi Biju &amp; Joyel Paul for their Engagement on 14 Jan 2027 at Pavithram Convention Centre, Kollam, and Holy Matrimony &amp; Wedding Reception on 18 Jan 2027 at St. Antony's Church, Kanakamala &amp; Kizhakuden's HeartLand, Chalakudy."
     />
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Dr Binshi &amp; Joyel — Wedding &amp; Engagement Invitation" />
     <meta
       property="og:description"
-      content="14 Jan 2027 (Engagement at Kundara, Kollam) &bull; 18 Jan 2027 (Holy Matrimony &amp; Reception at Chalakudy)"
+      content="14 Jan 2027 (Engagement at Kundara, Kollam) &bull; 18 Jan 2027 (Holy Matrimony at St. Antony's Church, Kanakamala &amp; Reception at Chalakudy)"
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./seashell-vows/editable/assets/couple-walking.png" />
@@ -173,7 +173,6 @@
         --ivory: #f3ebdc;
         --ivory-soft: #e6dcc6;
         --ink: #2a1d09;
-        --grad-gold: linear-gradient(100deg, #a97c2a 0%, #e9c879 45%, #f7e9c6 60%, #c9973e 100%);
       }
       .gilded-first-page .font-title {
         font-family: 'Marcellus', Georgia, serif !important;
@@ -187,12 +186,16 @@
         font-family: 'Jost', system-ui, sans-serif !important;
         font-weight: 300;
       }
-      .gilded-first-page .gold-text {
-        background: var(--grad-gold);
+
+      /* High-contrast, radiant luminous gold typography for bride & groom */
+      .gold-luminous-text {
+        color: #fffdf7;
+        background: linear-gradient(180deg, #ffffff 0%, #fff7e6 30%, #fae6ba 70%, #f0c978 100%);
         -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 20px rgba(233, 200, 121, 0.7));
       }
+
       .gilded-first-page .text-hall-light {
         color: var(--hall-light);
       }
@@ -260,16 +263,24 @@
       <!-- Skip Button -->
       <button id="openerSkipBtn" class="opener-skip-btn" type="button">Skip &bull;&bull;</button>
 
-      <!-- Tap to Open Button Overlay (Grand, elegant names) -->
+      <!-- Tap to Open Button Overlay (Three distinct lines: Dr. Binshi & Joyel in grand script) -->
       <button
         id="openerEnterBtn"
         type="button"
-        class="absolute inset-0 flex w-full flex-col items-center justify-end bg-[linear-gradient(180deg,transparent_42%,rgba(25,29,38,0.58)_100%)] px-6 pb-14 text-center text-white focus-visible:outline-none cursor-pointer transition-opacity duration-500"
+        class="absolute inset-0 flex w-full flex-col items-center justify-end bg-[linear-gradient(180deg,transparent_38%,rgba(15,10,5,0.72)_100%)] px-6 pb-14 text-center text-white focus-visible:outline-none cursor-pointer transition-opacity duration-500"
       >
-        <span class="script text-3xl sm:text-4xl text-[#f4d8a1]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.85);">
-          Dr Binshi &amp; Joyel
-        </span>
-        <span class="mt-3 border-b border-white/60 pb-1 font-body text-[0.72rem] uppercase tracking-[0.26em] text-white">
+        <div class="flex flex-col items-center text-center">
+          <span class="script text-[2.6rem] sm:text-[3.5rem] text-[#fff2d4] leading-tight" style="text-shadow: 0 3px 14px rgba(0,0,0,0.95), 0 0 24px rgba(233,200,121,0.7);">
+            Dr. Binshi
+          </span>
+          <span class="script text-2xl sm:text-3xl text-[#f5d799] my-1 sm:my-1.5" style="text-shadow: 0 2px 8px rgba(0,0,0,0.9);">
+            &amp;
+          </span>
+          <span class="script text-[2.6rem] sm:text-[3.5rem] text-[#fff2d4] leading-tight" style="text-shadow: 0 3px 14px rgba(0,0,0,0.95), 0 0 24px rgba(233,200,121,0.7);">
+            Joyel
+          </span>
+        </div>
+        <span class="mt-4 border-b border-white/60 pb-1 font-body text-[0.74rem] uppercase tracking-[0.28em] text-white">
           Tap to open
         </span>
       </button>
@@ -279,11 +290,11 @@
     <div class="relative min-h-screen">
 
       <!-- ========================================================================= -->
-      <!-- PART 1: ENGAGEMENT HERO (DELICATE IMAGE, GRAND NAMES, AIRY DETAILS)       -->
+      <!-- PART 1: ENGAGEMENT HERO (COMPACT PHOTO, PROMINENT VISIBLE NAMES)          -->
       <!-- ========================================================================= -->
       <header class="relative min-h-[100svh] overflow-hidden paper flex flex-col justify-between">
         <!-- Watercolor Arch Background -->
-        <div class="absolute inset-x-0 top-0 h-[75svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
+        <div class="absolute inset-x-0 top-0 h-[72svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
           <img
             src="seashell-vows/editable/assets/hero-arch.jpg"
             alt="Watercolor beach wedding arch at sunset"
@@ -301,7 +312,7 @@
           aria-hidden="true"
           width="1024"
           height="1024"
-          class="pointer-events-none absolute -left-10 top-4 w-32 sm:w-36 opacity-70 animate-float-soft"
+          class="pointer-events-none absolute -left-10 top-3 w-32 sm:w-36 opacity-70 animate-float-soft"
         />
         <img
           src="seashell-vows/external/media.invitestory.in/seashell-vows/src/assets/floral-spray.png"
@@ -309,33 +320,33 @@
           aria-hidden="true"
           width="1024"
           height="1024"
-          class="pointer-events-none absolute -right-10 top-16 w-28 sm:w-32 -scale-x-100 opacity-60 animate-float-soft"
+          class="pointer-events-none absolute -right-10 top-14 w-28 sm:w-32 -scale-x-100 opacity-60 animate-float-soft"
           style="animation-delay:1.4s;"
         />
 
-        <!-- Bride & Groom Walking Illustration (Delicate and refined sizing) -->
-        <div class="relative w-full flex justify-center pt-[7svh] sm:pt-[8svh] z-10 pointer-events-none">
+        <!-- Bride & Groom Walking Illustration (Compact sizing so names are 100% visible) -->
+        <div class="relative w-full flex justify-center pt-[4svh] sm:pt-[5svh] z-10 pointer-events-none">
           <img
             src="seashell-vows/editable/assets/couple-walking.png"
             alt="Bride and groom walking hand in hand"
             width="1024"
             height="1536"
-            class="w-[34%] max-w-[150px] sm:max-w-[170px] max-h-[25svh] sm:max-h-[28svh] object-contain animate-bloom drop-shadow-[0_12px_22px_rgba(92,80,68,0.15)]"
+            class="w-[28%] max-w-[120px] sm:max-w-[140px] max-h-[20svh] sm:max-h-[22svh] object-contain animate-bloom drop-shadow-[0_10px_20px_rgba(92,80,68,0.15)]"
           />
         </div>
 
-        <!-- Typography & Engagement Details (Grand romantic names, light airy metadata) -->
-        <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-10 sm:pb-14 text-center">
+        <!-- Typography & Engagement Details (Grand names, visible above screen fold) -->
+        <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-8 sm:pb-12 text-center">
           <p class="script text-xl sm:text-2xl text-primary animate-ink" style="animation-delay:0.4s">
             Together with our families
           </p>
-          <h1 class="mt-2 sm:mt-3 font-display text-[clamp(2.5rem,8.5vw,3.5rem)] leading-[1.02] text-foreground animate-ink font-light" style="animation-delay:0.7s">
+          <h1 class="mt-2 font-display text-[clamp(2.4rem,8.5vw,3.5rem)] leading-[1.02] text-foreground animate-ink font-light" style="animation-delay:0.7s">
             Dr Binshi Biju<span class="script mx-2 block text-2xl sm:text-3xl text-primary my-1">&amp;</span>Joyel Paul
           </h1>
-          <p class="mt-4 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1s">
+          <p class="mt-3.5 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1s">
             Thursday, 14 January 2027 &bull; 11:30 AM Onwards
           </p>
-          <p class="mt-1.5 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1.15s">
+          <p class="mt-1 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1.15s">
             Pavithram Convention Centre &bull; Kundara, Kollam
           </p>
         </div>
@@ -481,7 +492,7 @@
       <div class="page-spacer"></div>
 
       <!-- ======================================================================== -->
-      <!-- PART 2: WEDDING DETAILS FIRST PAGE (GRAND NAMES, PROMINENT LIFTED DATE)  -->
+      <!-- PART 2: WEDDING DETAILS FIRST PAGE (GRAND RADIANT NAMES, CLEAN CONTRAST) -->
       <!-- ======================================================================== -->
       <section class="gilded-first-page relative flex min-h-[100svh] flex-col justify-start overflow-hidden bg-[#150e04]">
         <!-- Hall Image Underneath (from OG Gilded Hall) -->
@@ -514,33 +525,35 @@
         <!-- Royal Bottom Radial Glow (from OG Gilded Hall) -->
         <div aria-hidden="true" class="pointer-events-none absolute -bottom-10 left-1/2 h-56 w-[130%] -translate-x-1/2 rounded-[50%]" style="background:radial-gradient(ellipse at center, rgba(233,200,121,0.35), transparent 70%)"></div>
 
-        <!-- Shimmering Gradient Overlay (from OG Gilded Hall) -->
-        <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(74,51,18,0.72) 0%, rgba(110,77,25,0.28) 45%, rgba(74,51,18,0.05) 65%, rgba(74,51,18,0.55) 100%)"></div>
+        <!-- Shimmering Gradient Overlay (Softens vertical rain lines across text area) -->
+        <div class="absolute inset-0 pointer-events-none z-15" style="background:linear-gradient(180deg, rgba(21,14,4,0.88) 0%, rgba(35,22,7,0.75) 32%, rgba(74,51,18,0.18) 65%, rgba(21,14,4,0.75) 100%)"></div>
 
-        <!-- Wedding Details Typography (Grand romantic names, lifted date, no clashing text) -->
-        <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 8svh)">
-          <p class="font-body text-[0.62rem] uppercase tracking-[0.42em] text-hall-light/90 reveal font-light" style="transition-delay:300ms">
-            Shubh Vivah &bull; Holy Matrimony
-          </p>
-          <!-- Grand Names of Bride and Groom -->
-          <h1 class="mt-4 sm:mt-6 font-display text-[clamp(3.2rem,16vw,5.2rem)] font-light leading-[0.92] gold-text reveal" style="transition-delay:900ms">
-            Joyel<span class="block font-title text-[0.32em] tracking-[0.3em] text-hall-light/90 my-2">&amp;</span>Dr Binshi
-          </h1>
-          <div class="reveal mt-3 sm:mt-4" style="transition-delay:1200ms">
-            <img
-              src="gilded-hall/editable/assets/divider.png"
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              width="1200"
-              height="512"
-              class="mx-auto h-auto opacity-80"
-              style="width:160px"
-            />
-            <!-- Date lifted cleanly above the stage arches -->
-            <p class="mt-2.5 sm:mt-3 font-title text-[0.95rem] sm:text-[1.1rem] tracking-[0.38em] text-[#fff6df] font-normal" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 16px rgba(233,200,121,0.6);">
-              18 . 01 . 2027
+        <!-- Wedding Details Typography (Radiant, large, luminous, no line clutter) -->
+        <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 7svh)">
+          <div class="mx-auto max-w-md rounded-2xl py-3 px-4" style="background:radial-gradient(ellipse at center, rgba(21,14,4,0.75) 0%, rgba(21,14,4,0.4) 60%, transparent 90%);">
+            <p class="font-body text-[0.68rem] uppercase tracking-[0.45em] text-[#fce5b8] reveal font-light" style="transition-delay:300ms; text-shadow:0 2px 8px rgba(0,0,0,0.95);">
+              Shubh Vivah &bull; Holy Matrimony
             </p>
+            <!-- Grand, Highly Visible Names of Bride & Groom -->
+            <h1 class="mt-4 sm:mt-5 font-display text-[clamp(3.6rem,17vw,5.6rem)] font-light leading-[0.92] reveal gold-luminous-text" style="transition-delay:900ms">
+              Joyel<span class="block font-title text-[0.34em] tracking-[0.3em] text-[#fce5b8] my-2">&amp;</span>Dr Binshi
+            </h1>
+            <div class="reveal mt-3 sm:mt-4" style="transition-delay:1200ms">
+              <img
+                src="gilded-hall/editable/assets/divider.png"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                width="1200"
+                height="512"
+                class="mx-auto h-auto opacity-85"
+                style="width:160px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.8));"
+              />
+              <!-- Date lifted cleanly above the stage arches -->
+              <p class="mt-2.5 sm:mt-3 font-title text-[1.05rem] sm:text-[1.2rem] tracking-[0.4em] text-[#fffdf7] font-normal" style="text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 0 18px rgba(233,200,121,0.75);">
+                18 . 01 . 2027
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -653,13 +666,13 @@
               </div>
 
               <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
-                <p class="font-normal text-foreground">St. Antony's Shrine, Kanakamala</p>
+                <p class="font-normal text-foreground">St. Antony's Church, Kanakamala</p>
                 <p class="text-xs text-muted-foreground">Mechira - Kanakamala Rd, Perambra, Kerala</p>
               </div>
 
               <div class="mt-5 flex flex-wrap gap-3">
                 <a
-                  href="https://maps.google.com/?q=St.+Antony's+Shrine+Kanakamala+Perambra+Kerala"
+                  href="https://maps.google.com/?q=St.+Antony's+Church+Kanakamala+Perambra+Kerala"
                   target="_blank"
                   rel="noreferrer"
                   class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
@@ -754,7 +767,7 @@
                 <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
                   18 Jan 2027 &bull; 10:30 AM Onwards
                 </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body font-light">St. Antony's Shrine, Kanakamala, Chalakudy</p>
+                <p class="mt-2 text-sm text-foreground/80 font-body font-light">St. Antony's Church, Kanakamala, Chalakudy</p>
                 <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Solemn Holy Mass &amp; sacred nuptial blessing.</p>
               </div>
             </article>
@@ -816,16 +829,16 @@
               </div>
             </div>
 
-            <!-- Venue 2: St. Antony's Shrine -->
+            <!-- Venue 2: St. Antony's Church -->
             <div class="card-soft p-6 rounded-sm border border-primary/15">
               <span class="script text-lg text-primary block font-normal">Holy Matrimony Church</span>
-              <h3 class="font-display text-2xl text-foreground mt-1 font-light">St. Antony's Shrine</h3>
+              <h3 class="font-display text-2xl text-foreground mt-1 font-light">St. Antony's Church</h3>
               <p class="text-xs text-muted-foreground mt-1 font-body font-light">
                 Mechira - Kanakamala Rd, Perambra, Kerala
               </p>
               <div class="mt-4">
                 <a
-                  href="https://maps.google.com/?q=St.+Antony's+Shrine+Kanakamala+Perambra+Kerala"
+                  href="https://maps.google.com/?q=St.+Antony's+Church+Kanakamala+Perambra+Kerala"
                   target="_blank"
                   rel="noreferrer"
                   class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
@@ -1191,8 +1204,8 @@
           'DTSTART:20270118T050000Z\n' +
           'DTEND:20270118T100000Z\n' +
           'SUMMARY:Holy Matrimony & Wedding Reception: Dr Binshi & Joyel\n' +
-          'DESCRIPTION:Holy Matrimony at St. Antony\'s shrine, Kanakamala (10:30 AM) followed by Reception at Kizhakuden\'s HeartLand Convention Centre, Chalakudy (12:30 PM).\n' +
-          'LOCATION:St. Antony\'s shrine, Kanakamala & Kizhakuden\'s HeartLand, Chalakudy\n' +
+          'DESCRIPTION:Holy Matrimony at St. Antony\'s Church, Kanakamala (10:30 AM) followed by Reception at Kizhakuden\'s HeartLand Convention Centre, Chalakudy (12:30 PM).\n' +
+          'LOCATION:St. Antony\'s Church, Kanakamala & Kizhakuden\'s HeartLand, Chalakudy\n' +
           'END:VEVENT\nEND:VCALENDAR';
 
         downloadIcs(ics, 'binshi-joyel-wedding.ics');
