@@ -276,15 +276,7 @@
         text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95) !important;
       }
 
-      /* Engagement couple illustration & names */
-      .couple-illustration {
-        width: 48px !important;
-        max-width: 48px !important;
-        height: auto !important;
-        max-height: 8.5svh !important;
-        object-fit: contain !important;
-        filter: drop-shadow(0 8px 16px rgba(92, 80, 68, 0.12));
-      }
+      /* Engagement couple names */
       .engagement-names-h1 {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
         font-size: clamp(2.6rem, 8.5vw, 4.2rem) !important;
@@ -430,7 +422,7 @@
       <!-- ========================================================================= -->
       <!-- PART 1: ENGAGEMENT HERO (OG TEMPLATE IMAGE SIZING & GRAND NAMES)          -->
       <!-- ========================================================================= -->
-      <header class="relative min-h-[100svh] overflow-hidden paper flex flex-col justify-between">
+      <header class="relative min-h-[100svh] overflow-hidden paper">
         <!-- Watercolor Arch Background (OG Template Structure) -->
         <div class="absolute inset-x-0 top-0 h-[78svh]" style="transform:translate3d(0, 0px, 0);will-change:transform">
           <img
@@ -463,20 +455,18 @@
           style="animation-delay:1.4s;transform:translate3d(0, 0px, 0)"
         />
 
-        <!-- Bride & Groom Walking Illustration (Delicate compact sizing: dainty & refined in upper arch) -->
-        <div class="relative w-full flex justify-center pt-[7svh] sm:pt-[8svh] z-10 pointer-events-none">
-          <img
-            src="seashell-vows/editable/assets/couple-walking.png"
-            alt="Bride and groom walking hand in hand"
-            width="1024"
-            height="1536"
-            class="couple-illustration animate-bloom"
-            style="width: 48px !important; max-width: 48px !important; max-height: 8.5svh !important; height: auto !important; object-fit: contain !important; filter: drop-shadow(0 8px 16px rgba(92,80,68,0.12));"
-          />
-        </div>
+        <!-- Bride & Groom Walking Illustration (Exact OG Seashell Vows Size & Placement) -->
+        <img
+          src="seashell-vows/editable/assets/couple-walking.png"
+          alt="Bride and groom walking hand in hand"
+          width="1024"
+          height="1536"
+          class="pointer-events-none absolute bottom-[28%] left-1/2 w-[64%] max-w-[300px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]"
+          style="transform:translate3d(-50%, 0px, 0)"
+        />
 
         <!-- Typography & Engagement Details (In Center, Grand Big & Bold: Joyel Paul Weds Dr. Binshi Biju) -->
-        <div class="relative z-20 flex flex-col items-center justify-end px-6 pb-8 sm:pb-12 text-center">
+        <div class="relative z-20 flex min-h-[100svh] flex-col items-center justify-end px-6 pb-8 sm:pb-12 text-center" style="transform:translate3d(0, 0px, 0)">
           <!-- Delicate tagline -->
           <p class="script text-base sm:text-lg text-primary animate-ink font-normal mb-1.5" style="animation-delay:0.4s">
             Together with our families
