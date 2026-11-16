@@ -27,7 +27,7 @@ window.WEDDING_DATA = {
     {
       name: "Holy Mass & Nuptial Ceremony",
       date: "18 January 2027",
-      time: "10:30 AM onwards",
+      time: "10:30 AM",
       venue: "St. Antony's Church, Kanakamala",
       address: "Mechira - Kanakamala Rd, Perambra, Keralam",
       note: "Solemn Nuptial Blessing with Holy Mass.",
@@ -35,7 +35,7 @@ window.WEDDING_DATA = {
     {
       name: "Wedding Reception",
       date: "18 January 2027",
-      time: "12:30 PM onwards",
+      time: "12:30 PM",
       venue: "Kizhakuden's HeartLand Convention Centre",
       address: "Athirapilly road, Koodapuzha, Chalakudy, Keralam 680721",
       note: "Feast, celebration and fellowship with family & friends.",

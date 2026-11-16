@@ -42,16 +42,16 @@ This website harmoniously unites two luxury themes:
 - Address: Padinjarakaran House, Kanakamala (Near Panampilly Memorial Govt. College Ground), Potta, Chalakudy, Kerala
 
 ### Engagement Ceremony:
-- Date: Thursday, 14 January 2027 (11:30 AM onwards)
+- Date: Thursday, 14 January 2027 (11:30 AM)
 - Venue: Pavithram Convention Centre, Kundara, Bharanikavu - Kollam Road, Mulavana - PO, Kollam — 691503
 - Maps Link: https://share.google/eKgdNtTLRLDoC2pMJ
 
 ### Wedding Nuptial Ceremony & Holy Mass:
-- Date: Monday, 18 January 2027 (10:30 AM onwards)
+- Date: Monday, 18 January 2027 (10:30 AM)
 - Church: St. Antony's Church, Kanakamala, Mechira - Kanakamala Rd, Perambra, Keralam
 
 ### Wedding Reception:
-- Date: Monday, 18 January 2027 (12:30 PM onwards)
+- Date: Monday, 18 January 2027 (12:30 PM)
 - Venue: Kizhakuden's HeartLand Convention Centre, Athirapilly road, Koodapuzha, Chalakudy, Keralam — 680721
 - Maps Link: https://share.google/Os4UVfy3K6uJ26IiD
 

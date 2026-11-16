@@ -19,7 +19,7 @@ window.WEDDING_DATA = {
   wedding: {
     dateLabel: "Thursday, 14 January 2027",
     weddingISO: "2027-01-14T11:30:00+05:30",
-    timeLabel: "11:30 AM onwards",
+    timeLabel: "11:30 AM",
   },
 
   venue: {
@@ -33,7 +33,7 @@ window.WEDDING_DATA = {
       name: "Engagement Ceremony",
       glyph: "💍",
       date: "14 Jan 2027",
-      time: "11:30 AM onwards",
+      time: "11:30 AM",
       venue: "Pavithram Convention Centre, Kundara, Kollam",
       note: "Celebrating love, exchange of rings & family blessings.",
     },
