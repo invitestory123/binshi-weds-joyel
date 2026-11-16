@@ -50,7 +50,7 @@
         --color-primary-foreground: #ffffff;
         --color-secondary: #fcf1f2; /* Soft Rose Blush Tint */
         --color-muted: #fcf1f2;
-        --color-muted-foreground: #7e5a62; /* Rosewood Muted Tone */
+        --color-muted-foreground: #4a2c35; /* Crisp readable Rosewood Tone */
         --color-border: #edd2d7; /* Delicate Rose Gold / Blush Border */
         --color-rose: #b82d43;
         --color-sage: #9ca38f;
@@ -60,31 +60,71 @@
         background-color: var(--color-background);
         color: var(--color-foreground);
         font-family: var(--font-body);
-        font-weight: 300;
+        font-weight: 400;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
       }
 
-      /* Heading typography: light, elegant, serif, never bold */
+      /* Heading typography: refined, clear, legible */
       h1, h2, h3, h4 {
         font-family: var(--font-display);
-        font-weight: 300;
+        font-weight: 500;
         color: var(--color-foreground);
       }
 
       .font-display {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-weight: 300;
+        font-weight: 500;
       }
       .script {
         font-family: 'Petit Formal Script', cursive !important;
-        font-weight: 400;
+        font-weight: 500;
       }
       .font-body {
         font-family: 'Jost', system-ui, -apple-system, sans-serif !important;
-        font-weight: 300;
+        font-weight: 450;
+      }
+      .font-light {
+        font-weight: 450 !important;
+      }
+      .text-muted-foreground {
+        color: #4a2c35 !important;
+        font-weight: 450 !important;
+      }
+      .text-primary {
+        color: #9b2234 !important;
+      }
+
+      /* Date & Location Highlight Badges */
+      .badge-date {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: #fcf1f2;
+        border: 1px solid rgba(155, 34, 52, 0.32);
+        color: #8b1e2e !important;
+        -webkit-text-fill-color: #8b1e2e !important;
+        font-family: 'Jost', system-ui, sans-serif !important;
+        font-weight: 600 !important;
+        border-radius: 9999px;
+        padding: 0.35rem 0.85rem;
+        box-shadow: 0 1px 4px rgba(155, 34, 52, 0.08);
+      }
+      .badge-location {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: #ffffff;
+        border: 1px solid rgba(34, 20, 23, 0.24);
+        color: #221417 !important;
+        -webkit-text-fill-color: #221417 !important;
+        font-family: 'Jost', system-ui, sans-serif !important;
+        font-weight: 600 !important;
+        border-radius: 9999px;
+        padding: 0.35rem 0.85rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
       }
 
       /* Opener Gate Modal */
@@ -242,11 +282,11 @@
       }
       .gilded-first-page .font-display {
         font-family: 'Cormorant Garamond', Georgia, serif !important;
-        font-weight: 300;
+        font-weight: 500;
       }
       .gilded-first-page .font-body {
         font-family: 'Jost', system-ui, sans-serif !important;
-        font-weight: 300;
+        font-weight: 450;
       }
 
       /* All writings in Gilded Hall first page strictly pure white & Grand typography */
@@ -276,6 +316,7 @@
         text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95) !important;
       }
 
+      /* Engagement couple names */
       /* Engagement couple names & tagline */
       .together-families-tagline {
         font-family: 'Petit Formal Script', cursive !important;
@@ -487,44 +528,49 @@
             <span class="engagement-weds script block text-primary my-1 font-bold" style="font-family: 'Petit Formal Script', cursive !important; font-size: clamp(1.6rem, 5vw, 2.5rem) !important;">Weds</span>
             Dr. Binshi Biju
           </h1>
-          <p class="mt-3 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1s">
-            Thursday, 14 January 2027 &bull; 11:30 AM Onwards
-          </p>
-          <p class="mt-1 font-body text-[0.66rem] sm:text-[0.72rem] uppercase tracking-airy text-muted-foreground animate-ink font-light" style="animation-delay:1.15s">
-            Pavithram Convention Centre &bull; Kundara, Kollam
-          </p>
+          <!-- Highlighted Date & Location Badges (Prominent, High-Contrast & Clear) -->
+          <div class="mt-4 flex flex-col items-center gap-2 animate-ink" style="animation-delay:1s">
+            <span class="badge-date text-xs sm:text-sm font-semibold tracking-wide">
+              <span>🗓️</span>
+              <span>Thursday, 14 January 2027 &bull; 11:30 AM Onwards</span>
+            </span>
+            <span class="badge-location text-xs sm:text-sm font-semibold tracking-wide">
+              <span>📍</span>
+              <span>Pavithram Convention Centre &bull; Kundara, Kollam</span>
+            </span>
+          </div>
         </div>
       </header>
 
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Engagement Countdown (Delicate light numbers, no harsh bold) -->
+      <!-- Engagement Countdown (Clear, prominent numerals & labels) -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
-          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
+          <p class="text-center font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-[#8b1e2e] font-bold">
             Counting down to the Engagement
           </p>
           <div class="mt-6">
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="engDays" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Days</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="engDays" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Days</span>
               </div>
-              <span class="text-primary/50 font-serif text-lg font-light">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="engHours" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Hrs</span>
+              <span class="text-[#8b1e2e] font-serif text-xl font-bold">:</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="engHours" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Hrs</span>
               </div>
-              <span class="text-primary/50 font-serif text-lg font-light">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="engMins" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Min</span>
+              <span class="text-[#8b1e2e] font-serif text-xl font-bold">:</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="engMins" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Min</span>
               </div>
-              <span class="text-primary/50 font-serif text-lg font-light">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="engSecs" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Sec</span>
+              <span class="text-[#8b1e2e] font-serif text-xl font-bold">:</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="engSecs" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Sec</span>
               </div>
             </div>
           </div>
@@ -534,7 +580,7 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Parents Blessing Section (Airy, elegant light typography) -->
+      <!-- Parents Blessing Section (Prominent, beautiful typography) -->
       <section class="relative px-7 py-12 sm:py-16">
         <div class="reveal">
           <!-- Flower Page Border -->
@@ -543,8 +589,8 @@
           </div>
 
           <div class="text-center">
-            <p class="script text-xl text-primary font-normal">With the blessings of our families</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Parents</h2>
+            <p class="script text-2xl sm:text-3xl text-[#8b1e2e] font-semibold">With the blessings of our families</p>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl leading-tight text-[#221417] font-bold">Parents</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -554,29 +600,29 @@
 
           <div class="mx-auto max-w-md space-y-5">
             <!-- Bride's Parents -->
-            <div class="card-soft p-6 rounded-sm border border-primary/15 text-center">
-              <span class="script text-lg text-primary block font-normal">Bride's Parents</span>
-              <h3 class="font-display text-2xl text-foreground mt-1 font-light">
+            <div class="card-soft p-6 rounded-sm border border-primary/20 text-center shadow-sm">
+              <span class="script text-xl text-[#8b1e2e] block font-semibold">Bride's Parents</span>
+              <h3 class="font-display text-2xl sm:text-3xl text-[#221417] mt-1 font-bold">
                 Biju Yohannan &amp; Shini Biju
               </h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
+              <p class="text-xs sm:text-sm text-[#4a2c35] mt-1 font-body font-bold">
                 Parents of Dr Binshi Biju
               </p>
-              <p class="text-xs text-foreground/75 mt-2 font-body font-light leading-relaxed">
+              <p class="text-xs sm:text-sm text-[#221417] mt-2 font-body font-medium leading-relaxed">
                 Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501
               </p>
             </div>
 
             <!-- Groom's Parents -->
-            <div class="card-soft p-6 rounded-sm border border-primary/15 text-center">
-              <span class="script text-lg text-primary block font-normal">Groom's Parents</span>
-              <h3 class="font-display text-2xl text-foreground mt-1 font-light">
+            <div class="card-soft p-6 rounded-sm border border-primary/20 text-center shadow-sm">
+              <span class="script text-xl text-[#8b1e2e] block font-semibold">Groom's Parents</span>
+              <h3 class="font-display text-2xl sm:text-3xl text-[#221417] mt-1 font-bold">
                 Poulose Padinjarakaran Rappai &amp; Siji Devasia
               </h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
+              <p class="text-xs sm:text-sm text-[#4a2c35] mt-1 font-body font-bold">
                 Parents of Joyel Paul
               </p>
-              <p class="text-xs text-foreground/75 mt-2 font-body font-light leading-relaxed">
+              <p class="text-xs sm:text-sm text-[#221417] mt-2 font-body font-medium leading-relaxed">
                 Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala
               </p>
             </div>
@@ -591,8 +637,8 @@
       <section class="relative px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">Our Engagement</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Ring Exchange &amp; Feast</h2>
+            <p class="font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-[#8b1e2e] font-bold">Our Engagement</p>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl leading-tight text-[#221417] font-bold">Ring Exchange &amp; Feast</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -600,20 +646,28 @@
             </div>
           </div>
 
-          <div class="mx-auto max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
+          <div class="mx-auto max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/25 shadow-sm">
             <div class="flex items-center gap-3">
-              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">💍</span>
+              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl bg-white shadow-xs">💍</span>
               <div>
-                <h3 class="font-display text-2xl text-foreground font-light">The Engagement Ceremony</h3>
-                <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5 font-light">
-                  Thursday, 14 Jan 2027 &bull; 11:30 AM Onwards
-                </p>
+                <h3 class="font-display text-2xl sm:text-3xl text-[#221417] font-bold">The Engagement Ceremony</h3>
+                <!-- Highlighted Date Badge -->
+                <div class="mt-2">
+                  <span class="badge-date text-xs sm:text-sm font-semibold tracking-wide">
+                    <span>🗓️</span>
+                    <span>Thursday, 14 Jan 2027 &bull; 11:30 AM Onwards</span>
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
-              <p class="font-normal text-foreground">Pavithram Convention Centre</p>
-              <p class="text-xs text-muted-foreground">Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503</p>
+            <!-- Highlighted Location -->
+            <div class="mt-5 border-t border-primary/20 pt-4 space-y-1 font-body">
+              <div class="flex items-center gap-1.5 font-bold text-base text-[#221417]">
+                <span>📍</span>
+                <span>Pavithram Convention Centre</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4a2c35] font-medium pl-6">Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503</p>
             </div>
 
             <div class="mt-5 flex flex-wrap gap-3">
@@ -621,14 +675,14 @@
                 href="https://share.google/eKgdNtTLRLDoC2pMJ"
                 target="_blank"
                 rel="noreferrer"
-                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
+                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
               >
                 Open in Google Maps
               </a>
               <button
                 type="button"
                 onclick="addToCalendarEngagement()"
-                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/30 bg-secondary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-foreground"
+                class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/30 bg-secondary px-4 font-body text-xs font-semibold uppercase tracking-wider text-foreground hover:bg-white"
               >
                 Add to Calendar
               </button>
@@ -680,7 +734,7 @@
         <!-- Wedding Details Typography (All writings in pure brilliant white) -->
         <div class="relative z-20 px-6 text-center" style="padding-top:calc(env(safe-area-inset-top) + 7svh)">
           <div class="mx-auto max-w-md rounded-2xl py-3 px-4" style="background:radial-gradient(ellipse at center, rgba(21,14,4,0.78) 0%, rgba(21,14,4,0.45) 60%, transparent 90%);">
-            <p class="font-body text-[0.72rem] uppercase tracking-[0.45em] reveal font-light text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition-delay:300ms; text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.9);">
+            <p class="font-body text-xs sm:text-sm uppercase tracking-[0.35em] reveal font-semibold text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition-delay:300ms; text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.9);">
               Shubh Vivah &bull; Holy Matrimony
             </p>
             <!-- Grand Big & Bold Names in PURE WHITE with Capital starting words: Joyel Paul & Dr. Binshi Biju -->
@@ -700,10 +754,13 @@
                 class="mx-auto h-auto opacity-90"
                 style="width:160px; filter: brightness(1.2) drop-shadow(0 2px 8px rgba(0,0,0,0.9));"
               />
-              <!-- Date lifted cleanly above the stage arches in PURE WHITE -->
-              <p class="mt-2.5 sm:mt-3 font-title text-[1.1rem] sm:text-[1.25rem] tracking-[0.4em] font-normal text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 0 18px rgba(0,0,0,0.9);">
-                18 . 01 . 2027
-              </p>
+              <!-- Date lifted cleanly above the stage arches in PURE WHITE with highlight badge -->
+              <div class="mt-3 flex justify-center">
+                <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full font-title text-base sm:text-lg tracking-[0.35em] font-bold text-white bg-black/50 border border-[#d4af37]/80 shadow-[0_4px_20px_rgba(0,0,0,0.9),0_0_15px_rgba(212,175,55,0.3)] backdrop-blur-sm">
+                  <span>🗓️</span>
+                  <span>18 . 01 . 2027</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -739,8 +796,8 @@
             <div class="border border-primary/25 rounded-[2px] px-5 py-7 sm:px-8 sm:py-9 text-center space-y-4">
               <!-- Header -->
               <div>
-                <p class="script text-xl sm:text-2xl text-primary font-normal">A love united in faith</p>
-                <h2 class="mt-1 font-display text-[2rem] sm:text-[2.4rem] leading-tight text-foreground font-light">
+                <p class="script text-2xl sm:text-3xl text-[#8b1e2e] font-bold" style="color: #8b1e2e !important; -webkit-text-fill-color: #8b1e2e !important;">A love united in faith</p>
+                <h2 class="mt-1 font-display text-[2.2rem] sm:text-[2.6rem] leading-tight text-[#221417] font-bold">
                   The Sacred Sacrament
                 </h2>
                 <div class="flex items-center justify-center gap-3 py-2.5 text-primary/70">
@@ -752,41 +809,44 @@
 
               <!-- Scripture Verse -->
               <div>
-                <p class="font-display italic text-base sm:text-lg leading-relaxed text-foreground/80 font-light">
+                <p class="font-display italic text-lg sm:text-xl leading-relaxed text-[#221417] font-medium">
                   &ldquo;Therefore what God has joined together, let no one separate.&rdquo;
                 </p>
-                <p class="font-body text-[0.6rem] uppercase tracking-airy text-muted-foreground font-light mt-1">
+                <p class="font-body text-xs uppercase tracking-widest text-[#8b1e2e] font-bold mt-1">
                   Mark 10:9
                 </p>
               </div>
 
               <!-- Formal Invitation Letter Note -->
               <div class="pt-3 border-t border-primary/20 space-y-2.5">
-                <p class="font-body text-[0.68rem] uppercase tracking-[0.25em] text-primary font-medium">
+                <p class="font-body text-xs sm:text-sm uppercase tracking-[0.25em] text-[#8b1e2e] font-bold">
                   Together with their families
                 </p>
-                <p class="font-body text-xs sm:text-[0.82rem] leading-relaxed text-foreground/85 font-light max-w-sm mx-auto">
+                <p class="font-body text-sm sm:text-base leading-relaxed text-[#221417] font-medium max-w-sm mx-auto">
                   Request the honour of your esteemed presence and heartfelt prayers at the Holy Matrimony &amp; Wedding Reception celebrating the union of
                 </p>
                 
                 <!-- Couple Names inside Letter -->
                 <div class="py-1">
-                  <h3 class="font-display text-2xl sm:text-3xl text-foreground font-bold">
+                  <h3 class="font-display text-2xl sm:text-3xl text-[#221417] font-bold">
                     Joyel Paul
                   </h3>
-                  <span class="script text-xl text-primary my-0.5 block font-normal">weds</span>
-                  <h3 class="font-display text-2xl sm:text-3xl text-foreground font-bold">
+                  <span class="script text-2xl text-[#8b1e2e] my-0.5 block font-bold" style="color: #8b1e2e !important; -webkit-text-fill-color: #8b1e2e !important;">weds</span>
+                  <h3 class="font-display text-2xl sm:text-3xl text-[#221417] font-bold">
                     Dr. Binshi Biju
                   </h3>
                 </div>
 
-                <div class="pt-1.5 space-y-1">
-                  <p class="font-body text-xs sm:text-[0.78rem] uppercase tracking-wider text-muted-foreground font-light">
-                    Monday, 18 January 2027 &bull; 10:30 AM Onwards
-                  </p>
-                  <p class="font-body text-xs sm:text-sm text-foreground font-normal">
-                    St. Antony's Church, Kanakamala
-                  </p>
+                <!-- Highlighted Date & Location Badges -->
+                <div class="pt-3 flex flex-col items-center gap-2">
+                  <span class="badge-date text-xs sm:text-sm font-semibold tracking-wide">
+                    <span>🗓️</span>
+                    <span>Monday, 18 January 2027 &bull; 10:30 AM Onwards</span>
+                  </span>
+                  <span class="badge-location text-xs sm:text-sm font-semibold tracking-wide">
+                    <span>📍</span>
+                    <span>St. Antony's Church, Kanakamala</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -797,32 +857,32 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Wedding Countdown (Light airy numerals) -->
+      <!-- Wedding Countdown (Clear, prominent numerals & labels) -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
-          <p class="text-center font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
+          <p class="text-center font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-[#8b1e2e] font-bold">
             Counting down to the Holy Matrimony
           </p>
           <div class="mt-6">
             <div class="flex items-center justify-center gap-2 sm:gap-3 text-center">
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="wedDays" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Days</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="wedDays" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Days</span>
               </div>
-              <span class="text-primary/50 font-serif text-lg font-light">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="wedHours" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Hrs</span>
+              <span class="text-[#8b1e2e] font-serif text-xl font-bold">:</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="wedHours" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Hrs</span>
               </div>
-              <span class="text-primary/50 font-serif text-lg font-light">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="wedMins" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Min</span>
+              <span class="text-[#8b1e2e] font-serif text-xl font-bold">:</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="wedMins" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Min</span>
               </div>
-              <span class="text-primary/50 font-serif text-lg font-light">:</span>
-              <div class="card-soft min-w-[4.4rem] px-3 py-3 rounded-sm border border-primary/20">
-                <span id="wedSecs" class="font-display text-2xl sm:text-3xl font-light text-foreground">00</span>
-                <span class="block font-body text-[0.55rem] uppercase tracking-airy text-muted-foreground mt-1 font-light">Sec</span>
+              <span class="text-[#8b1e2e] font-serif text-xl font-bold">:</span>
+              <div class="card-soft min-w-[4.6rem] px-3 py-3 rounded-sm border border-primary/25 shadow-sm">
+                <span id="wedSecs" class="font-display text-2xl sm:text-3xl font-bold text-[#221417]">00</span>
+                <span class="block font-body text-xs uppercase tracking-wider text-[#4a2c35] mt-1 font-bold">Sec</span>
               </div>
             </div>
           </div>
@@ -841,8 +901,8 @@
           </div>
 
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">18 January 2027</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Wedding Ceremonies</h2>
+            <p class="font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-[#8b1e2e] font-bold">18 January 2027</p>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl leading-tight text-[#221417] font-bold">Wedding Ceremonies</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -852,20 +912,28 @@
 
           <div class="mx-auto max-w-md space-y-6">
             <!-- 1. Holy Mass Ceremony Card -->
-            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25 shadow-sm">
               <div class="flex items-center gap-3">
-                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">⛪</span>
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl bg-white shadow-xs">⛪</span>
                 <div>
-                  <h3 class="font-display text-2xl text-foreground font-light">Holy Matrimony &amp; Mass</h3>
-                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5 font-light">
-                    Monday, 18 Jan 2027 &bull; 10:30 AM Onwards
-                  </p>
+                  <h3 class="font-display text-2xl sm:text-3xl text-[#221417] font-bold">Holy Matrimony &amp; Mass</h3>
+                  <!-- Highlighted Date Badge -->
+                  <div class="mt-2">
+                    <span class="badge-date text-xs sm:text-sm font-semibold tracking-wide">
+                      <span>🗓️</span>
+                      <span>Monday, 18 Jan 2027 &bull; 10:30 AM Onwards</span>
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
-                <p class="font-normal text-foreground">St. Antony's Church, Kanakamala</p>
-                <p class="text-xs text-muted-foreground">Mechira - Kanakamala Rd, Perambra, Kerala</p>
+              <!-- Highlighted Location -->
+              <div class="mt-5 border-t border-primary/20 pt-4 space-y-1 font-body">
+                <div class="flex items-center gap-1.5 font-bold text-base text-[#221417]">
+                  <span>📍</span>
+                  <span>St. Antony's Church, Kanakamala</span>
+                </div>
+                <p class="text-xs sm:text-sm text-[#4a2c35] font-medium pl-6">Mechira - Kanakamala Rd, Perambra, Kerala</p>
               </div>
 
               <div class="mt-5 flex flex-wrap gap-3">
@@ -873,14 +941,14 @@
                   href="https://maps.google.com/?q=St.+Antony's+Church+Kanakamala+Perambra+Kerala"
                   target="_blank"
                   rel="noreferrer"
-                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   Church Directions
                 </a>
                 <button
                   type="button"
                   onclick="addToCalendarWedding()"
-                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/30 bg-secondary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-foreground"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm border border-primary/30 bg-secondary px-4 font-body text-xs font-semibold uppercase tracking-wider text-foreground hover:bg-white"
                 >
                   Add to Calendar
                 </button>
@@ -888,20 +956,28 @@
             </div>
 
             <!-- 2. Reception Card -->
-            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
+            <div class="card-soft p-6 sm:p-8 rounded-sm border border-primary/25 shadow-sm">
               <div class="flex items-center gap-3">
-                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary text-xl">🥂</span>
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 text-primary text-xl bg-white shadow-xs">🥂</span>
                 <div>
-                  <h3 class="font-display text-2xl text-foreground font-light">Wedding Reception</h3>
-                  <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground mt-0.5 font-light">
-                    Monday, 18 Jan 2027 &bull; 12:30 PM Onwards
-                  </p>
+                  <h3 class="font-display text-2xl sm:text-3xl text-[#221417] font-bold">Wedding Reception</h3>
+                  <!-- Highlighted Date Badge -->
+                  <div class="mt-2">
+                    <span class="badge-date text-xs sm:text-sm font-semibold tracking-wide">
+                      <span>🗓️</span>
+                      <span>Monday, 18 Jan 2027 &bull; 12:30 PM Onwards</span>
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div class="mt-5 border-t border-primary/15 pt-4 text-sm text-foreground/80 space-y-1 font-body font-light">
-                <p class="font-normal text-foreground">Kizhakuden's HeartLand Convention Centre</p>
-                <p class="text-xs text-muted-foreground">Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721</p>
+              <!-- Highlighted Location -->
+              <div class="mt-5 border-t border-primary/20 pt-4 space-y-1 font-body">
+                <div class="flex items-center gap-1.5 font-bold text-base text-[#221417]">
+                  <span>📍</span>
+                  <span>Kizhakuden's HeartLand Convention Centre</span>
+                </div>
+                <p class="text-xs sm:text-sm text-[#4a2c35] font-medium pl-6">Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721</p>
               </div>
 
               <div class="mt-5 flex flex-wrap gap-3">
@@ -909,7 +985,7 @@
                   href="https://share.google/Os4UVfy3K6uJ26IiD"
                   target="_blank"
                   rel="noreferrer"
-                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press flex min-h-[44px] flex-1 items-center justify-center rounded-sm bg-primary px-4 font-body text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   Reception Map
                 </a>
@@ -922,7 +998,7 @@
       <!-- SPACE BETWEEN PAGES -->
       <div class="page-spacer"></div>
 
-      <!-- Celebrations Timeline (EXACT IMAGE 4 STYLE & LIGHT TYPOGRAPHY) -->
+      <!-- Celebrations Timeline (EXACT IMAGE 4 STYLE & HIGH-CONTRAST TYPOGRAPHY) -->
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
           <!-- Flower Page Border -->
@@ -931,8 +1007,8 @@
           </div>
 
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">Four Days of Joy</p>
-            <h2 class="mt-3 font-display text-[2rem] leading-tight text-foreground font-light">Celebrations</h2>
+            <p class="font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-[#8b1e2e] font-bold">Four Days of Joy</p>
+            <h2 class="mt-3 font-display text-3xl sm:text-4xl leading-tight text-[#221417] font-bold">Celebrations</h2>
             <div class="flex items-center justify-center gap-3 py-6 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -942,53 +1018,77 @@
 
           <div class="mx-auto max-w-lg space-y-4">
             <!-- Event 1: Engagement -->
-            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
-              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/20 bg-secondary text-primary">
+            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/20 shadow-sm">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary text-lg">
                 💍
               </div>
               <div class="flex-1">
                 <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="font-display text-xl text-foreground font-light">The Engagement</h3>
+                  <h3 class="font-display text-xl sm:text-2xl text-[#221417] font-bold">The Engagement</h3>
                 </div>
-                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
-                  14 Jan 2027 &bull; 11:30 AM Onwards
-                </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body font-light">Pavithram Convention Centre, Kundara, Kollam</p>
-                <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Ring exchange, family blessings &amp; luncheon.</p>
+                <!-- Highlighted Date Badge -->
+                <div class="mt-1">
+                  <span class="badge-date text-[0.72rem] sm:text-xs font-semibold tracking-wide">
+                    <span>🗓️</span>
+                    <span>14 Jan 2027 &bull; 11:30 AM Onwards</span>
+                  </span>
+                </div>
+                <!-- Highlighted Location -->
+                <div class="mt-2 flex items-center gap-1.5 font-bold text-sm text-[#221417]">
+                  <span>📍</span>
+                  <span>Pavithram Convention Centre, Kundara, Kollam</span>
+                </div>
+                <p class="mt-1 text-xs sm:text-sm text-[#4a2c35] font-body font-medium italic pl-5">Ring exchange, family blessings &amp; luncheon.</p>
               </div>
             </article>
 
             <!-- Event 2: Holy Mass -->
-            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
-              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/20 bg-secondary text-primary">
+            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/20 shadow-sm">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary text-lg">
                 ⛪
               </div>
               <div class="flex-1">
                 <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="font-display text-xl text-foreground font-light">The Holy Matrimony</h3>
+                  <h3 class="font-display text-xl sm:text-2xl text-[#221417] font-bold">The Holy Matrimony</h3>
                 </div>
-                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
-                  18 Jan 2027 &bull; 10:30 AM Onwards
-                </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body font-light">St. Antony's Church, Kanakamala, Chalakudy</p>
-                <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Solemn Holy Mass &amp; sacred nuptial blessing.</p>
+                <!-- Highlighted Date Badge -->
+                <div class="mt-1">
+                  <span class="badge-date text-[0.72rem] sm:text-xs font-semibold tracking-wide">
+                    <span>🗓️</span>
+                    <span>18 Jan 2027 &bull; 10:30 AM Onwards</span>
+                  </span>
+                </div>
+                <!-- Highlighted Location -->
+                <div class="mt-2 flex items-center gap-1.5 font-bold text-sm text-[#221417]">
+                  <span>📍</span>
+                  <span>St. Antony's Church, Kanakamala, Chalakudy</span>
+                </div>
+                <p class="mt-1 text-xs sm:text-sm text-[#4a2c35] font-body font-medium italic pl-5">Solemn Holy Mass &amp; sacred nuptial blessing.</p>
               </div>
             </article>
 
             <!-- Event 3: Reception -->
-            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/15">
-              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/20 bg-secondary text-primary">
+            <article class="card-soft relative flex gap-4 p-5 rounded-sm border border-primary/20 shadow-sm">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 bg-secondary text-primary text-lg">
                 🥂
               </div>
               <div class="flex-1">
                 <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="font-display text-xl text-foreground font-light">Wedding Reception</h3>
+                  <h3 class="font-display text-xl sm:text-2xl text-[#221417] font-bold">Wedding Reception</h3>
                 </div>
-                <p class="mt-0.5 font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">
-                  18 Jan 2027 &bull; 12:30 PM Onwards
-                </p>
-                <p class="mt-2 text-sm text-foreground/80 font-body font-light">Kizhakuden's HeartLand Convention Centre</p>
-                <p class="mt-1 text-xs text-muted-foreground font-body font-light italic">Dinner, music, joy &amp; celebration with loved ones.</p>
+                <!-- Highlighted Date Badge -->
+                <div class="mt-1">
+                  <span class="badge-date text-[0.72rem] sm:text-xs font-semibold tracking-wide">
+                    <span>🗓️</span>
+                    <span>18 Jan 2027 &bull; 12:30 PM Onwards</span>
+                  </span>
+                </div>
+                <!-- Highlighted Location -->
+                <div class="mt-2 flex items-center gap-1.5 font-bold text-sm text-[#221417]">
+                  <span>📍</span>
+                  <span>Kizhakuden's HeartLand Convention Centre</span>
+                </div>
+                <p class="mt-1 text-xs sm:text-sm text-[#4a2c35] font-body font-medium italic pl-5">Dinner, music, joy &amp; celebration with loved ones.</p>
               </div>
             </article>
           </div>
@@ -1002,8 +1102,8 @@
       <section class="px-6 py-12 sm:py-16">
         <div class="reveal">
           <div class="text-center">
-            <p class="font-body text-[0.62rem] uppercase tracking-airy text-muted-foreground font-light">Find Your Way</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">Venues</h2>
+            <p class="font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-[#8b1e2e] font-bold">Find Your Way</p>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl leading-tight text-[#221417] font-bold">Venues</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
@@ -1013,18 +1113,20 @@
 
           <div class="mx-auto max-w-md space-y-5">
             <!-- Venue 1: Pavithram -->
-            <div class="card-soft p-6 rounded-sm border border-primary/15">
-              <span class="script text-lg text-primary block font-normal">Engagement Venue</span>
-              <h3 class="font-display text-2xl text-foreground mt-1 font-light">Pavithram Convention Centre</h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
-                Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503
-              </p>
+            <div class="card-soft p-6 rounded-sm border border-primary/20 shadow-sm">
+              <span class="script text-xl text-[#8b1e2e] block font-semibold">Engagement Venue</span>
+              <h3 class="font-display text-2xl sm:text-3xl text-[#221417] mt-1 font-bold">Pavithram Convention Centre</h3>
+              <!-- Highlighted Location -->
+              <div class="flex items-start gap-1.5 text-xs sm:text-sm text-[#221417] mt-2 font-body font-medium">
+                <span>📍</span>
+                <span>Kundara, Bharanikavu - Kollam Road, Mulavana PO, Kollam - 691503</span>
+              </div>
               <div class="mt-4">
                 <a
                   href="https://share.google/eKgdNtTLRLDoC2pMJ"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   <span>Open Maps</span>
                   <span>&rarr;</span>
@@ -1033,18 +1135,20 @@
             </div>
 
             <!-- Venue 2: St. Antony's Church -->
-            <div class="card-soft p-6 rounded-sm border border-primary/15">
-              <span class="script text-lg text-primary block font-normal">Holy Matrimony Church</span>
-              <h3 class="font-display text-2xl text-foreground mt-1 font-light">St. Antony's Church</h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
-                Mechira - Kanakamala Rd, Perambra, Kerala
-              </p>
+            <div class="card-soft p-6 rounded-sm border border-primary/20 shadow-sm">
+              <span class="script text-xl text-[#8b1e2e] block font-semibold">Holy Matrimony Church</span>
+              <h3 class="font-display text-2xl sm:text-3xl text-[#221417] mt-1 font-bold">St. Antony's Church</h3>
+              <!-- Highlighted Location -->
+              <div class="flex items-start gap-1.5 text-xs sm:text-sm text-[#221417] mt-2 font-body font-medium">
+                <span>📍</span>
+                <span>Mechira - Kanakamala Rd, Perambra, Kerala</span>
+              </div>
               <div class="mt-4">
                 <a
                   href="https://maps.google.com/?q=St.+Antony's+Church+Kanakamala+Perambra+Kerala"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   <span>Church Directions</span>
                   <span>&rarr;</span>
@@ -1053,18 +1157,20 @@
             </div>
 
             <!-- Venue 3: HeartLand -->
-            <div class="card-soft p-6 rounded-sm border border-primary/15">
-              <span class="script text-lg text-primary block font-normal">Wedding Reception Venue</span>
-              <h3 class="font-display text-2xl text-foreground mt-1 font-light">Kizhakuden's HeartLand Convention Centre</h3>
-              <p class="text-xs text-muted-foreground mt-1 font-body font-light">
-                Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721
-              </p>
+            <div class="card-soft p-6 rounded-sm border border-primary/20 shadow-sm">
+              <span class="script text-xl text-[#8b1e2e] block font-semibold">Wedding Reception Venue</span>
+              <h3 class="font-display text-2xl sm:text-3xl text-[#221417] mt-1 font-bold">Kizhakuden's HeartLand Convention Centre</h3>
+              <!-- Highlighted Location -->
+              <div class="flex items-start gap-1.5 text-xs sm:text-sm text-[#221417] mt-2 font-body font-medium">
+                <span>📍</span>
+                <span>Athirapilly Road, Koodapuzha, Chalakudy, Kerala 680721</span>
+              </div>
               <div class="mt-4">
                 <a
                   href="https://share.google/Os4UVfy3K6uJ26IiD"
                   target="_blank"
                   rel="noreferrer"
-                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-[0.68rem] font-normal uppercase tracking-airy text-primary-foreground shadow-sm"
+                  class="press inline-flex items-center gap-2 rounded-sm bg-primary px-4 py-2 font-body text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   <span>Reception Map</span>
                   <span>&rarr;</span>
@@ -1081,9 +1187,9 @@
       <!-- Wish Sky / Floating Lanterns (OG Seashell Style) -->
       <section class="wish-sky relative isolate overflow-hidden px-6 py-20 text-center text-white" style="background:#1a1510;">
         <div class="relative z-10 mx-auto max-w-md">
-          <p class="script text-xl text-[#f4d8a1] font-normal">Send Your Blessings</p>
-          <h2 class="mt-2 font-display text-3xl font-light text-[#fff6df]">Release a Sky Lantern</h2>
-          <p class="mt-3 text-xs leading-relaxed text-[#e6dcc6]/90 font-body font-light">
+          <p class="script text-2xl text-[#f4d8a1] font-semibold">Send Your Blessings</p>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-bold text-[#fff6df]">Release a Sky Lantern</h2>
+          <p class="mt-3 text-sm leading-relaxed text-[#f4ece1] font-body font-medium">
             Light a virtual lantern carrying your heartfelt prayers and wishes into the starlit sky for Binshi &amp; Joyel.
           </p>
 
@@ -1094,11 +1200,11 @@
               class="press flex items-center gap-2 rounded-full border border-[#d4af37]/60 bg-[#251707]/90 px-6 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,175,55,0.3)] backdrop-blur-md transition-all hover:border-[#d4af37] cursor-pointer"
             >
               <span class="text-lg">🏮</span>
-              <span class="font-body text-xs font-normal uppercase tracking-widest text-[#f7e9c6]">Release Lantern</span>
+              <span class="font-body text-xs font-semibold uppercase tracking-widest text-[#f7e9c6]">Release Lantern</span>
             </button>
           </div>
 
-          <p id="lanternStatus" class="mt-4 font-body text-xs text-[#f4d8a1]/90 min-h-[1.5rem] font-light"></p>
+          <p id="lanternStatus" class="mt-4 font-body text-sm text-[#f4d8a1] min-h-[1.5rem] font-semibold"></p>
         </div>
       </section>
 
@@ -1114,44 +1220,44 @@
           </div>
 
           <div class="text-center">
-            <p class="script text-xl text-primary font-normal">Will you join us?</p>
-            <h2 class="mt-2 font-display text-[2.2rem] leading-tight text-foreground font-light">RSVP</h2>
+            <p class="script text-2xl sm:text-3xl text-[#8b1e2e] font-semibold">Will you join us?</p>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl leading-tight text-[#221417] font-bold">RSVP</h2>
             <div class="flex items-center justify-center gap-3 py-4 text-primary/70">
               <span class="h-px w-14 bg-gradient-to-r from-transparent to-primary/50"></span>
               <span class="text-[0.7rem] tracking-airy">❖</span>
               <span class="h-px w-14 bg-gradient-to-l from-transparent to-primary/50"></span>
             </div>
-            <p class="mx-auto max-w-md font-body text-xs text-muted-foreground leading-relaxed font-light">
+            <p class="mx-auto max-w-md font-body text-xs sm:text-sm text-[#4a2c35] leading-relaxed font-semibold">
               Kindly confirm your presence so we may warmly prepare for your attendance at our Engagement and Wedding.
             </p>
           </div>
 
-          <div class="mx-auto mt-8 max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/20">
+          <div class="mx-auto mt-8 max-w-md card-soft p-6 sm:p-8 rounded-sm border border-primary/25 shadow-sm">
             <form onsubmit="event.preventDefault(); submitRsvp();" class="space-y-4">
               <div>
-                <label for="guestName" class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Your Full Name *</label>
+                <label for="guestName" class="block font-body text-xs sm:text-sm font-bold text-[#221417] uppercase tracking-wider">Your Full Name *</label>
                 <input
                   type="text"
                   id="guestName"
                   required
                   placeholder="e.g. John Doe"
-                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground font-light focus:border-primary focus:outline-none"
+                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground font-medium focus:border-primary focus:outline-none"
                 />
               </div>
 
               <div>
-                <label for="guestPhone" class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Phone Number</label>
+                <label for="guestPhone" class="block font-body text-xs sm:text-sm font-bold text-[#221417] uppercase tracking-wider">Phone Number</label>
                 <input
                   type="tel"
                   id="guestPhone"
                   placeholder="e.g. +91 98765 43210"
-                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground font-light focus:border-primary focus:outline-none"
+                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2.5 font-body text-sm text-foreground font-medium focus:border-primary focus:outline-none"
                 />
               </div>
 
               <div>
-                <label class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Will you be attending?</label>
-                <div class="mt-2 flex gap-4 font-body text-xs text-foreground font-light">
+                <label class="block font-body text-xs sm:text-sm font-bold text-[#221417] uppercase tracking-wider">Will you be attending?</label>
+                <div class="mt-2 flex gap-4 font-body text-xs sm:text-sm text-[#221417] font-bold">
                   <label class="flex items-center gap-2 cursor-pointer">
                     <input type="radio" name="attendance" value="attending" checked class="accent-[#8b6b43]" />
                     <span>Joyfully Accept</span>
@@ -1164,22 +1270,22 @@
               </div>
 
               <div>
-                <label class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Number of Guests</label>
+                <label class="block font-body text-xs sm:text-sm font-bold text-[#221417] uppercase tracking-wider">Number of Guests</label>
                 <div class="mt-2 flex items-center gap-3">
                   <button
                     type="button"
                     onclick="adjustGuest(-1)"
-                    class="h-9 w-9 rounded-sm border border-primary/25 bg-secondary font-display text-base font-light text-foreground hover:bg-primary hover:text-white"
+                    class="h-9 w-9 rounded-sm border border-primary/25 bg-secondary font-display text-base font-bold text-foreground hover:bg-primary hover:text-white"
                   >
                     -
                   </button>
-                  <span id="guestCountDisplay" class="min-w-[2.5rem] text-center font-display text-lg font-light text-foreground">
+                  <span id="guestCountDisplay" class="min-w-[2.5rem] text-center font-display text-lg font-bold text-foreground">
                     2
                   </span>
                   <button
                     type="button"
                     onclick="adjustGuest(1)"
-                    class="h-9 w-9 rounded-sm border border-primary/25 bg-secondary font-display text-base font-light text-foreground hover:bg-primary hover:text-white"
+                    class="h-9 w-9 rounded-sm border border-primary/25 bg-secondary font-display text-base font-bold text-foreground hover:bg-primary hover:text-white"
                   >
                     +
                   </button>
@@ -1187,29 +1293,29 @@
               </div>
 
               <div>
-                <label for="guestMessage" class="block font-body text-xs font-light text-foreground uppercase tracking-wider">Wishes / Blessings</label>
+                <label for="guestMessage" class="block font-body text-xs sm:text-sm font-bold text-[#221417] uppercase tracking-wider">Wishes / Blessings</label>
                 <textarea
                   id="guestMessage"
                   rows="3"
                   placeholder="Leave a heartfelt message for Binshi & Joyel..."
-                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2 font-body text-sm text-foreground font-light focus:border-primary focus:outline-none"
+                  class="mt-1.5 w-full rounded-sm border border-primary/25 bg-white/70 px-3.5 py-2 font-body text-sm text-foreground font-medium focus:border-primary focus:outline-none"
                 ></textarea>
               </div>
 
               <div class="pt-2">
                 <button
                   type="submit"
-                  class="press w-full rounded-sm bg-primary py-3 font-body text-xs font-normal uppercase tracking-airy text-primary-foreground shadow-sm hover:opacity-95"
+                  class="press w-full rounded-sm bg-primary py-3 font-body text-xs sm:text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-95"
                 >
                   Send RSVP via WhatsApp &rarr;
                 </button>
               </div>
             </form>
 
-            <div class="mt-6 border-t border-primary/15 pt-5 text-center font-body text-[0.72rem] text-muted-foreground space-y-2 font-light">
-              <p class="font-normal text-foreground">Family Residences:</p>
-              <p>Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501</p>
-              <p>Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala</p>
+            <div class="mt-6 border-t border-primary/20 pt-5 text-center font-body text-xs sm:text-sm text-[#221417] space-y-2 font-medium">
+              <p class="font-bold text-[#8b1e2e] uppercase tracking-wider">Family Residences:</p>
+              <p><span class="font-bold">Bride:</span> Manthottathil House, Elampalloor, Kundara, Kollam, Kerala 691501</p>
+              <p><span class="font-bold">Groom:</span> Padinjarakaran House, Kanakamala, Potta, Chalakudy, Kerala</p>
             </div>
           </div>
         </div>
@@ -1221,21 +1327,21 @@
       <!-- Footer Scene (Grand names everywhere, light airy text) -->
       <footer class="relative overflow-hidden px-6 pt-12 pb-24 text-center border-t border-primary/15">
         <div class="reveal">
-          <p class="script text-[clamp(4.5rem,15vw,6.5rem)] text-primary font-normal leading-tight">Dr Binshi &amp; Joyel</p>
-          <p class="mt-2 font-display text-sm tracking-widest uppercase text-muted-foreground font-light">
+          <p class="script text-[clamp(4rem,14vw,6rem)] text-[#8b1e2e] font-bold leading-tight">Dr Binshi &amp; Joyel</p>
+          <p class="mt-2 font-display text-base sm:text-lg tracking-widest uppercase text-[#4a2c35] font-bold">
             January 2027 &bull; Kollam &amp; Chalakudy
           </p>
           <div class="mt-6 flex justify-center gap-3">
             <button
               type="button"
               onclick="shareInvitation()"
-              class="press inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-secondary px-5 py-2.5 font-body text-xs font-normal uppercase tracking-airy text-foreground"
+              class="press inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-secondary px-5 py-2.5 font-body text-xs font-semibold uppercase tracking-wider text-foreground hover:bg-white"
             >
               <span>Share Invitation</span>
               <span>🔗</span>
             </button>
           </div>
-          <p class="mt-8 font-body text-[0.62rem] text-muted-foreground/75 tracking-wider uppercase font-light">
+          <p class="mt-8 font-body text-xs text-[#4a2c35] tracking-wider uppercase font-semibold">
             Designed with love &bull; Binshi &amp; Joyel
           </p>
         </div>
